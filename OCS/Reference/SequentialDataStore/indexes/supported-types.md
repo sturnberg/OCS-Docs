@@ -1,0 +1,21 @@
+# Supported types for an index
+Type                     | SdsTypeCode
+-----------------------  | -----
+Boolean                  | 3
+Byte                     | 6
+Char                     | 4
+DateTime                 | 16
+DateTimeOffset           | 20
+Decimal                  | 15
+Double                   | 14
+Guid                     | 19
+Int16                    | 7
+Int32                    | 9
+Int64                    | 11
+SByte                    | 5
+Single                   | 13
+String                   | 18
+TimeSpan                 | 21
+UInt16                   | 8
+UInt32                   | 10
+UInt64                   | 12

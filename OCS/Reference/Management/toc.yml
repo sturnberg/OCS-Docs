@@ -1,0 +1,32 @@
+- name: AAD Tenant
+  href: Account_Tenant.md
+- name: Authorization Code Client
+  href: Identity_AuthorizationCodeClient.md
+- name: Client Credential Client
+  href: Identity_ClientCredentialClient.md
+- name: Client Roles
+  href: Account_ClientRole_1.md
+- name: Hybrid Client
+  href: Identity_HybridClient.md
+- name: Identity Provider
+  href: Identity_IdentityProvider.md
+- name: Invitation
+  href: Identity_Invitation.md
+- name: Persisted Grant
+  href: Identity_PersistedGrant.md
+- name: Roles
+  href: Account_Role_1.md
+- name: RootAccessControl
+  href: Account_RootAccessControl_1.md
+- name: Secret
+  href: Identity_Secret.md
+- name: ServiceBlog
+  href: Account_ServiceBlog.md
+- name: Tenant
+  href: Account_Tenant.md
+- name: Tenant Feature States
+  href: Account_TenantFeatureState.md
+- name: User
+  href: Identity_User.md
+- name: User Roles
+  href: Account_UserRole_1.md  

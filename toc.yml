@@ -1,3 +1,3 @@
-- name: OCS Content Portal
-  href: Content_Portal/
-  homepage: Content_Portal/OCS_Content_Portal_Overview.md
+- name: OCS documentation
+  href: OCS/
+  homepage: OCS/OCS_Content_Portal_Overview.md

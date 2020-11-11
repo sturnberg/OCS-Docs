@@ -1,0 +1,4 @@
+- name: Index type codes
+  href: supported-types.md
+- name: Compound index
+  href: compound-index.md

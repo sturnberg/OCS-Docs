@@ -1,0 +1,20 @@
+- name: Account Management
+  href: Management/toc.yml
+  topicHref: Management/Management_Overview.md
+- name: Sequential Data Store
+  href: SequentialDataStore/toc.yml
+  topicHref: SequentialDataStore/Data_Store_and_SDS.md
+- name: Data Ingress and OMF
+  href: DataIngress/toc.yml
+  topicHref: DataIngress/Data_Ingress.md
+- name: Metadata Rules
+  topicHref: Metadata/Metadata_Rules_Overview.md
+- name: Assets
+  href: Assets/toc.yml
+  topicHref: Assets/Assets.md
+- name: Data Views
+  href: DataViews/toc.yml
+  topicHref: DataViews/Data_Views_Overview.md
+- name: Operations
+  href: Operations/toc.yml
+  topicHref: Operations/Operations_Overview.md

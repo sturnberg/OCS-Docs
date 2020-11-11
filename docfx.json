@@ -10,7 +10,7 @@
       ],
       "dest": "api",
       "disableGitFeatures": false,
-      "_appLogoPath": "./Content_Portal/Documentation/images/atlas_icon.png",
+      "_appLogoPath": "./OCS/Reference/images/atlas_icon.png",
       "_appName": "OSIsoft Cloud Services Documentation"
     }
   ],
@@ -21,8 +21,8 @@
     "content": [
       {
         "files": [
-	  "Content_Portal/**/**.md",
-	  "Content_Portal/**/toc.yml",
+	  "OCS/**/**.md",
+	  "OCS/**/toc.yml",
           "toc.yml",
           "**.md"
         ]
@@ -31,8 +31,8 @@
     "resource": [
       {
         "files": [
-            "Content_Portal/Quickstarts/images/**",
-	    "Content_Portal/Documentation/images/**"
+            "OCS/Quickstarts/images/**",
+	    "OCS/Reference/images/**"
         ]
       }
     ],

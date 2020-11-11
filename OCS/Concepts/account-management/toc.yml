@@ -1,0 +1,12 @@
+- name: OSIsoft Identity Service 
+  href: Identity_Overview.md
+- name: Consent
+  href: Consent.md
+- name: Credential management
+  href: credential-management.md
+- name: Least privileges 
+  href: least-privileges.md
+- name: Roles
+  href: roles.md
+- name: Token management
+  href: token-management.md
