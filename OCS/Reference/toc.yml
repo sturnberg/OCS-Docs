@@ -1,4 +1,4 @@
-- name: Account Management
+- name: Tenant Management
   href: Management/toc.yml
   topicHref: Management/Management_Overview.md
 - name: Sequential Data Store
@@ -7,8 +7,6 @@
 - name: Data Ingress and OMF
   href: DataIngress/toc.yml
   topicHref: DataIngress/Data_Ingress.md
-- name: Metadata Rules
-  topicHref: Metadata/Metadata_Rules_Overview.md
 - name: Assets
   href: Assets/toc.yml
   topicHref: Assets/Assets.md
