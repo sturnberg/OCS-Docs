@@ -12,6 +12,8 @@
   href: Identity_IdentityProvider.md
 - name: Invitation
   href: Identity_Invitation.md
+- name: Namespace
+  href: Account_Namespace_1.md
 - name: Persisted Grant
   href: Identity_PersistedGrant.md
 - name: Roles

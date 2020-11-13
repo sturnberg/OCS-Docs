@@ -1,20 +1,15 @@
-- name: Namespace
-  href: Account_Namespace_1.md
-- name: SdsTypes
+- name: Types
   href: types/toc.yml
   topicHref: SDS_Types.md
-- name: SdsStreams
+- name: Streams
   href: streams/toc.yml
   topicHref: SDS_Streams.md 
 - name: Stream metadata and tags
   href: metadata/toc.yml
   topicHref: SdsStreamExtra.md
-- name: SdsStreamViews
+- name: StreamViews
   href: views/toc.yml
   topicHref: SDS_Views.md
-- name: Indexes
-  href: indexes/toc.yml
-  topicHref: indexes.md
 - name: Units of measure
   href: uom/toc.yml
   topicHref: Units_of_Measure.md
@@ -24,7 +19,3 @@
 - name: Write data
   href: write-data/toc.yml
   topicHref: Writing_Data.md
-- name: Compression
-  href: Compression.md
-- name: Search in SDS
-  href: Searching.md

@@ -1,4 +1,4 @@
-- name: Stream fields and properties table
+- name: Stream definition
   href: stream-properties.md
 - name: StreamPrpertyOverride object
   href: stream-property-override.md

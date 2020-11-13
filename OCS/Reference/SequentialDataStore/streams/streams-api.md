@@ -1,4 +1,4 @@
-# SdsStream API
+# Stream API
 
 The REST APIs provide programmatic access to read and write SDS data. The API in this 
 section interacts with SdsStreams. When working in .NET framework, convenient SDS client libraries are 

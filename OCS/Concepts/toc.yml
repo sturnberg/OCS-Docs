@@ -1,7 +1,7 @@
 - name: Tenant management 
   href: account-management/toc.yml
   topicHref: Account_Management_Concepts.md
-- name: Data storage
+- name: Sequential Data Store
   href: sds/toc.yml
   topicHref: Data_Storage_Concepts.md
 - name: Data ingress

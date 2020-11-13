@@ -1,10 +1,12 @@
-- name: Fields and properties table
+- name: Type definition
   href: types-properties-table.md
-- name: Type code
-  href: type-code.md
-- name: Type property
-  href: type-property.md
-- name: Type reusability
-  href: type-reuse.md
 - name: Type API
   href: type-api.md
+- name: Type ACL API
+  href: type-acl-api.md
+- name: Type search API
+  href: type-search-api.md
+- name: SdsTypeCode
+  href: type-code.md
+- name: SdsTypeProperty
+  href: type-property.md
