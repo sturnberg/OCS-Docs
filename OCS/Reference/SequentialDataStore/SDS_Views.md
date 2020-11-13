@@ -36,6 +36,28 @@ The same is true for nested SdsStreamViewProperties. For more information, see [
 4. Cannot contain forward slash ("/")
 5. Can contain a maximum of 100 characters
 
+### Stream views mapping
+
+SDS automatically maps properties from the source to the target type when it is straightforward:
+ - The properties are in the same position
+ - The properties are of the same data type
+ - The properties are of the same name
+
+See [Work with StreamViews in .NET framework](#work-with-sdsstreamviews-in-net-framework) below for how automatic mapping works.  
+
+If needed, you can specify mapping. SDS largely supports mapping within the same data type. 
+
+**Mapping compatibility chart**
+ 
+| Source type\ Target type    | Numeric types 	| Nullable numeric types 	| Enumeration types 	| Nullable enumeration types 	| Object types    	| 
+|----------------------------	|---------------	|------------------------	|-------------------	|----------------------------	|--------------------|
+| Numeric types              	| Yes           	| Yes                    	| No                	| No                         	| No                 |
+| Nullable numeric types     	| Yes           	| Yes                    	| No                	| No                         	| No                 |
+| Enumeration types          	| No            	| No                     	| Yes               	| Yes                        	| No                 |
+| Nullable enumeration types 	| No            	| No                     	| Yes               	| Yes                        	| No                 | 
+| Object types               	| No            	| No                     	| No                	| No                         	| Yes*               |
+
+\*: Mappable if `typeId` matches between the source and the target type 
 
 ## SdsStreamViewProperty
 The SdsStreamView Properties collection provides detailed instructions for specifying the mapping of 

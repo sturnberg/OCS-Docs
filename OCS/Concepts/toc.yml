@@ -4,8 +4,6 @@
 - name: Data storage
   href: sds/toc.yml
   topicHref: Data_Storage_Concepts.md
-- name: Data contextualization
-  topicHref: Metadata/Metadata_Rules_Overview.md
 - name: Data ingress
   href: ingress/toc.yml
   topicHref: ingress/pi-to-ocs.md
