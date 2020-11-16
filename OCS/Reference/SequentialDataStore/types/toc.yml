@@ -2,10 +2,10 @@
   href: types-properties-table.md
 - name: Type API
   href: type-api.md
-- name: Type ACL API
-  href: type-acl-api.md
 - name: Type search API
   href: type-search-api.md
+- name: Type ACL API
+  href: type-acl-api.md
 - name: SdsTypeCode
   href: type-code.md
 - name: SdsTypeProperty

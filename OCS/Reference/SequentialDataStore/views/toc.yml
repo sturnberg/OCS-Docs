@@ -2,3 +2,7 @@
   href: views-properties.md
 - name: Stream view API 
   href: views-api.md
+- name: Stream view search API 
+  href: views-search-api.md
+- name: Stream view ACL API 
+  href: views-acl-api.md

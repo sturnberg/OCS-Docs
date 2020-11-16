@@ -7,7 +7,7 @@
 - name: Stream metadata and tags
   href: metadata/toc.yml
   topicHref: SdsStreamExtra.md
-- name: StreamViews
+- name: Stream views
   href: views/toc.yml
   topicHref: SDS_Views.md
 - name: Units of measure

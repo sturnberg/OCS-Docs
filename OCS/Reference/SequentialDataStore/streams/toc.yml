@@ -1,6 +1,10 @@
 - name: Stream definition
   href: stream-properties.md
-- name: StreamPrpertyOverride object
+- name: StreamPropertyOverride definition
   href: stream-property-override.md
-- name: Streams API
+- name: Stream API
   href: streams-api.md
+- name: Stream search API
+  href: stream-search-api.md
+- name: Stream ACL API
+  href: stream-acl-api.md
