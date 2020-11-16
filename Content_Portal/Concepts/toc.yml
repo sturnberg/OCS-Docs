@@ -1,11 +1,15 @@
 - name: Account Management 
   topicHref: Account_Management_Concepts.md
+- name: AAD Consent to OSIsoft Applications
+  topicHref: Consent.md
 - name: Credential Management 
   topicHref: Credential_Management.md
 - name: Data Storage
   topicHref: Data_Storage_Concepts.md
 - name: Least Privilege
   topicHref: Least_Privilege.md
+- name: OSIsoft Identity Service
+  topicHref: Identity_Overview.md
 - name: Roles
   topicHref: Roles.md
 - name: Token Management
