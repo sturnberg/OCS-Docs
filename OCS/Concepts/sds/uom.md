@@ -1,4 +1,50 @@
-﻿# Supported Units of Measure
+﻿# Units of Measure
+
+The Sequential Data Store (SDS) provides a collection of built-in units of measure (UOM). These units of measure can be [associated](#associating-a-unit-of-measure-with-a-sdstype) with SdsStreams and SdsTypes in order to provide unit information for stream data that model measurable quantities. If data has unit information associated with it, SDS is able to support unit conversions when retrieving data. See [Reading data](xref:sdsReadingData) for more information.
+
+Since a unit of measure (meter, for example) defines the magnitude of a quantity (for example, length), SDS represents this by way of two objects: SdsUom and SdsUomQuantity. 
+
+## Supported Quantities
+A list of the supported quantities and their base unit of measures is below. Supported quantities are read-only.
+
+| Quantity Id                                 | Base Uom Id               |
+| ------------------------------------------- | ------------------------- |
+| Angular Velocity                            | radian per second         |
+| Area                                        | square meter              |
+| Computer Storage                            | byte                      |
+| Density                                     | kilogram per cubic meter  |
+| Dynamic Viscosity                           | pascal second             |
+| Electric Charge                             | coulomb                   |
+| Electric Current                            | ampere                    |
+| Electric Potential                          | volt                      |
+| Electric Resistance                         | ohm                       |
+| Energy                                      | joule                     |
+| Entropy and Heat Capacity                   | joule per kelvin          |
+| Force                                       | newton                    |
+| Frequency                                   | hertz                     |
+| Length                                      | meter                     |
+| Luminous Intensity                          | candela                   |
+| Mass                                        | kilogram                  |
+| Mass Flow Rate                              | kilogram per second       |
+| Molar Flow Rate                             | mole per second           |
+| Molecular Weight                            | kilogram per mole         |
+| Amount of Substance                         | mole                      |
+| Plane Angle                                 | radian                    |
+| Power                                       | watt                      |
+| Pressure                                    | pascal                    |
+| Quantity                                    | count                     |
+| Ratio                                       | percent                   |
+| Specific Energy                             | joule per kilogram        |
+| Specific Entropy and Specific Heat Capacity | joule per kilogram kelvin |
+| Specific Volume                             | cubic meter per kilogram  |
+| Speed                                       | meter per second          |
+| Temperature                                 | kelvin                    |
+| Temperature (Delta)                         | delta kelvin              |
+| Time                                        | second                    |
+| Volume                                      | cubic meter               |
+| Volume Flow Rate                            | cubic meter per second    |
+
+## Supported Units of Measure
 A list of the supported units of measure is below. Supported units of measure are read-only.
 
 | Uom Id                                           | Abbreviation | Quantity Id                                 | Conversion Factor | Conversion Offset |

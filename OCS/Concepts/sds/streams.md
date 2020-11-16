@@ -11,3 +11,11 @@ Stream identifiers must be unique within a namespace.
 A stream must include a `TypeId` that references the identifier of an existing type.
 Stream management using the .NET SDS client libraries is performed through `ISdsMetadataService`.
 Create the `ISdsMetadataService`, using one of the ``Service.GetMetadataService()`` factory methods.
+
+## Streams Metadata and Tags
+Stream metadata is represented as a dictionary of string keys and associated string values. 
+It can be used to associate additional information with a stream. Stream tags are represented 
+as a list of strings. Tags can be used to categorize or denote special attributes of streams. 
+The Stream Metadata API And Stream Tags API do not accept the search query parameter in their respective
+Get calls. However, stream tags and metadata can be used as criteria in search query strings to return 
+Stream results with the [Stream](xref:sdsStreams) API.

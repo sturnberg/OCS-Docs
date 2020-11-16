@@ -1,4 +1,4 @@
-# SdsUom
+# Units definition
 
 A SdsUom represents a single unit of measure, such as 'meter'.
 

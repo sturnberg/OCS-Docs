@@ -1,4 +1,4 @@
-## SdsUomQuantity
+## Quantities definition
 
 A SdsUomQuantity represents a single measurable quantity (for example, length).
 
