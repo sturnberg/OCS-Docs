@@ -6,7 +6,7 @@ things to note when writing to an SdsStream.
 When working in .NET, convenient SDS Client libraries are available. The `ISdsDataService` interface, accessed using the
 ``SdsService.GetDataService()`` helper, defines the available functions.
 
-All writes rely on a stream’s key or primary index. The primary index determines the order of events in the stream. Secondary indexes are updated, but they do not contribute 
+All writes rely on a stream's key or primary index. The primary index determines the order of events in the stream. Secondary indexes are updated, but they do not contribute 
 to the request. All references to indexes are to the primary index.
 
 **\*Notes:** Use the ISO 8601 representation of dates and times in SDS, `2020-02-20T08:30:00-08:00` for February 20, 2020 at 8:30 AM PST, for example.
