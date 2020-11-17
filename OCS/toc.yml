@@ -4,11 +4,13 @@
   homepage: index.md
 - name: Get Started
   href: Quickstarts/toc.yml
+  topicHref: Quickstarts/Quick_Start.md
 - name: Concepts
   href: Concepts/toc.yml
   topicHref: Concepts/Concepts_Overview.md
 - name: Tutorials
   href: Tutorials/toc.yml
+  topicHref: Tutorials/create-stream-views.md
 - name:  API Reference
   href: Reference/toc.yml
   topicHref: Reference/OSIsoft_Cloud_Services.md
