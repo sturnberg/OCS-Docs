@@ -1,6 +1,4 @@
 - name: What is OCS?
-  href: OSIsoft_Cloud_Services.md
-- name: What does OCS do?
-  href: Function.md
+  href: What-Is-OCS.md
 - name: Who uses OCS?
-  href: users-ocs.md
+  href: Who-Uses-OCS.md
