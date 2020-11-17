@@ -4,13 +4,14 @@
   href: indexes.md
 - name: Streams
   href: streams.md
+- name: Metadata rules
+  href: Metadata_Rules_Overview.md
 - name: Stream views
   href: stream-views.md
 - name: Search in SDS
   href: Searching.md
-- name: Metadata rules
-  href: Metadata_Rules_Overview.md
-- name: Compression
-  href: Compression.md
+- name: Read data
+  href: read-data/toc.yml
+  topicHref: read-data.md
 - name: Units of measure
   href: uom.md

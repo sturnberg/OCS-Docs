@@ -1,3 +1,7 @@
+---
+uid: create-stream-views
+---
+
 # Create stream views
 
 To work with stream views, you first need to have types, streams and streams data defined. 

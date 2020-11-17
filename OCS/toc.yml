@@ -1,6 +1,7 @@
 - name: Overview
   href: Overview/toc.yml
-  topicHref: OCS_Content_Portal_Overview.md
+  topicHref: index.md
+  homepage: index.md
 - name: Get Started
   href: Quickstarts/toc.yml
 - name: Concepts

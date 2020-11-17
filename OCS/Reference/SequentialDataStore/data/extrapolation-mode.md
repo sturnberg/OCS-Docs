@@ -1,5 +1,4 @@
-
-# Extrapolation
+# ExtrapolationMode
 
 Extrapolation defines how a stream responds to requests with indexes that precede or follow all 
 data in the steam. ExtrapolationMode acts as a master switch to determine whether extrapolation 
@@ -38,4 +37,3 @@ show how ExtrapolationMode affects returned values for each InterpolationMode va
 For additional information about the effect of read characteristics, see the
 documentation on the [read method](xref:sdsReadingDataApi)
 you are using.
-

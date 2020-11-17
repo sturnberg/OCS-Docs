@@ -1,3 +1,6 @@
 - name: OCS documentation
-  href: OCS/
-  homepage: OCS/OCS_Content_Portal_Overview.md
+  dropdown: true
+  items:
+  - name: OCS API documentation
+    href: OCS/
+    topicHref: OCS/index.md

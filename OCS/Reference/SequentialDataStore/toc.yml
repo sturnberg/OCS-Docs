@@ -1,3 +1,6 @@
+- name: Data
+  href: data/toc.yml
+  topicHref: data.md
 - name: Quantities
   href: quantities/toc.yml
   topicHref: Units_of_Measure.md
@@ -19,9 +22,3 @@
 - name: Units
   href: units/toc.yml
   topicHref: Units_of_Measure.md
-- name: Read data
-  href: read-data/toc.yml
-  topicHref: Reading_Data.md
-- name: Write data
-  href: write-data/toc.yml
-  topicHref: Writing_Data.md
