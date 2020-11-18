@@ -4,16 +4,12 @@ uid: WhatIsOCS
 
 # What is OSIsoft Cloud Services (OCS)?
 
-OSIsoft Cloud Services (OCS) is a cloud data platform for storing, retrieving, and analyzing sequential data. It provides real-time data transfer and easily scales to high data volumes. 
-
-OCS creates a seamless, trustworthy data infrastructure, incorporating information from sensors, assets, plants, enterprises, and communities of interested users. This enables Operational Technology (OT) to be fully utilized across your organization. 
+OSIsoft Cloud Services (OCS) is a cloud data platform for storing, retrieving, and analyzing sequential data. It provides real-time data transfer and easily scales to high data volumes. OCS creates a seamless, trustworthy data infrastructure, incorporating information from sensors, assets, plants, enterprises, and communities of interested users. This enables Operational Technology (OT) to be fully utilized across your organization. 
 
 OCS offers the following capabilities: 
 
-**QUESTION: We ordered these with the ones most relevant and eye-catching to users first. They are all important, we might need additional sections, and/or to re-order these.** 
-
 * [Remote monitoring from the network edge](#remote-monitoring-from-the-network-edge) 
-* [Easy data import (ingress)](#easy-data-import)
+* [Easy data import](#easy-data-import)
 * [Data aggregation from many sources](#data-aggregation-from-many-sources)  
 * [Integration with custom applications and business intelligence tools and new types of data sharing](#integration-with-custom-applications-and-business-intelligence-tools-and-new-types-of-data-sharing) 
 * [Management of assets by using the Asset Explorer](#management-of-assets-by-using-asset-explorer) 
@@ -37,9 +33,7 @@ You can choose the data collection technology that meets your specific needs:
 
 ## Easy data import
 
-**QUESTION: We do need to explain some terms that might not be familiar to those new to the cloud and OCS: ingress, elastic, shape come to mind. There are others…** 
-
-OCS provides a variety of methods to ingress and organize (or shape) your data. You can ingress data from an asset, an external application, or from PI Server directly to OCS, by using any or all of the following methods: 
+OCS provides a variety of methods to ingress and organize or shape your data. You can ingress data from an asset, an external application, or from PI Server directly to OCS, by using any or all of the following methods: 
 
 * **PI to OCS**:  The PI to OCS utility transfers PI time-series data from an on-premises PI Server into OCS. PI to OCS maps PI Data Archive data shapes to SDS types and streams. 
 * **OSIsoft Message Format (OMF)**: A platform-independent format for passing JSON messages to OCS using an HTTP client. You can use OMF to achieve high-throughput asynchronous data ingress into the Sequential Data Store. 
@@ -72,9 +66,7 @@ OCS also offers opportunities for many new types of data consumers. For example,
 
 ## Management of assets by using Asset Explorer
 
-Asset Explorer allows you to view and create asset definitions and visualize asset information details. 
-
-Asset metadata provides semi-static information about a particular asset, for example the make, model, and location of a truck. This information makes it easy to search through a fleet of assets and identify the assets of interest. 
+Asset Explorer allows you to view and create asset definitions and visualize asset information details. Asset metadata provides semi-static information about a particular asset, for example the make, model, and location of a truck. This information makes it easy to search through a fleet of assets and identify the assets of interest. 
 
 ![Asset Manager](images/asset-manager.png)
 
@@ -88,9 +80,7 @@ The display of the status of a critical measurement can be used to flag problems
 
 ## Secure and robust data infrastructure
 
-OCS is built from the ground up to ensure security. 
-
-The OCS platform is based on industry standard techniques to ensure the strongest possible data integrity. All users authenticate through trusted identity providers, such as Google, Microsoft Live, and Azure Active Directory. Authenticated users can only perform actions for which their role is authorized. Machine access to OCS is controlled through a variety of defensive strategies. All data in OCS is fully encrypted in transit and at rest. 
+OCS is built from the ground up to ensure security. The OCS platform is based on industry standard techniques to ensure the strongest possible data integrity. All users authenticate through trusted identity providers, such as Google, Microsoft Live, and Azure Active Directory. Authenticated users can only perform actions for which their role is authorized. Machine access to OCS is controlled through a variety of defensive strategies. All data in OCS is fully encrypted in transit and at rest. 
 
 OCS is designed to prevent your data from being accessible to others. Each organization using OCS, known as a tenant, sets up one or more logical units of work called a *namespace*. Each namespace is distinct. When you request a new namespace, OCS automatically allocates the resources needed to support your data infrastructure needs. The storage and computing resources for each namespace are completely separate from all other namespaces. 
 
@@ -102,16 +92,12 @@ When a tenant requests a new namespace, OCS provisions a new set of microservice
 
 ## Interruption resilience
 
-To prevent data interruptions or loss, OCS incorporates many safeguards. 
-
-By design OCS is built for high availability. You are not required to perform any specific actions to ensure continuous access to reliable, distributed data storage. 
+To prevent data interruptions or loss, OCS incorporates many safeguards. By design OCS is built for high availability. You are not required to perform any specific actions to ensure continuous access to reliable, distributed data storage. 
 
 OSIsoft continuously tests OCS to ensure the platform is performing reliably. Both the platform and the underlying operating systems are updated regularly. In addition, OSIsoft conducts frequent threat analyses to thwart potential exploitations. Load balancing precludes distributed denial of service attacks, and a gateway prevents unauthorized access to resources. 
 
 ## Easy management and maintenance
 
-OSIsoft manages, operates, and maintains all aspects of the OCS platform. 
-
-OCS is built and deployed on Microsoft Azure and operates outside the OSIsoft corporate firewall. Currently, OCS runs in two Azure regions: West US and West Europe. By housing the platform in multiple regions, OCS accommodates regulations that mandate where data must be stored. 
+OSIsoft manages, operates, and maintains all aspects of the OCS platform. OCS is built and deployed on Microsoft Azure and operates outside the OSIsoft corporate firewall. Currently, OCS runs in two Azure regions: West US and West Europe. By housing the platform in multiple regions, OCS accommodates regulations that mandate where data must be stored. 
 
 With OCS, you can perform virtually all actions on your data infrastructure by using modern, secure, developer-friendly REST APIs. OCS also provides an easy-to-use user interface. 
