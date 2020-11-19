@@ -2,7 +2,7 @@
 uid: sdsWritingDataApi
 ---
 
-# API calls for writing data
+# Write data API
 
 #### Example Type, Stream, and Data
 

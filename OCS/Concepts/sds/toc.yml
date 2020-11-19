@@ -4,7 +4,7 @@
   href: indexes.md
 - name: Streams
   href: streams.md
-- name: Metadata rules
+- name: Metadata rule
   href: Metadata_Rules_Overview.md
 - name: StreamViews
   href: stream-views.md
