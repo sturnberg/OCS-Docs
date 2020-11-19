@@ -1,4 +1,4 @@
-# Streams metadata API 
+# Stream metadata API 
 
 ## `Get stream metadata`
 Returns the metadata dictionary for the specified stream.   

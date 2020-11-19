@@ -1,4 +1,4 @@
-- name: Quantities definition
+- name: Quantity definition
   href: sds-uom-quantity.md
 - name: Quantities API
   href: quantity-api.md

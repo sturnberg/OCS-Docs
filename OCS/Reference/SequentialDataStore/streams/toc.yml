@@ -1,4 +1,4 @@
-- name: Streams definition
+- name: Stream definition
   href: stream-properties.md
 - name: StreamPropertyOverride definition
   href: stream-property-override.md

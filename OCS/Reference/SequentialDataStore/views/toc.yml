@@ -1,4 +1,4 @@
-- name: StreamViews definition 
+- name: StreamView definition 
   href: views-properties.md
 - name: StreamViews API 
   href: views-api.md
