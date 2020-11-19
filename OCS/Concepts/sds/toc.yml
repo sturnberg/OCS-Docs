@@ -6,7 +6,7 @@
   href: streams.md
 - name: Metadata rules
   href: Metadata_Rules_Overview.md
-- name: Stream views
+- name: StreamViews
   href: stream-views.md
 - name: Search in SDS
   href: Searching.md

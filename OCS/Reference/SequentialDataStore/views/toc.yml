@@ -1,8 +1,8 @@
-- name: Stream view definition 
+- name: StreamViews definition 
   href: views-properties.md
-- name: Stream view API 
+- name: StreamViews API 
   href: views-api.md
-- name: Stream view search API 
+- name: StreamViews search API 
   href: views-search-api.md
-- name: Stream view ACL API 
+- name: StreamViews ACL API 
   href: views-acl-api.md

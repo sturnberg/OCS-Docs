@@ -1,10 +1,10 @@
-- name: Type definition
+- name: Types definition
   href: types-properties-table.md
-- name: Type API
+- name: Types API
   href: type-api.md
-- name: Type search API
+- name: Types search API
   href: type-search-api.md
-- name: Type ACL API
+- name: Types ACL API
   href: type-acl-api.md
 - name: SdsTypeCode
   href: type-code.md
