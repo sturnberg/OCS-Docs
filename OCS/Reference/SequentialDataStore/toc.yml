@@ -7,10 +7,10 @@
 - name: Streams
   href: streams/toc.yml
   topicHref: SDS_Streams.md 
-- name: Streams metadata API
+- name: Stream Metadata
   href: metadata/toc.yml
   topicHref: SdsStreamExtra.md
-- name: Streams tags API
+- name: Stream Tags
   href: tag/toc.yml
   topicHref: SdsStreamExtra.md
 - name: Stream Views

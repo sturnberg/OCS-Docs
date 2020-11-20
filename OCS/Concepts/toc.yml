@@ -6,6 +6,6 @@
   topicHref: Data_Storage_Concepts.md
 - name: Data ingress
   href: ingress/toc.yml
-  topicHref: ingress/pi-to-ocs.md
+  topicHref: ingress/Ingress.md
 - name: Role-Based Access Control
   href: Access_Control.md

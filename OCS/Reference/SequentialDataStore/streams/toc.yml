@@ -6,5 +6,5 @@
   href: streams-api.md
 - name: Streams search API
   href: stream-search-api.md
-- name: Streams ACL API
+- name: Streams Access Control API
   href: stream-acl-api.md

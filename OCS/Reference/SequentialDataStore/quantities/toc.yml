@@ -2,5 +2,5 @@
   href: sds-uom-quantity.md
 - name: Quantities API
   href: quantity-api.md
-- name: Quantities ACL API
+- name: Quantities Access Control API
   href: quantity-acl-api.md

@@ -1,10 +1,13 @@
 - name: Tenant Management
   href: Management/toc.yml
   topicHref: Management/Management_Overview.md
+- name: Identity Access Management
+  href: Identity/toc.yml
+  topicHref: Identity/Identity_Overview.md
 - name: Sequential Data Store
   href: SequentialDataStore/toc.yml
   topicHref: SequentialDataStore/Data_Store_and_SDS.md
-- name: Data Ingress and OMF
+- name: Ingress
   href: DataIngress/toc.yml
   topicHref: DataIngress/Data_Ingress.md
 - name: Assets

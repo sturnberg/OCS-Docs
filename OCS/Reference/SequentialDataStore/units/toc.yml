@@ -2,5 +2,5 @@
   href: sdsuom.md
 - name: Units API
   href: uom-api.md
-- name: Units ACL API
+- name: Units Access Control API
   href: uom-acl-api.md
