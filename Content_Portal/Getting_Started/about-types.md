@@ -3,6 +3,10 @@ uid: designConsiderationsSDSTypes
 ---
 # Design considerations when creating SDS types
 
+<<WRITER'S COMMENT: Introduction to be added.>>
+
+The following are guidelines to use when creating SDS types:
+
 - Where possible, include multiple value properties that use the same index in one SDS type. This is a more efficient way to manage your data and to transfer data into and out of OCS. In the following example, both Pressure and Temperature value properties use the DateTime index and the data values are read at the same time or index. <!-- Note: This diagram doesn't match what they're creating in the Getting Started because they can't set UOM through the UI, right? That may be okay, as long as we clarify that UOM must be set programmatically. -->
     ![](images\types-1.png)
 
@@ -22,5 +26,7 @@ uid: designConsiderationsSDSTypes
 - For custom applications using the SDS client libraries or OSIsoft Messaging Format (OMF) OSIsoft recommends that you use the client libraries to define the type rather than defining them in the OSIsoft portal. This ensures that the type the application expects matches the type in the Sequential Data Store. You can also take advantage of the custom property fields such as UOM when defining a property using the .NET client libraries methods.
 
 ## Inherited Attributes
+
+<<WRITER'S COMMENT: Content to be added.>>
 
 <! -- We might want to add some general discussion about inheritance of attributes and why/when you want to define these attributes on the type. -->
