@@ -1,4 +1,4 @@
-# Account Management Concepts
+# Tenant Management Concepts
 
 
 
