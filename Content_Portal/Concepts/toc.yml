@@ -1,12 +1,11 @@
-- name: Tenant Management 
+- name: Tenant management 
+  href: account-management/toc.yml
   topicHref: Account_Management_Concepts.md
-- name: Credential Management 
-  topicHref: Credential_Management.md
-- name: Data Storage
+- name: Sequential Data Store
+  href: sds/toc.yml
   topicHref: Data_Storage_Concepts.md
-- name: Least Privilege
-  topicHref: Least_Privilege.md
-- name: Roles
-  topicHref: Roles.md
-- name: Token Management
-  topicHref: Token_Management.md
+- name: Data ingress
+  href: ingress/toc.yml
+  topicHref: ingress/Ingress.md
+- name: Role-Based Access Control
+  href: Access_Control.md

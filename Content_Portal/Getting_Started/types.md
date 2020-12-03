@@ -6,15 +6,13 @@ uid: GSTypes
 
 Sequential Data Store (SDS) types define the shape and structure of events and how to associate events within a stream of data. An SDS type is comprised of at least two properties. One property serves as the primary index, most commonly a timestamp or DateTime. In addition, it has one or more additional properties called value properties which describes the data in each stream event. Each value property can have a different property type. For example, In the "Get Started with Types" procedure below, you create two value properties with Ids called Temperature and Pressure. A wide variety of property types are supported. For a list of the supported property types, see [Supported Types](xref:sdsTypes#supported-types). Note: You can also create complex secondary indexes. SDS types are immutable. Once created, they cannot be updated. Therefore, it is important to determine the correct type definition before you begin building streams and data in the Sequential Data Store.
 
-For more information on SDS Types, see <!-- add xref.-->
+For more information, see [Types](xref:sdsTypes).
 
 ### PI Core Counterpart
 
 An SDS type is comparable to PI point type in PI Data Archive. For example, a PI point of type float32 is comparable to an SDS type with a DateTime index property and a float32 value property. Because they are similar, if you use PI to OCS to import data into SDS, some "PI-\*" types are created automatically in SDS that map to existing PI point types. PI Data Archive has a predefined list of supported PI point types. The data structure of the Sequential Data Store is more flexible because SDS types can include multiple data measurements of different data types, and data can be indexed using a non-time-series index or multiple indexes. 
 
 ## Best Practices for Creating Types
-
-<!-- This list is getting pretty long and a little "in the weeds." I'm wondering if for the new customer, we should keep it simple and point them to a longer discussion on Best Practices. For example, we could keep the first three bullets and part of #5 here. And put the rest in the "Design considerations when creating SDS types" topic that we link to. -->
 
 The following are best practices OSIsoft recommends for creating types and streams.
 
@@ -28,15 +26,8 @@ The following are best practices OSIsoft recommends for creating types and strea
 
 - Where possible, include multiple value properties that use the same index in one SDS type. This is a more efficient way to manage your data and to transfer data into and out of OCS. For example, in the "Get Started with Types" procedure, both value properties use the DateTime index. Use a [stream view](xref:DataStorageConcepts#sds-stream-views) to view a subset of the type's properties.
 
-  <!--  I moved #4 to the "Design considerations when creating SDS types" topic.  --><!-- 4. Do not include value properties that are read at different times or indices in the same SDS type. For example, if a device measures temperature every 30 seconds and pressure every 45 seconds, OSIsoft recommends that you define two types, one for temperature and one for pressure. For a more extended discussion on creating SDS types, see [Design considerations when creating SDS types](xref:DesignConsiderationsSDSTypes). -->
+- Define all of the properties of the SDS type at the time it is created. If you anticipate adding properties to the stream later, OSIsoft recommends that you create a separate stream for each property. <!-- 
 
-- Define all of the properties of the SDS type at the time it is created. If you anticipate adding properties to the stream later, OSIsoft recommends that you create a separate stream for each property. <!-- This was #5. Keep this in the Best Practices here. -->
-
-   <!-- I moved the rest of the content to the more detailed discussion. --><!-- If you expect that different devices will have different sets of properties at different points in time, OSIsoft recommends that you use separate streams for each measurement. For example, you may have an instrument that currently measures temperature and pressure, but it may later also measure humidity. In this example, use separate streams for temperature and pressure. Later, if you add humidity, this data will be in its own stream. Using separate streams for each measurement simplifies managing the measurements in multiple devices over time. -->
-
-   <!-- 6. If properties are added to a type later, you must create a new type that includes all the properties of the original type, plus the new properties. Use a stream view to convert the existing streams to the new stream type and migrate the data. There are no values for the new properties for the existing streams, and null values are assigned. Before you migrate your data, be sure to consider the effect of the null values on your application and ensure that the application will not break if it encounters null values. -->
-
-   <!-- 7. For custom applications using the SDS client libraries or OSIsoft Messaging Format (OMF) OSIsoft recommends that you use the client libraries to define the type rather than defining them in the OSIsoft portal. This ensures that the type the application expects matches the type in the Sequential Data Store. You can also take advantage of the custom property fields such as UOM when defining a property using the .NET client libraries methods. -->
 
 For more information about best practices to consider when creating your types, see [Design considerations when creating SDS types](xref:designConsiderationsSDSTypes).
 ## Get Started with Types

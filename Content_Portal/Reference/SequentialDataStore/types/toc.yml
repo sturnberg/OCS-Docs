@@ -1,0 +1,16 @@
+- name: Type definition
+  href: types-properties-table.md
+- name: Types API
+  href: type-api.md
+- name: Types search API
+  href: type-search-api.md
+- name: Types Access Control API
+  href: type-acl-api.md
+- name: InterpolationMode
+  href: interpolation-mode.md
+- name: ExtrapolationMode
+  href: extrapolation-mode.md
+- name: SdsTypeCode
+  href: type-code.md
+- name: SdsTypeProperty
+  href: type-property.md

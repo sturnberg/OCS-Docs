@@ -1,0 +1,4 @@
+- name: Quick Start Sequential Data Store
+  topicHref: Quick_Start.md
+- name: Create stream views
+  topicHref: create-stream-views.md

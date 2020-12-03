@@ -1,0 +1,6 @@
+- name: Sample code for types 
+  href: types-samples.md
+- name: Sample code for stream views 
+  href: views-samples.md
+- name: Sample code for indexes 
+  href: indexes-samples.md

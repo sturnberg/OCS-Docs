@@ -1,14 +1,26 @@
-- name: OSIsoft Cloud Services
-  href: OCS_Content_Portal_Overview.md
-- name: Getting Started with OCS
-  href: Getting_Started/toc.yml
-  topicHref: Getting_Started/getting-started-intro.md
-- name: Quickstarts
-  href: Quickstarts/toc.yml
-- name: How-To Guides
-  href: How_To_Guides/toc.yml
-- name: API Reference
-  href: Documentation/toc.yml
-  topicHref: Documentation/OSIsoft_Cloud_Services.md
+- name: Overview
+  href: Overview/toc.yml
 - name: Concepts
   href: Concepts/toc.yml
+  topicHref: Concepts/Concepts_Overview.md
+- name: Getting Started
+  href: Getting_Started/toc.yml
+  topicHref: Getting_Started/getting-started-intro.md
+- name: Visualization
+  href: Visualization/toc.yml
+  topicHref: Visualization/Getting_Started.md
+- name: Data Ingress
+  href: Data Ingress/toc.yml
+  topicHref: Data Ingress/OMF.md
+- name: Sequential Data Store
+  href: SDS/toc.yml
+  topicHref: SDS/Quick_Start.md
+- name: Data Egress
+  href: Data Egress/toc.yml
+  topicHref: Data Egress/Add a data view.md
+- name:  API Reference
+  href: Reference/toc.yml
+  topicHref: Reference/OSIsoft_Cloud_Services.md
+- name: Resources
+  href: Resources/toc.yml
+  topicHref: Resources/OSIsoft_Cloud_Services.md

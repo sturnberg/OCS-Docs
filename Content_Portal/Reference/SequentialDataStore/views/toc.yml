@@ -1,0 +1,12 @@
+- name: StreamView definition 
+  href: views-properties.md
+- name: StreamViews API 
+  href: views-api.md
+- name: StreamViews search API 
+  href: views-search-api.md
+- name: StreamViews Access Control API 
+  href: views-acl-api.md
+- name: SdsStreamViewProperty
+  href: SdsStreamViewProperty.md
+- name: SdsStreamViewMap
+  href: SdsStreamViewMap.md

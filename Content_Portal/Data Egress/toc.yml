@@ -1,0 +1,6 @@
+- name: Add a data view
+  topicHref: Add a data view.md
+- name: Define a data view
+  topicHref: DefineaDataView/Quick_Start_Define_a_Data_View.md
+- name: Get Data View Data
+  topicHref: GetDataViewData/Quick_Start_Get_Data_View_Data.md

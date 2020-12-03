@@ -16,9 +16,7 @@ In PI Core Services, a namespace is similar to a full PI Server. Much like a PI 
 
 ## Namespace IDs
 
-The namespace ID must be unique across the account. <!--- Is an account the same thing as a tenant? --->
-
-<!-- DB: Yes, Derek and I had discussed that we likely need a separate page discussing what an account/tenant is, and settle on using one term or the other. Currently 'account' seems more prevalent in existing documentation. --><!-- LA: Recently, I heard that we are moving away from "account" and will be removing all instances of it in our documentation. -->
+The namespace ID must be unique across the tenant.
 
 The namespace ID must meet these requirements:
 
@@ -26,7 +24,7 @@ The namespace ID must meet these requirements:
 - Can include alphanumeric characters, underscores (\_), dashes (-), spaces, and periods
 - Cannot contain two consecutive periods or two consecutive underscores
 - Cannot begin or end with a period
-- Cannot start with two consecutive underscores <!-- LA: Does this mean it can end with two consecutive underscores? --><!-- DB: I don't know. We would likely have to verify with the dev teams. -->
+- Cannot start with two consecutive underscores <!-- LA: need to verify this with engineering -->
 - Cannot include leading or trailing white spaces
 
 ## Querying Data Across Namespaces
@@ -45,8 +43,6 @@ The first strategy is recommended for accounts where all the data belongs to one
 The second strategy may be preferable if you are providing a service to multiple end-user customers that use OSIsoft Cloud Services as a backend. This strategy makes it easier to avoid naming conflicts for end-users. It can also make it easier to manage security and assign permissions. However, it is important to note that security on a namespace is not automatically inherited by the objects and collections within it. If your organization has internal data that does not belong to an end-user customer, you may want to consider combining both strategies. Create separate namespaces for each customer and one namespace for internal use that includes your Production, Development, and Staging environments.
 
 ## Get Started with Namespaces
-
-<!-- I know you like the "QuickStart" label. Generally, though, the term "quickstart" is given to a shorter type of document. For example, each topic (Namespaces, Connections, Types, etc.) would be a quickstart. But taken all together, it is more suited to what I would call a  Getting Started Guide-- that is, it's the first document you want users to look at that helps familiarize them with the key parts of your application.-->
 
 Creating a namespace is a resource-intensive operation. Therefore, you may prefer to use an existing namespace. In this procedure, the ID assigned to the namespace is QuickStart. Throughout the Getting Started, we will refer to the namespace with this name. Substitute "QuickStart" with the name of an existing namespace or any other name you prefer.
 
@@ -68,9 +64,7 @@ Creating a namespace is a resource-intensive operation. Therefore, you may prefe
 
     Note: It will take some time for the namespace to be created. 
 
-   <!-- DB: It takes a while to bring a namespace online, basically trying to instruct them to refresh the browser until the process is complete. To be honest I don't think I've ever created a namespace (never had an opportunity to) so I might not be including all the right specific details. -->
-
-   <!-- LA: What is the status while the namespace is being set up? Can we give them an estimate of how long it might take for the namespace status to change to Active? -->
+   <!-- LA: What is the status while the namespace is being set up? Can we give them an estimate of how long it might take for the namespace status to change to Active? Follow up with Derek. -->
 
 5. Select the namespace in the list, and click **Edit Namespace**.  
 
@@ -80,7 +74,7 @@ Creating a namespace is a resource-intensive operation. Therefore, you may prefe
 
 #### How to manage permissions on the namespace
 
-<!-- The question of whether the user will have the necessary permissions to manage the permissions for a particular resource keeps coming up. I think we should discuss it here, the first time they encounter it, or have a separate discussion that explains (briefly) how permissions are handled in OCS. -->
+<!-- DB: I think it makes sense to have that discussion as part of the Roles discussion, since that's the explicit purpose of Roles. But agreed it shouldn't be repeated in every page. --><!-- LA: I will make a pass through all the topics once we've created the Roles topic. -->
 
 Access control is managed by assigning permissions to roles. Each role is granted (**Allow**) or denied (**Deny**) permission to perform an access operation (read, write, delete, or manage permissions). Users are assigned to a role that determines their access to OCS resources. 
 

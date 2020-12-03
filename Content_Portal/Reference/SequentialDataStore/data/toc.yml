@@ -1,0 +1,10 @@
+- name: Read data API
+  href: Reading_Data_API.md
+- name: Write data API
+  href: Writing_Data_API.md
+- name: Bulk data API
+  href: bulk-read.md
+- name: SdsBoundaryType
+  href: boundary-type.md
+- name: SdsSearchMode
+  href: search-mode.md

@@ -1,0 +1,17 @@
+- name: Client Roles
+  href: Account_ClientRole_1.md
+- name: Features
+  href: Account_TenantFeatureState.md
+- name: Namespace
+  href: Account_Namespace_1.md
+- name: Roles
+  href: Account_Role_1.md
+- name: Root Access Control
+  href: Account_RootAccessControl_1.md
+- name: ServiceBlog
+  href: Account_ServiceBlog.md
+- name: Tenants
+  href: Account_Tenant.md
+- name: User Roles
+  href: Account_UserRole_1.md
+  
