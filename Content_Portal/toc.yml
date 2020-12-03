@@ -15,9 +15,9 @@
 - name: Sequential Data Store
   href: SDS/toc.yml
   topicHref: SDS/Quick_Start.md
-- name: Data Egress
-  href: Data Egress/toc.yml
-  topicHref: Data Egress/Add a data view.md
+- name: Data Views
+  href: Data Views/toc.yml
+  topicHref: Data Views/Add a data view.md
 - name:  API Reference
   href: Reference/toc.yml
   topicHref: Reference/OSIsoft_Cloud_Services.md

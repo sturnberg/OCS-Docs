@@ -36,6 +36,7 @@
             "Content_Portal/How_To_Guides/images/**",
             "Content_Portal/Getting_Started/images/**",
             "Content_Portal/Data Egress/images/**",
+            "Content_Portal/Visualization/images/**",
         ]
       }
     ],
