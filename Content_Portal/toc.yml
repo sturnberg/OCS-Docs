@@ -10,14 +10,14 @@
   href: Visualization/toc.yml
   topicHref: Visualization/Getting_Started.md
 - name: Data Collection
-  href: Data Ingress/toc.yml
-  topicHref: Data Ingress/OMF.md
+  href: Data_Ingress/toc.yml
+  topicHref: Data_Ingress/OMF.md
 - name: Sequential Data Store
   href: SDS/toc.yml
   topicHref: SDS/Quick_Start.md
 - name: Data Views
-  href: Data Views/toc.yml
-  topicHref: Data Views/Add a data view.md
+  href: Data_Views/toc.yml
+  topicHref: Data_Views/Add a data view.md
 - name:  API Reference
   href: Reference/toc.yml
   topicHref: Reference/OSIsoft_Cloud_Services.md

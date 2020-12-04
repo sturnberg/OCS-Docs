@@ -37,6 +37,7 @@
             "Content_Portal/Getting_Started/images/**",
             "Content_Portal/Data Egress/images/**",
             "Content_Portal/Visualization/images/**",
+            "Content_Portal/Data_Ingress/PI-to-OCS/images/**",
         ]
       }
     ],
