@@ -9,7 +9,7 @@
 - name: Visualization
   href: Visualization/toc.yml
   topicHref: Visualization/Getting_Started.md
-- name: Data Ingress
+- name: Data Collection
   href: Data Ingress/toc.yml
   topicHref: Data Ingress/OMF.md
 - name: Sequential Data Store
