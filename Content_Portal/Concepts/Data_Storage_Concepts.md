@@ -9,13 +9,20 @@ uid: DataStorageConcepts
 
 Sequential Data Store (SDS) is a streaming database optimized for storing sequential data, typically time-series data. It can store any data that is indexed by an ordered sequence. For each namespace that is created, an SDS instance or SDS resources, is created. The services and storage are scoped to a particular region. Data is written into the SDS using REST APIs. 
 
-## SDS Types
-SDS types (SdsType) define the shape of the data. It is comparable to a type (class) in programming or a table definition in a database.
+## Types
+Types define the datum stored by OCS. It is comparable to a type (class) in programming or a table definition in a database. Types contain:
 
-## SDS Streams
-SDS streams (SdsStream) are groupings of sequential values (or events) that are of the same type. SDS streams are either a collection of ordered events stored in SDS or a series of events (instances of the defined SdsType) indexed by one or more properties.
+* The composition of named properties with primitive types and other Types
+* Arrays of primitive types and other Types
+* Index *annotation*
+* UOMs annotation
 
-SDS streams are defined to organize incoming data from a device into Osisoft Cloud Services (OCS). Metadata and tags can be used to organize the SDS stream data. Metadata is a key-value pair that allows you to add context to your data. Tags are string values that represent SdsStream attributes, a tag that identifies, for example, the region.
+If context is needed, then Stream Type is used. Within the API itself, this is frequently referred to as SdsType.
+
+## Streams
+Streams (SdsStream) are containers for sequential data of some **Type**. Streams are either a collection of ordered events stored in SDS or a series of events (instances of the defined SdsType) indexed by one or more properties.
+
+Streams are defined to organize incoming data from a device into Osisoft Cloud Services (OCS). Metadata and tags can be used to organize the stream data. Metadata is a key-value pair that allows you to add context to your data. Tags are string values that represent SdsStream attributes, a tag that identifies, for example, the region.
 
 
 <!---
@@ -26,7 +33,7 @@ JL: Yes, just like with PI to OCS, you are essentially "shaping" the PI data to 
 SdsStream objects are scoped within a namespace. 
 
 
-## SDS Stream Views
+## Stream Views
 Different personas in the customer's organization may be interested in different data contained in the stream. A process engineer and maintenance person rely on different data in the stream to do their job. SdsType objects are immutable, that is, once created, you cannot alter the data captured by them. However, stream views (SdsStreamView) provide greater flexibility and allow different personas to view only the subset of the stream they are interested in. Stream views are a custom view or logical overlay over your stream data. They allow you to scope down the data that is viewed, to change non-intuitive labels to more user-friendly names, and create arbitrary mappings of data within a stream.
 
 

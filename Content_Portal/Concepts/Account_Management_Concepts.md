@@ -8,7 +8,9 @@ uid: AccountManagementConcepts
 
 ## Tenant
 
-A tenant is how OSIsoft Cloud Services (OCS) refers to a customer, client, or organization. Before a customer can use OCS, a tenant must be provisioned for them. A customer will have at least one tenant and could have more than one tenant. Each tenant has at least one identity provider associated with it. Tenants also span regions within OCS. For example, OCS currently has services hosted in two regions, West US, and West Europe. If the tenant is authorized to use multiple regions, they can create resources (for example, namespaces) in each region.
+A tenant represents the set of services, applications, data, and configuration states available to a customer in OSIsoft Cloud Services (OCS) . Users are associated with a tenant via at least one configured identity provider, a database of user records that allows for authentication, and access to resources can be managed for those users via the assignment of roles. 
+
+Before a customer can use OCS, a tenant must be provisioned for them. A customer will have at least one tenant and could have more than one tenant. Tenants also span regions within OCS. For example, OCS currently has services hosted in two regions, West US, and West Europe. If the tenant is authorized to use multiple regions, they can create resources (for example, namespaces) in each region.
 
 ## Namespace
 
@@ -16,11 +18,11 @@ A namespace is a logical unit of organization for data within a tenant. Each ten
 
 When a namespace is created, a set of OSIsoft Cloud Services (OCS) data processing resources (for example, SDS and Asset service), along with the associated storage resources, are allocated to support that namespace. Each namespace is distinct and separate from other namespaces and, therefore, they isolate the resources contained within it. The resources are scoped to the namespace. Therefore, you can create an SdsType or an SdsStream object with the same name in two different namespaces.
 
-Any data stored within a namespace is tied to that namespace, along with the region where the namespace was allocated. OCS does not currently provide a mechanism to directly transfer data from one namespace (or region) to any other namespace (or region). To migrate data between namespaces, and thus between namespaces in different regions, the data must be exported from the source namespace in OCS, then imported into the destination namespace.
+Any data stored within a namespace is tied to that namespace along with the region where the namespace was allocated. OCS does not currently provide a mechanism to directly transfer data from one namespace (or region) to any other namespace (or region). To migrate data between namespaces, and thus between namespaces in different regions, the data must be exported from the source namespace in OCS, then imported into the destination namespace.
 
 ## User
 
-Authentication of individuals is performed by the identity provider associated with the tenant. When a user logs in to OCS, they authenticate themselves with an identity provider such as Google or Azure Active Directory. The identity provider authenticates the user against the credentials in its database. Upon successful authentication, it passes a token back to OCS granting the user access.
+Authentication of individuals using OCS is performed by the identity provider associated with the tenant. When a user logs in to OCS, they authenticate themselves with an identity provider such as Google or Azure Active Directory. The identity provider authenticates the user against the credentials in its database. Upon successful authentication, it passes a token back to OCS granting the user access.
 
 A user’s access to an OCS object is determined by the roles they are assigned and the corresponding Access Control Lists.  See [Roles](#roles) for more information.
 
@@ -40,8 +42,8 @@ Roles, in combination with Access Control Lists (ACL), determine the level of ac
 
 OCS provides two built-in roles:
 
-- Tenant member &#150; Assigned to every user and client credentials client. Users and clients assigned this role can access objects or information of which they are the owner.
-- Tenant administrator &#150; Role with the highest privileges, the tenant Administrator can create and delete users, clients, and secrets.
+- Tenant member &#150; Assigned to every user and client credentials client. Users and clients assigned this role can log into and and access the OCS portal and objects or information of which they are the owner.
+- Tenant administrator &#150; Role with the highest privileges, the tenant Administrator can manage user access for the tenant and create and delete users, clients, and secrets.
 
 
 
