@@ -2,7 +2,7 @@
 uid: identityConsent
 ---
 
-# AAD Consent to OSIsoft Applications
+# AAD consent to OSIsoft applications
 
 You have chosen to use your organization’s existing Azure Active Directory (AAD) to sign in to your
 OSIsoft Cloud Services (OCS) account. In order to proceed, you first need to complete a consent workflow. In

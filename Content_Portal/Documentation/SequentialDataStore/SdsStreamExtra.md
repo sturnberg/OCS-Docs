@@ -2,7 +2,7 @@
 uid: sdsStreamExtra
 ---
 
-# Stream Metadata and Tags
+# Stream metadata and tags
 SdsStream metadata is represented as a dictionary of string keys and associated string values. 
 It can be used to associate additional information with a stream. SdsStream tags are represented 
 as a list of strings. Tags can be used to categorize or denote special attributes of streams. 
@@ -25,10 +25,10 @@ Returns the metadata dictionary for the specified stream.
 ### Parameters  
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -55,7 +55,7 @@ Allowed for tenant administrator and tenant members
 ```csharp
       Task<IDictionary<string, string>> GetStreamMetadataAsync(string streamId); 
 ```
-  
+
 ***********************
 
 ## `Get stream metadata value`
@@ -69,13 +69,13 @@ Returns the value for the specified key in the metadata dictionary of the specif
 ### Parameters
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`   
 The namespace identifier   
-  
+
 `string streamId`  
 The stream identifier   
-  
+
 `string key`  
 The key specifying the metadata value of interest  
 
@@ -117,10 +117,10 @@ Overwrites any existing metadata; does not merge.
 ### Parameters  
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -150,10 +150,10 @@ Modifies the metadata based on operations specified in the request body. The req
 ### Parameters  
 `string tenantId`  
 The tenant identifier    
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -184,13 +184,13 @@ Deletes the metadata for the specified stream.
 ### Parameters  
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
-  
+
 ### Response  
 The response includes a status code  
 
@@ -217,10 +217,10 @@ Returns the tag list for the specified stream.
 ### Parameters  
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier   
 
@@ -239,7 +239,7 @@ Content-Type: application/json
     "a tag", 
     "another tag" 
 ] 
-```  
+```
 ### Authorization
 Allowed for tenant administrator and tenant members
 
@@ -261,10 +261,10 @@ Overwrites any existing tags; does not merge.
 ### Parameters  
 `string tenantId`  
 The tenant identifier    
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -294,10 +294,10 @@ Deletes the tag list for the specified stream.
 ### Parameters  
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 

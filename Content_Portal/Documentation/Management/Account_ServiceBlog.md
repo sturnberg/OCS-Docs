@@ -8,7 +8,7 @@ API's for reading entries posted on the Service Blog.
 
 ***
 
-## `Get Service Blog Entries`
+## `Get service blog entries`
 
 Returns blog entries ordered by time posted.
 
@@ -41,14 +41,14 @@ Any identity, including anonymous, can retrieve service blog entries.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
-| --- | --- | ---  | 
-| 200 | [SdsServiceBlogEntry] | Returns a list of blog entries. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | [SdsServiceBlogEntry] | Returns a list of blog entries. |
 
 
 ***
 
-## `Get Service Blog Entry`
+## `Get service blog entry`
 
 Returns a blog entry specified by ID.
 
@@ -73,9 +73,9 @@ Any identity, including anonymous, can retrieve service blog entries.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
-| --- | --- | ---  | 
-| 200 | SdsServiceBlogEntry | Returns the specified blog entry. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | SdsServiceBlogEntry | Returns the specified blog entry. |
 
 
 ***

@@ -19,7 +19,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [OCS Authentication documentation](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will appear as follows:
 
@@ -34,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get Tenant Usage`
+## `Get tenant usage`
 
 Gets **Tenant** usage data calculated based on active / 
             completed billing cycles, when the **start** and 
@@ -142,15 +142,9 @@ Forbidden
 Internal server error
 ***
 
-## `Get Namespace Usage`
+## `Get namespace usage`
 
-Gets **Namespace** usage data calculated based on active / 
-            completed billing cycles, when the **start** and 
-            **end** parameters are omitted. When **start** is 
-            provided and **end** is omitted, a single day of usage data
-            is returned. When both **start** and 
-            **end** are provided, daily usage data is returned
-            from the provided range.
+Gets **Namespace** usage data calculated based on active / completed billing cycles, when the **start** and **end** parameters are omitted. When **start** is provided and **end** is omitted, a single day of usage data is returned. When both **start** and **end** are provided, daily usage data is returned from the provided range.
 
 ### Request
 

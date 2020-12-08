@@ -5,8 +5,7 @@ uid: sdsTypes
 # Types
 
 The Sequential Data Store (SDS) stores streams of events and provides convenient ways to find and associate 
-events. Events are stored in SdsStreams (or streams). An SdsType (or type) defines the shape or structure of the 
-event and how to associate events within the stream.
+events. Events are stored in SdsStreams (or streams). An SdsType is a primitive type available in OCS used within the API and REST definitions to identify a stream Type.
 
 Define simple atomic types, such as integers, floats, strings, arrays, and dictionaries, or 
 complex or nested types using the [Properties collection of SdsTypes](#sdstypeproperty). 
@@ -157,7 +156,7 @@ Version                 | 22
 VersionArray            | 222
 
 ## SdsTypeProperty
-The Properties collection defines the fields in an SdsType. 
+The Properties collection defines the fields in an SdsType. Stream properties are a field expected to appear in every stream created from a given type.
 
 The following table shows the required and optional SdsTypeProperty fields. Fields that 
 are not included are reserved for internal SDS use.
@@ -634,7 +633,7 @@ var derivedType = new SdsObjects.SdsType({
 });
 ```
 
-## Type Reusability
+## Type reusability
 SdsTypes can also refer other types by using their identifiers. This enables type re-usability.
 For example, if there is a common index and value property for a group of types that may have additional properties,
 a base type can be created with those properties.
@@ -782,7 +781,7 @@ defines the available functions. See [Types](#types) for general type-related in
 
 ***********************
 
-## `Get Type`
+## `Get type`
 Returns the type corresponding to the specified typeId within a given namespace.
 
 ### Request
@@ -872,7 +871,7 @@ Content-Type: application/json
 
 ***********************
 
-## `Get Type Reference Count`
+## `Get type reference count`
 
 Returns a dictionary mapping the object name to the number of references held by streams, stream views and parent types for the specified type. See [Streams](xref:sdsStreams) and [Steam Views](xref:sdsStreamViews) for more information on the use of types to define streams and stream views. For further details about type referencing please see: [Type Reusability](#type-reusability).
 
@@ -914,7 +913,7 @@ A dictionary mapping object name to number of references.
 
 ***********************
 
-## `Get Types`
+## `Get types`
 Returns a list of types within a given namespace.
 
 If specifying the optional search query parameter, the list of types returned will match 
@@ -1025,7 +1024,7 @@ Content-Type: application/json
 
 ***********************
 
-## `Get or Create Type`
+## `Get or create type`
 
 Creates the specified type. If a type with a matching identifier already exists, SDS compares the 
 existing type with the type that was sent.
@@ -1269,7 +1268,7 @@ The .NET SDS Client Libraries manage redirects.
 
 ***********************
 
-## `Delete Type`
+## `Delete type`
 
 Deletes a type from the specified tenant and namespace. Note that a type cannot be deleted if any streams, stream views, or other types reference it.
 
@@ -1299,7 +1298,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get Types Access Control List`
+## `Get types access control list`
 
 Get the default ACL for the Types collection. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1312,7 +1311,7 @@ Get the default ACL for the Types collection. For more information on ACLs, see 
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
 
@@ -1328,7 +1327,7 @@ The default ACL for Types
 ```
 ***********************
 
-## `Update Types Access Control List`
+## `Update types access control list`
 
 Update the default ACL for the Types collection. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1341,7 +1340,7 @@ Update the default ACL for the Types collection. For more information on ACLs, s
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
 
@@ -1358,7 +1357,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get Type Access Control List`
+## `Get type access control list`
 
 Get the ACL of the specified type. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1371,10 +1370,10 @@ Get the ACL of the specified type. For more information on ACLs, see [Access Con
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string typeId`  
 The type identifier  
 
@@ -1390,7 +1389,7 @@ The ACL for the specified type
 ```
 ***********************
 
-## `Update Type Access Control List`
+## `Update type access control list`
 
 Update the ACL of the specified type. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1405,10 +1404,10 @@ Note that this does not update the ACL for the associated types. For further det
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string typeId`  
 The type identifier  
 
@@ -1424,7 +1423,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get Type Owner`
+## `Get type owner`
 
 Get the Owner of the specified type. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -1437,10 +1436,10 @@ Get the Owner of the specified type. For more information on Owners, see [Access
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string typeId`  
 The type identifier  
 
@@ -1456,7 +1455,7 @@ The Owner for the specified type
 ```
 ***********************
 
-## `Update Type Owner`
+## `Update type owner`
 
 Update the Owner of the specified type. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -1471,10 +1470,10 @@ Note that this does not update the Owner for the associated types. For further d
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string typeId`  
 The type identifier  
 
@@ -1490,7 +1489,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get Type Access Rights`
+## `Get type access rights`
 
 Gets the Access Rights associated with the specified type for the requesting identity. For 
 more information on Access Rights, see [Access Control](xref:accessControl#commonaccessrightsenum).
@@ -1504,10 +1503,10 @@ more information on Access Rights, see [Access Control](xref:accessControl#commo
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string typeId`  
 The type identifier  
 

@@ -2,7 +2,7 @@
 uid: unitsOfMeasure
 ---
 
-# Units of Measure
+# Units of measure
 
 The Sequential Data Store (SDS) provides a collection of built-in units of measure (UOM). These units of measure can be [associated](#associating-a-unit-of-measure-with-a-sdstype) with SdsStreams and SdsTypes in order to provide unit information for stream data that model measurable quantities. If data has unit information associated with it, SDS is able to support unit conversions when retrieving data. See [Reading data](xref:sdsReadingData) for more information.
 
@@ -37,7 +37,7 @@ The following table shows the required and optional SdsUomQuantity fields.
 | BaseUom    | SdsUom  | Required    | The base unit of measure for this quantity. All other Uom's measuring this quantity will have ConversionFactor's and ConversionOffsets relative to the BaseUom  | SdsUom representing "meters per second" |
 | Dimensions | short[] | Optional    | Reserved for internal use. Represents the seven base SI dimensions: Length, Mass, Time, Electric Current, Thermodynamic Temperature, Amount of Substance, and Luminous Density. | [1,0,-1,0,0,0,0] |
 
-## Supported Quantities
+## Supported quantities
 A list of the supported quantities and their base unit of measures is below. Supported quantities are read-only.
 
 | Quantity Id                                 | Base Uom Id               |
@@ -77,7 +77,7 @@ A list of the supported quantities and their base unit of measures is below. Sup
 | Volume                                      | cubic meter               |
 | Volume Flow Rate                            | cubic meter per second    |
 
-## Supported Units of Measure
+## Supported units of measure
 A list of the supported units of measure is below. Supported units of measure are read-only.
 
 | Uom Id                                           | Abbreviation | Quantity Id                                 | Conversion Factor | Conversion Offset |
@@ -290,13 +290,13 @@ A list of the supported units of measure is below. Supported units of measure ar
 # SdsUomQuantity API
 The REST APIs provide programmatic access to read and write SDS data. The APIs in this section interact with SdsUomQuantitys. When working in .NET, convenient SDS client libraries methods are available. The ``ISdsMetadataService`` interface, accessed using the ``SdsService.GetMetadataService( )`` helper, defines the available functions. See [Units of Measure](#units-of-measure) for general [SdsUomQuantity](#sdsuomquantity) information.
 ***
-## `Get Quantity`
+## `Get quantity`
 Returns the quantity corresponding to the specified quantityId within a given namespace.
 
 #### Request
  ```text
     GET api/v1/Tenants/{tenantId}/Namespaces/{namespaceId}/Quantities/{quantityId}
-```
+ ```
 
 ##### Parameters
 
@@ -350,7 +350,7 @@ Content-Type: application/json
 
 ***
 
-## `Get Quantities`
+## `Get quantities`
 
 Returns a list of all quantities available within a given namespace.
 
@@ -434,7 +434,7 @@ Content-Type: application/json
 ```
 ***
 
-## `Get Quantity Uom`
+## `Get quantity UOM`
 
 Returns the unit of measure associated with the specified uomId belonging to the quantity with the specified quantityId.
 
@@ -481,7 +481,7 @@ Content-Type: application/json
 ```
 ***
 
-## `Get Quantity Uoms`
+## `Get quantity UOMs`
 
 Returns the list of units of measure that belongs to the quantity with the specified quantityId.
 
@@ -536,7 +536,7 @@ Content-Type: application/json
 ```
 ***
 
-## `Get Quantities Access Control List`
+## `Get quantities access control list`
 
 Get the default ACL for the Quantities collection. For more information on ACLs, see [Role-based access control](xref:accessControl).
 
@@ -549,7 +549,7 @@ Get the default ACL for the Quantities collection. For more information on ACLs,
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
 
@@ -565,7 +565,7 @@ The default ACL for Quantities
 ```
 ***
 
-## `Update Quantities Access Control List`
+## `Update quantities access control list`
 
 Update the default ACL for the Quantities collection. For more information on ACLs, see [Role-based access control](xref:accessControl).
 
@@ -577,7 +577,7 @@ Update the default ACL for the Quantities collection. For more information on AC
 ##### Parameters
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
 
@@ -594,7 +594,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get Quantity Access Control List`
+## `Get quantity access control list`
 
 Get the ACL of the specified quantity. For more information on ACLs, see [Role-based access control](xref:accessControl).
 
@@ -606,10 +606,10 @@ Get the ACL of the specified quantity. For more information on ACLs, see [Role-b
 ##### Parameters
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -625,7 +625,7 @@ The ACL for the specified quantity
 ```
 ***********************
 
-## `Update Quantity Access Control List`
+## `Update quantity access control list`
 
 Update the ACL of the specified quantity. For more information on ACLs, see [Role-based access control](xref:accessControl).
 
@@ -638,10 +638,10 @@ Update the ACL of the specified quantity. For more information on ACLs, see [Rol
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -657,7 +657,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get Quantity Owner`
+## `Get quantity owner`
 
 Get the Owner of the specified quantity. For more information on Owners, see [Role-based access control](xref:accessControl).
 
@@ -670,10 +670,10 @@ Get the Owner of the specified quantity. For more information on Owners, see [Ro
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -689,7 +689,7 @@ The Owner for the specified quantity
 ```
 ***********************
 
-## `Update Quantity Owner`
+## `Update quantity owner`
 
 Update the Owner of the specified quantity. For more information on Owners, see [Role-based access control](xref:accessControl).
 
@@ -702,10 +702,10 @@ Update the Owner of the specified quantity. For more information on Owners, see 
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -721,7 +721,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get Quantity Access Rights`
+## `Get quantity access rights`
 
 Gets the Access Rights associated with the specified quantity for the requesting identity.  For 
 more information on Access Rights, see [Role-based access control](xref:accessControl#commonaccessrightsenum).
@@ -735,10 +735,10 @@ more information on Access Rights, see [Role-based access control](xref:accessCo
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -767,7 +767,7 @@ The REST APIs provide programmatic access to read and write SDS data. The APIs i
 
 ***
 
-## ``Get Uom``
+## ``Get UOM``
 
 Returns the unit of measure corresponding to the specified uomId within a given namespace.
 
@@ -811,7 +811,7 @@ Content-Type: application/json
 ```
 ***
 
-## ``Get Uoms``
+## ``Get UOMs``
 
 Returns a list of all available units of measure in the system.
 
@@ -877,7 +877,7 @@ Content-Type: application/json
 ***
 
 
-## `Get Uom Access Control List`
+## `Get UOM access control list`
 
 Get the ACL of the specified unit of measure. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -890,10 +890,10 @@ Get the ACL of the specified unit of measure. For more information on ACLs, see 
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -908,27 +908,27 @@ The ACL for the specified Uom
 
 #### .NET client libraries method
 ```csharp
-   Task<AccessControlList> GetQuantityUomAccessControlListAsync(string quantityId, string uomId);
+   Task<AccessControlList> GetQuantityUomAccessControlListAsync(string quantityId, string UOMId);
 ```
 ***********************
 
-## `Update Uom Access Control List`
+## `Update UOM Access Control List`
 
 Update the ACL of the specified unit of measure. For more information on ACLs, see [Access Control](xref:accessControl).
 
 #### Request
  ```text
-    PUT api/v1/Tenants/{tenantId}/Namespaces/{namespaceId}/Quantities/{quantityId}/Units/{uomId}/AccessControl
+    PUT api/v1/Tenants/{tenantId}/Namespaces/{namespaceId}/Quantities/{quantityId}/Units/{UOMId}/AccessControl
  ```
 
 ##### Parameters
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -943,11 +943,11 @@ The response includes a status code.
 
 #### .NET client libraries method
 ```csharp
-   Task UpdateQuantityUomAccessControlListAsync(string quantityId, string uomId, AccessControlList uomAcl);
+   Task UpdateQuantityUomAccessControlListAsync(string quantityId, string UOMId, AccessControlList uomAcl);
 ```
 ***
 
-## `Get Uom Owner`
+## `Get UOM owner`
 
 Get the Owner of the specified unit of measure. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -960,10 +960,10 @@ Get the Owner of the specified unit of measure. For more information on Owners, 
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -982,7 +982,7 @@ The Owner for the specified Uom
 ```
 ***********************
 
-## `Update Uom Owner`
+## `Update UOM owner`
 
 Update the Owner of the specified unit of measure. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -995,10 +995,10 @@ Update the Owner of the specified unit of measure. For more information on Owner
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 
@@ -1017,7 +1017,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get Uom Access Rights`
+## `Get UOM access rights`
 
 Gets the Access Rights associated with the specified unit of measure for the requesting identity. For 
 more information on Access Rights, see [Access Control](xref:accessControl#commonaccessrightsenum).
@@ -1031,10 +1031,10 @@ more information on Access Rights, see [Access Control](xref:accessControl#commo
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string quantityId`  
 The quantity identifier  
 

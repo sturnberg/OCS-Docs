@@ -3,12 +3,7 @@ uid: sdsStreamViews
 ---
 
 # Stream Views
-SdsStreamViews (or stream views) provide flexibility in the use of SdsTypes.
-While you cannot actually change the properties of SdsTypes themselves,
-the stream views feature enables you to create a view of a selected SdsStream that appears as if you had changed the SdsType on which it is based.
-You create a stream view by choosing a source and target type then a set of mappings between properties of those two types. 
-Using a stream view to leverage existing SdsType properties is preferable to creating a new SdsType, because the SdsStream that is based on the SdsType continues to function with its previously archived stream data intact.
-For more information, see [Update Stream Type](xref:sdsStreams#update-stream-type).
+SdsStreamViews (or stream views) provide flexibility in the use of SdsTypes and allow you to expose data as a different type. While you cannot actually change the properties of SdsTypes themselves, the stream views feature enables you to create a view of a selected SdsStream that appears as if you had changed the SdsType on which it is based. You create a stream view by choosing a source and target type then a set of mappings between properties of those two types. Using a stream view to leverage existing SdsType properties is preferable to creating a new SdsType, because the SdsStream that is based on the SdsType continues to function with its previously archived stream data intact. For more information, see [Update Stream Type](xref:sdsStreams#update-stream-type).
 
 ## SdsStreamView fields and properties table
 <a name="streamviewpropertiestable"></a>
@@ -50,7 +45,7 @@ and add it to the SdsStreamView’s properties collection.
 SDS largely supports mapping within the same data type. 
 
 **Mapping compatibility chart**
- 
+
 | Source type\ Target type    | Numeric types 	| Nullable numeric types 	| Enumeration types 	| Nullable enumeration types 	| Object types    	| 
 |----------------------------	|---------------	|------------------------	|-------------------	|----------------------------	|--------------------|
 | Numeric types              	| Yes           	| Yes                    	| No                	| No                         	| No                 |
@@ -133,7 +128,7 @@ For code examples, see [Work with SdsStreamViews in .NET framework](#work-with-s
     - The mapping between the source and the target type happens automatically if you do not specify it in [SdsStreamViewProperty](#sdsstreamviewproperty).
 7. Get [SdsStreamViewMap](#get-stream-view-map) to see how properties are mapped.
 8. Read data from the stream with the stream view to verify. For more information, see [Reading with SdsStreamViews](xref:sdsReadingData#reading-with-sdsstreamviews).
-     
+   
 
 ## Work with SdsStreamViews in .NET framework
 
@@ -486,10 +481,10 @@ Returns the stream view corresponding to the specified streamViewId within a giv
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -533,7 +528,7 @@ Content-Type: application/json
 
 ***********************
 
-## `Get Stream View Map`
+## `Get stream view map`
 
 Returns the stream view map corresponding to the specified streamViewId within a given namespace.
 
@@ -546,10 +541,10 @@ Returns the stream view map corresponding to the specified streamViewId within a
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -598,7 +593,7 @@ Content-Type: application/json
 
 ***********************
 
-## `Get Stream Views`
+## `Get stream views`
 
 Returns a list of stream views within a given namespace.
 
@@ -677,7 +672,7 @@ Content-Type: application/json
   }
 ]
 ```
-                
+
 ### .NET client libraries method
 ```csharp
    Task<IEnumerable<SdsStreamView>> GetStreamViewsAsync(int skip = 0, int count = 100);
@@ -685,7 +680,7 @@ Content-Type: application/json
 
 ***********************
 
-## `Get or Create Stream View`
+## `Get or create stream view`
 
 If a stream view with a matching identifier already exists, the stream view passed in is compared with the existing stream view.
 If the stream views are identical, a Found (302) status is returned and the stream view. If the stream views are different, the Conflict (409) error is returned.
@@ -701,10 +696,10 @@ If no matching identifier is found, the specified stream view is created.
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier. The identifier must match the ``SdsStreamView.Id`` field.   
 
@@ -724,7 +719,7 @@ The newly created or matching SdsStreamView.
 
 ***********************
 
-## `Create or Update Stream View` 
+## `Create or update stream view` 
 
 Creates or updates the definition of a stream view. 
 
@@ -737,10 +732,10 @@ Creates or updates the definition of a stream view.
 
 `string tenantId`
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -760,7 +755,7 @@ The newly created or updated SdsStreamView.
 
 ***********************
 
-## `Delete Stream View`
+## `Delete stream view`
 
 Deletes a stream view from the specified tenant and namespace.
 
@@ -773,10 +768,10 @@ Deletes a stream view from the specified tenant and namespace.
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -789,7 +784,7 @@ The response includes a status code.
 ```
 
 ***********************
-## `Get Stream Views Access Control List`
+## `Get stream views access control list`
 
 Get the default ACL for the Stream Views collection. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -802,7 +797,7 @@ Get the default ACL for the Stream Views collection. For more information on ACL
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
 
@@ -818,7 +813,7 @@ The default ACL for Stream Views
 ```
 ***********************
 
-## `Update Stream Views Access Control List`
+## `Update stream views access control list`
 
 Update the default ACL for the Stream Views collection. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -831,7 +826,7 @@ Update the default ACL for the Stream Views collection. For more information on 
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
 
@@ -848,7 +843,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get Stream View Access Control List`
+## `Get stream view access control list`
 
 Get the ACL of the specified stream view. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -861,10 +856,10 @@ Get the ACL of the specified stream view. For more information on ACLs, see [Acc
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -880,7 +875,7 @@ The ACL for the specified stream view
 ```
 ***********************
 
-## `Update Stream View Access Control List`
+## `Update stream view access control list`
 
 Update the ACL of the specified stream view. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -893,10 +888,10 @@ Update the ACL of the specified stream view. For more information on ACLs, see [
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -912,7 +907,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get Stream View Owner`
+## `Get stream view owner`
 
 Get the Owner of the specified stream view. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -925,10 +920,10 @@ Get the Owner of the specified stream view. For more information on Owners, see 
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -944,7 +939,7 @@ The Owner for the specified stream view
 ```
 ***********************
 
-## `Update Stream View Owner`
+## `Update stream view owner`
 
 Update the Owner of the specified stream view. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -957,10 +952,10 @@ Update the Owner of the specified stream view. For more information on Owners, s
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -976,7 +971,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get Stream View Access Rights`
+## `Get stream view access rights`
 
 Gets the Access Rights associated with the specified stream view for the requesting identity. For 
 more information on Access Rights, see [Access Control](xref:accessControl#commonaccessrightsenum).
@@ -990,10 +985,10 @@ more information on Access Rights, see [Access Control](xref:accessControl#commo
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 

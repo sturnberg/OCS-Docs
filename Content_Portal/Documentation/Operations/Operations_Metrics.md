@@ -19,7 +19,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [OCS Authentication documentation](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) to learn how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will appear as follows:
 
@@ -34,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get Stream Metrics`
+## `Get stream metrics`
 
 Retrieves metrics related to streams ingress and egress rates for a given namespace.
 
@@ -132,7 +132,7 @@ Forbidden
 Internal server error
 ***
 
-## `Get OMF Ingress Connection Metrics`
+## `Get OMF ingress connection metrics`
 
 Retrieves metrics related to OMF Ingress connections for a given namespace.
 
@@ -228,4 +228,5 @@ Forbidden
 #### 500
 
 Internal server error
+
 ***

@@ -11,7 +11,7 @@ For a description of the `DataView` object type, see the [DataView documentation
 Other sections of documentation describe how to [secure data views](xref:DataViewsSecuringDataViews) by setting their ownership and permissions, and the corresponding [API](xref:DataViewsAccessControlAPI).
 
 
-## `Get Data View`
+## `Get data view`
 Returns the specified data view.
 
 ### Request
@@ -65,7 +65,7 @@ Content-Type: application/json
    Task<DataView> GetDataViewAsync(string id);
 ```
 
-## `Get Data Views`
+## `Get data views`
 Returns a list of data views.
 
 ### Request
@@ -122,7 +122,7 @@ Content-Type: application/json
    Task<IEnumerable<DataView>> GetDataViewsAsync(int skip = 0, int count = 100);
 ```
 
-## `Create Data View`
+## `Create data view`
 Create a new data view with a system-generated identifier.
 ### Request
 ```text
@@ -184,7 +184,7 @@ Content-Type: application/json
    Task<DataView> GetOrCreateDataViewAsync(DataView dataView);
 ```
 
-## `Get or Create Data View`
+## `Get or create data view`
 This call creates the specified data view. If a data view with the same id already exists, the existing data view is compared with the specified data view. If they are identical, a redirect (`302 Found`) is returned with the `Location` response header indicating the URL where the data view may be retrieved using a Get function. If the data views do not match, the request fails with `409 Conflict`.
 
 ### Request
@@ -254,7 +254,7 @@ Content-Type: application/json
    Task<DataView> GetOrCreateDataViewAsync(DataView dataView);
 ```
 
-## `Create or Update Data View`
+## `Create or update data view`
 If a data view with the same id already exists, it is updated to the specified value. Otherwise, a new data view is created.
 
 ### Request
@@ -305,7 +305,7 @@ The response includes a status code and, in some cases, a body.
    Task<DataView> CreateOrUpdateDataViewAsync(DataView dataView);
 ```
 
-## `Delete Data View`
+## `Delete data view`
 Delete the data view with the specified id.
 
 ### Request

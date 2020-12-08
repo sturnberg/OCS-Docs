@@ -4,11 +4,11 @@ uid: sdsWritingDataApi
 
 # API calls for writing data
 
-#### Example Type, Stream, and Data
+#### Example type, stream, and data
 
 Many of the API methods described below contain example requests and responses in JSON to highlight usage and specific behaviors. The following type, stream, and data are used in the examples.
 
-**Example Type**  
+**Example type**  
 ``SimpleType`` is an SdsType with a single index and two additional properties. This type is defined below in .NET, Python, and Javascript:
 
 ###### .NET
@@ -71,10 +71,10 @@ var SimpleType = function () {
 }
 ```
 
-**Example Stream**  
+**Example stream**  
 ``Simple`` is an SdsStream of type ``SimpleType``.
 
-**Example Data**  
+**Example data**  
 ``Simple`` has stored values as follows:
 
       11/23/2017 12:00:00 PM: Ok  0
@@ -87,7 +87,7 @@ All times are represented at offset 0, GMT.
 
 *****
 
-## `Insert Values`
+## `Insert values`
 
 Inserts data into the specified stream. Returns an error if data is already present at the index of any event.
 
@@ -99,10 +99,10 @@ Inserts data into the specified stream. Returns an error if data is already pres
 ##### Parameters 
 ``string tenantId``  
 The tenant identifier  
-  
+
 ``string namespaceId``  
 The namespace identifier  
-  
+
 ``string streamId``  
 The stream identifier  
 
@@ -145,7 +145,7 @@ The request body specifies the values to insert.
 
 **********************
 
-## `Patch Values`
+## `Patch values`
 
 Modifies the specified stream event(s). Patching affects only the data item parameters that are included in the call.
 
@@ -158,13 +158,13 @@ Modifies the specified stream event(s). Patching affects only the data item para
 ##### Parameters 
 ``string tenantId``  
 The tenant identifier
-  
+
 ``string namespaceId``  
 The namespace identifier  
-  
+
 ``string streamId``  
 The stream identifier 
-  
+
 ``string selectExpression``  
 Comma separated list of strings that indicates the event fields that will be changed in stream events  
 
@@ -205,14 +205,14 @@ If there is a problem patching any individual event, the entire operation is rol
 
 **********************
 
-## ``Remove Values``
+## ``Remove values``
 
 There are two options for specifying which events to remove from a stream:
 * [Index Collection](#removeindexcollection): One or more indexes can be specified in the request. 
 * [Window](#removewindow): A window can be specified with a start index and end index.
 
 <a name="removeindexcollection"></a>
-### `Index Collection`
+### `Index collection`
 
 Removes the event at each index from the specified stream. Different overloads are available to make it easier to indicate the index where you want to remove a data event. 
 
@@ -225,13 +225,13 @@ Removes the event at each index from the specified stream. Different overloads a
 ##### Parameters 
 ``string tenantId``  
 The tenant identifier  
-  
+
 ``string namespaceId``  
 The namespace identifier   
-  
+
 ``string streamId``  
 The stream identifier  
-  
+
 ``string index``  
 One or more indexes of events to remove
 
@@ -268,13 +268,13 @@ Removes events at and between the start index and end index.
 ##### Parameters 
 ``string tenantId``  
 The tenant identifier  
-  
+
 ``string namespaceId``  
 The namespace identifier   
-  
+
 ``string streamId``  
 The stream identifier  
-  
+
 ``string startIndex``  
 The index defining the beginning of the window
 
@@ -294,9 +294,9 @@ If any individual event fails to be removed, the entire operation is rolled back
     Task RemoveWindowValuesAsync<T1, T2>(string streamId, Tuple<T1, T2> startIndex, Tuple<T1, T2> endIndex);
 ```
 
-***********************  
+***********************
 
-## ``Replace Values``
+## ``Replace values``
 
 Writes one or more events over existing events in the specified stream.
 
@@ -309,13 +309,13 @@ Writes one or more events over existing events in the specified stream.
 ##### Parameters 
 ``string tenantId``  
 The tenant identifier  
-  
+
 ``string namespaceId``  
 The namespace identifier   
-  
+
 ``string streamId``  
 The stream identifier  
- 
+
 ##### Request Body
 A serialized list of one or more events of the stream type
 
@@ -333,7 +333,7 @@ This request returns an error if the stream does not have an event to be replace
 
 ***********************
 
-## `Update Values`
+## `Update values`
 
 Writes one or more events to the specified stream.
 
@@ -345,10 +345,10 @@ Writes one or more events to the specified stream.
 ##### Parameters 
 ``string tenantId``  
 The tenant identifier  
-  
+
 ``string namespaceId``  
 The namespace identifier   
-  
+
 ``string streamId``  
 The stream identifier  
 

@@ -5,7 +5,7 @@ uid: DataViewsDataAPI
 # Data API
 The Data API allows users to [retrieve data](xref:DataViewsQuickStartGetData) for a specified data view.  This API is one portion of the [data views API](xref:DataViewsAPIOverview).
 
-## `Get Data View Data`
+## `Get data view data`
 Get data for the provided index parameters with paging. See [documentation on paging](xref:DataViewsQuickStartGetData#paging) for further information.
 
 ### Request

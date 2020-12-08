@@ -4,16 +4,9 @@ uid: identityClientCredentialClient
 
 # ClientCredentialClient
 
-Client Credential clients are used for machine-to-machine communication without
-            the presence of a User. 
-            These clients are issued an Id and Secret upon creation,
-            which are later used for authentication against OSIsoft Cloud Services. More than one Secret can be
-            created for a Client. You can read more about these clients
-            [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#client-credential-flow).
-            Because they access resources on OSIsoft Cloud Services, and are not associated to users, these
-            clients can be assigned any of the roles in the Tenant. We suggest following a
-            least privilege strategy when assigning roles to these clients, as they are more
-            likely to operate in remote machines with a wider attack surface.
+Client credential clients are used for server-to-server communications without the presence or intervention of a user. Examples include OSIAdapter or Edge Data Store sending data to OCS. The client credentials client is issued a client Id and secret. Once authenticated, it is granted an access token with a defined lifetime. The tokens may either be short-lived access tokens or longer-lived refresh tokens that allow the client to request new access tokens. You can read more about these clients [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#client-credential-flow). 
+
+Because they access resources on OSIsoft Cloud Services and are not associated to users, these clients can be assigned any of the roles in the tenant. We suggest following a least privilege strategy when assigning roles to these clients, as they are more likely to operate in remote machines with a wider attack surface.
 
 ## Properties
 
@@ -28,7 +21,7 @@ Enabled | bool | Whether client is enabled. Client can be used for authenticatio
 AccessTokenLifetime | int32 | Lifetime of access token issued for this client after authentication. Minimum 60 seconds. Maximum 3600 seconds. Defaults to 3600 seconds.
 Tags | string[] | For or OSIsoft internal use only.
 
-### Serialized Model
+### Serialized model
 
 ```json
 {
@@ -59,7 +52,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will look as follows:
 
@@ -74,7 +67,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Create Client Credential Client`
+## `Create client credential client`
 
 Create a Client Credential Client. A Client Id and Client Secret will be generated to perform
             authentication. Make sure to store the Secret somewhere safe as we do not store the
@@ -207,7 +200,7 @@ Client Id already exists.
 Internal server error.
 ***
 
-## `Update Client Credential Client`
+## `Update client credential client`
 
 Update a Client Credential Client. It can take up to one hour
             for these values to manifest in the authentication process.
@@ -330,7 +323,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get Client Credential Client`
+## `Get client credential client`
 
 Get a Client Credential Client.
 
@@ -405,7 +398,7 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Get All Client Credential Clients`
+## `Get all client credential clients`
 
 Get a list of Client Credential clients from a Tenant.
             Optionally, get a list of requested clients. Total number
@@ -600,7 +593,7 @@ Tenant not found.
 Internal server error.
 ***
 
-## `Delete Client Credential Client`
+## `Delete client credential client`
 
 Delete a Client Credential Client. It can take up to one hour
             for deletion to manifest in the authentication process. Access
@@ -663,7 +656,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get Header for Client Credential Client`
+## `Get header for client credential client`
 
 Validate that a Client Credential Client exists.
             This endpoint is identical to the GET one but
@@ -723,13 +716,9 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Get Total Count of Clients`
+## `Get total count of clients`
 
-Return total number of Client Credential clients in a Tenant.
-            Optionally, check based on a list of requested clients. The
-            value will be set in the Total-Count header. This endpoint
-            is identical to the GET one but it does not return any objects
-            in the body.
+Return total number of Client Credential clients in a Tenant. Optionally, check based on a list of requested clients. The value will be set in the Total-Count header. This endpoint is identical to the GET one but it does not return any objects in the body.
 
 ### Request
 

@@ -4,10 +4,7 @@ uid: identityAuthorizationCodeClient
 
 # AuthorizationCodeClient
 
-Authorization Code clients are used in Javascript/Browser (SPA) based applications or native
-            mobile applications with the presence of a User. You can read more about these clients
-            [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#authorization-code-flow-with-pkce).
-            Authorization Code clients are not issued secrets or refresh tokens.
+Authorization code clients are used by web-based applications, native mobile applications, and desktop applications that access OCS. Authorization code clients require user interaction. Users authenticate with the identity provider. This client supports silent refresh, which allows the user to automatically receive a new access token, providing for uninterrupted access to the application. You can read more about these clients [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#authorization-code-flow-with-pkce). Authorization code clients are not issued secrets or refresh tokens.
 
 ## Properties
 
@@ -82,10 +79,9 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Create an Authorization Code Client`
+## `Create an authorization code client`
 
-Create an Authorization Code flow Client. No Secret will be generated for this
-            Client.
+Create an authorization code client. No secret will be generated for this client.
 
 ### Request
 
@@ -98,7 +94,7 @@ Create an Authorization Code flow Client. No Secret will be generated for this
 string tenantId
 ```
 
-Id of Tenant.
+Id of tenant.
 
 ```csharp
 [FromBody]
@@ -195,7 +191,7 @@ Created.
 
 #### 400
 
-Missing or invalid inputs, or Client limit exceeded.
+Missing or invalid inputs or client limit exceeded.
 
 #### 401
 
@@ -226,10 +222,9 @@ Client Id already exists.
 Internal server error.
 ***
 
-## `Update an Authorization Code Client`
+## `Update an authorization code client`
 
-Update an Authorization Code Client. It can take up to one hour
-            for update to manifest in the authentication process.
+Update an authorization code client. It can take up to one hour for update to manifest in the authentication process.
 
 ### Request
 
@@ -257,7 +252,7 @@ Id of Client.
 AuthorizationCodeClient authorizationCodeClient
 ```
 
-Updated Authorization Code Client values. Properties that are not set or are null will not be changed.
+Updated authorization code client values. Properties that are not set or are null will not be changed.
 
 Property Name | Data Type | Required | Description 
  --- | --- | --- | ---
@@ -373,9 +368,9 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get an Authorization Code Client from Tenant`
+## `Get an authorization code client from tenant`
 
-Get an Authorization Code Client from Tenant.
+Get an authorization code client from tenant.
 
 ### Request
 
@@ -388,7 +383,7 @@ Get an Authorization Code Client from Tenant.
 string tenantId
 ```
 
-Id of Tenant.
+Id of tenant.
 
 ```csharp
 [Required]
@@ -457,11 +452,9 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Get All Authorization Code Clients from Tenant`
+## `Get all authorization code clients from tenant`
 
-Get all Authorization Code clients from a Tenant.
-            Optionally, get a list of requested clients. Total number
-            of clients in the Tenant set in the Total-Count header.
+Get all authorization code clients from a tenant. Optionally, get a list of requested clients. Total number of clients in the Tenant set in the Total-Count header.
 
 ### Request
 
@@ -474,7 +467,7 @@ Get all Authorization Code clients from a Tenant.
 string tenantId
 ```
 
-Id of Tenant.
+Id of tenant.
 
 ```csharp
 [FromQuery]
@@ -492,7 +485,7 @@ Unordered list of ids for all clients to get. Empty or whitespace Ids will be ig
 string[] tag
 ```
 
-Only return Clients that have these tags.
+Only return clients that have these tags.
 
 ```csharp
 [FromQuery]
@@ -607,13 +600,9 @@ Tenant not found.
 Internal server error.
 ***
 
-## `Get Total Count Authorization Code Clients from Tenant`
+## `Get total count authorization code clients from tenant`
 
-Return total number of Authorization Code clients in a Tenant.
-            Optionally, check based on a list of requested clients. The
-            value will be set in the Total-Count header. This endpoint
-            is identical to the GET one but it does not return any objects
-            in the body.
+Return total number of authorization code clients in a Tenant. Optionally, check based on a list of requested clients. The value will be set in the Total-Count header. This endpoint is identical to the GET one but it does not return any objects in the body.
 
 ### Request
 
@@ -626,7 +615,7 @@ Return total number of Authorization Code clients in a Tenant.
 string tenantId
 ```
 
-Id of Tenant.
+Id of tenant.
 
 ```csharp
 [FromQuery]
@@ -644,7 +633,7 @@ Unordered list of ids for all clients to get. Empty or whitespace Ids will be ig
 string[] tag
 ```
 
-Only count Clients that have these tags.
+Only count clients that have these tags.
 
 ### Security
 
@@ -679,11 +668,9 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Delete an Authorization Code Client`
+## `Delete an authorization code client`
 
-Delete an Authorization Code Client. It can take up to one hour
-            for deletion to manifest in the authentication process. Access
-            tokens issued to this client will be valid until their expiration.
+Delete an Authorization Code Client. It can take up to one hour for deletion to manifest in the authentication process. Access  tokens issued to this client will be valid until their expiration.
 
 ### Request
 
@@ -696,14 +683,14 @@ Delete an Authorization Code Client. It can take up to one hour
 string tenantId
 ```
 
-Id of Tenant.
+Id of tenant.
 
 ```csharp
 [Required]
 string clientId
 ```
 
-Id of Client.
+Id of client.
 
 ### Security
 
@@ -742,9 +729,9 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get Header for Authorization Code Client`
+## `Get header for authorization code client`
 
-Validate that an Authorization Code Client exists in Tenant.
+Validate that an authorization code client exists in Tenant.
 
 ### Request
 
@@ -757,14 +744,14 @@ Validate that an Authorization Code Client exists in Tenant.
 string tenantId
 ```
 
-Id of Tenant.
+Id of tenant.
 
 ```csharp
 [Required]
 string clientId
 ```
 
-Id of Client.
+Id of client.
 
 ### Security
 

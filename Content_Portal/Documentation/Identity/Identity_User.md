@@ -4,19 +4,8 @@ uid: identityUser
 
 # User
 
-Users consume resources in a Tenant. They are invited by the Admin of the
-            Tenant and should already have an account in one of the configured Identity
-            Providers for this Tenant. A User is fully provisioned in OSIsoft Cloud Services
-            only after they have accepted the invitation and successfully logged with
-            an Identity Provider. OSIsoft Cloud Services does not maintain User credentials, but it delegates
-            authentication to the Identity Provider the User logged in with at first. Once
-            logged in the User cannot change the Identity Provider it signed up with. A Tenant
-            can only have one User with a given email to an Identity Provider. If a User has
-            multiple aliases in the same Identity Provider, they will not be able to create
-            multiple corresponding OSIsoft Cloud Services users. Users have roles associated with them. These roles
-            determine what a User is authorized to do in the Tenant. Roles are assigned to a User
-            upon creation and can be modified by an Admin. We allow the change of some User fields
-            and the complete deletion of a User.
+Users consume resources in a tenant. They are invited by the admin of the tenant and should already have an account in one of the configured identity providers for this tenant. A user is fully provisioned in OSIsoft Cloud Services only after they have accepted the invitation and successfully logged with an identity provider. OSIsoft Cloud Services does not maintain user credentials, but it delegates authentication to the identity provider the user logged in with at first. Once
+logged in the user cannot change the identity provider it signed up with. A tenant can only have one user with a given email to an identity provider. If a user has multiple aliases in the same identity provider, they will not be able to create multiple corresponding OSIsoft Cloud Services users. Users have roles associated with them. These roles determine what a user is authorized to do in the tenant. Roles are assigned to a user upon creation and can be modified by an Admin. We allow the change of some User fields and the complete deletion of a user.
 
 ## Properties
 
@@ -36,7 +25,7 @@ ExternalUserId | string | Provider id for user. This is the unique ID we get fro
 IdentityProviderId | Guid | Identity Provider Id used to authenticate User. Will be set once the User accepts an invitation. If not specified when sending the invitation to the User, it can be any of the Identity Provider Ids configured for this Tenant.
 RoleIds | Guid[] | List of strings of RoleIds.
 
-### Serialized Model
+### Serialized model
 
 ```json
 {
@@ -69,7 +58,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will look as follows:
 
@@ -84,7 +73,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get Users from a Tenant`
+## `Get users from a tenant`
 
 Get a list of users from a Tenant. Optionally, get a list of requested users.
             Total number of users in the Tenant set in the Total-Count header.
@@ -281,12 +270,9 @@ Tenant not found.
 Internal server error.
 ***
 
-## `Get Users' Invitation Status`
+## `Get users' invitation status`
 
-Get invitation statuses for multiple users. Optionally
-            restrict it only to users of a specific invitation status.
-            The User status can be: InvitationAccepted (0),  NoInvitation (1),
-            InvitationNotSent (2), InvitationSent (3), InvitationExpired (4).
+Get invitation statuses for multiple users. Optionally restrict it only to users of a specific invitation status. The user status can be: InvitationAccepted (0),  NoInvitation (1), InvitationNotSent (2), InvitationSent (3), InvitationExpired (4).
 
 ### Request
 
@@ -427,7 +413,7 @@ Internal server error.
 Tenant not found.
 ***
 
-## `Get User from a Tenant`
+## `Get user from a fenant`
 
 Get a User from Tenant.
 
@@ -504,7 +490,7 @@ User or Tenant not found.
 Internal server error.
 ***
 
-## `Get User's Invitation Status`
+## `Get user's invitation status`
 
 Get invitation status for a User. It can be: InvitationAccepted (0),
             NoInvitation (1), InvitationNotSent (2), InvitationSent (3), InvitationExpired (4).
@@ -585,7 +571,7 @@ User or Tenant not found.
 Internal server error.
 ***
 
-## `Get User's Preferences`
+## `Get user's preferences`
 
 Get preferences from a User. User preferences can be any valid
             JSON object. A common use case is to store UI preferences for the User.
@@ -648,7 +634,7 @@ User or Tenant not found.
 Internal server error.
 ***
 
-## `Update User's Preferences`
+## `Update user's preferences`
 
 Update preferences for a User.
 
@@ -734,7 +720,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Create User`
+## `Create user`
 
 Create a User in the Tenant. This endpoint does not create an invitation for the User.
             You will need to create an invitation in the respective endpoint for this User, otherwise
@@ -854,7 +840,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Update User in a Tenant`
+## `Update user in a tenant`
 
 Update a User in a Tenant. The Id of a User cannot be changed.
 
@@ -977,7 +963,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Delete User in a Tenant`
+## `Delete user in a tenant`
 
 Delete a User. Admins cannot delete themselves.
             Deleting a User does not invalidate any of the
@@ -1045,7 +1031,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get Header for User`
+## `Get header for user`
 
 Validate that a User exists. This endpoint is identical to the GET
             one, but it does not return an object in the body.
@@ -1104,11 +1090,9 @@ User does not exist.
 Internal server error.
 ***
 
-## `Get Total Count of Users`
+## `Get total count of users`
 
-Return total number of users in a Tenant. Optionally, check based on a list of requested users.
-            The value will be set in the Total-Count header. This endpoint is identical to the GET one but
-            it does not return any objects in the body.
+Return total number of users in a Tenant. Optionally, check based on a list of requested users. The value will be set in the Total-Count header. This endpoint is identical to the GET one but it does not return any objects in the body.
 
 ### Request
 
@@ -1166,7 +1150,7 @@ User not found.
 Internal server error.
 ***
 
-## `Get Header for User's Preferences`
+## `Get header for user's preferences`
 
 Validate that there are preferences for a User. This endpoint is identical
             to the GET one but it does not return any objects in the body.

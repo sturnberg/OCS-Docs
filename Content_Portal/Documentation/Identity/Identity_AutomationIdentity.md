@@ -4,7 +4,7 @@ uid: identityAutomationIdentity
 
 # AutomationIdentity
 
-APIs for Automation Identities.
+APIs for automation identities.
 
 ## Properties
 
@@ -19,7 +19,7 @@ RoleIds | Guid[] | Role ids associated with this Automation Identity.
 RoleTypeIds | Guid[] | Role type ids associated with this Automation Identity.
 Tags | string[] | Tags associated with this Automation Identity.
 
-### Serialized Model
+### Serialized model
 
 ```json
 {
@@ -53,7 +53,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will look as follows:
 
@@ -68,7 +68,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Create an Automation Identity`
+## `Create an automation identity`
 
 Create an Automation Identity. A non-Administrator caller must have all roles being assigned to the new Automation Identity.
 
@@ -185,7 +185,7 @@ Already exists.
 Internal server error.
 ***
 
-## `Get an Automation Identity`
+## `Get an automation identity`
 
 Returns Automation Identity object.
 
@@ -263,7 +263,7 @@ Not found.
 Internal server error.
 ***
 
-## `Get Header for Automation Identity`
+## `Get header for automation identity`
 
 Validate that an Automation Identity exists in Tenant.
 
@@ -321,7 +321,7 @@ Automation Identity or Tenant not found.
 Internal server error.
 ***
 
-## `Get Automation Identities from a Tenant`
+## `Get automation identities from a tenant`
 
 Returns Automation Identity objects.
 
@@ -447,7 +447,7 @@ Not found.
 Internal server error.
 ***
 
-## `Get Total Count of Automation Identities from Tenant`
+## `Get total count of automation identities from tenant`
 
 Return total number of Automation Identities in Tenant in the Total-Count header.
 
@@ -507,7 +507,7 @@ Automation Identity or Tenant not found.
 Internal server error.
 ***
 
-## `Delete an Automation Identity`
+## `Delete an automation identity`
 
 Delete an Automation Identity. A non-Administrator caller must have all roles belonging to the Automation Identity being deleted.
 
@@ -569,7 +569,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Update Automation Identity`
+## `Update automation identity`
 
 Update a Automation Identity. A non-Administrator caller must have all roles belonging to the existing Automation Identity, as well as any roles being added.
 

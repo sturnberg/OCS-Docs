@@ -4,15 +4,9 @@ uid: identityHybridClient
 
 # HybridClient
 
-Hybrid clients are used in typical, thick MVC clients with the presence of a User.
-            These clients are issued an Id and Secret upon creation, which are later used for authentication
-            against OSIsoft Cloud Services. More than one Secret can be created for a Client. You can read more about these clients
-            [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#hybrid-flow).
-            Hybrid clients can be issued refresh tokens, if requested, alongside access tokens. Refresh tokens typically
-            have an longer lifetime than access tokens, and are used to request a new access token on behalf of the user
-            without them having to sign-in.
-            It is highly suggested that both the Client Secret and the refresh token be stored
-            in a secure location.
+Hybrid clients are used in typical, thick MVC clients with the presence of a user. These clients are issued an Id and secret upon creation, which are later used for authentication with an identity provider. You can create more than one secret for a client. You can read more about these clients [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#hybrid-flow). 
+
+Hybrid clients can be issued refresh tokens, if requested, alongside access tokens. Refresh tokens typically have an longer lifetime than access tokens, and are used to request a new access token on behalf of the user without them having to sign-in. It is highly suggested that both the client secret and the refresh token be stored in a secure location.
 
 ## Properties
 
@@ -32,7 +26,7 @@ Enabled | bool | Whether client is enabled. Client can be used for authenticatio
 AccessTokenLifetime | int32 | Lifetime of access token issued for this client after authentication. Minimum 60 seconds. Maximum 3600 seconds. Defaults to 3600 seconds.
 Tags | string[] | For OSIsoft internal use only.
 
-### Serialized Model
+### Serialized model
 
 ```json
 {
@@ -71,7 +65,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will look as follows:
 
@@ -86,7 +80,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Create Hybrid Client`
+## `Create hybrid client`
 
 Create a Hybrid Client. A Client Id and Client Secret will be generated to perform
             authentication. Make sure to store the Secret somewhere safe as we do not store the
@@ -240,7 +234,7 @@ Client Id already exists.
 Internal server error.
 ***
 
-## `Update Hybrid Client`
+## `Update hybrid client`
 
 Update a Hybrid Client. It can take up to one hour
             for these values to manifest in the authentication process.
@@ -384,7 +378,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get Hybrid Client`
+## `Get hybrid client`
 
 Get a Hybrid Client from a Tenant.
 
@@ -466,11 +460,9 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Get All Hybrid Clients`
+## `Get all hybrid clients`
 
-Get a list of Hybrid clients from a Tenant.
-            Optionally, get a list of requested clients. Total number
-            of clients in the Tenant set in the Total-Count header.
+Get a list of Hybrid clients from a tenant. Optionally, get a list of requested clients. Total number of clients in the tenant set in the Total-Count header.
 
 ### Request
 
@@ -612,12 +604,9 @@ Tenant not found.
 Internal server error.
 ***
 
-## `Delete Hybrid Client`
+## `Delete hybrid client`
 
-Delete a Hybrid Client. It can take up to one hour
-            for deletion to manifest in the authentication process. Access
-            tokens issued to this Client will be valid until their expiration.
-            Refresh tokens issued to this will be valid up to one hour after deletion.
+Delete a Hybrid Client. It can take up to one hour for deletion to manifest in the authentication process. Access tokens issued to this Client will be valid until their expiration. Refresh tokens issued to this will be valid up to one hour after deletion.
 
 ### Request
 
@@ -676,11 +665,9 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get Header for Hybrid Client`
+## `Get header for hybrid client`
 
-Validate that a Hybrid Client exists.
-            This endpoint is identical to the GET one but
-            it does not return any objects in the body.
+Validate that a Hybrid Client exists. This endpoint is identical to the GET one but it does not return any objects in the body.
 
 ### Request
 
@@ -735,13 +722,9 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Get Total Count of Hybrid Clients`
+## `Get total count of hybrid clients`
 
-Return total number of Hybrid clients in a Tenant.
-            Optionally, check based on a list of requested clients. The
-            value will be set in the Total-Count header. This endpoint
-            is identical to the GET one but it does not return any objects
-            in the body.
+Return total number of Hybrid clients in a Tenant. Optionally, check based on a list of requested clients. The value will be set in the Total-Count header. This endpoint is identical to the GET one but it does not return any objects in the body.
 
 ### Request
 

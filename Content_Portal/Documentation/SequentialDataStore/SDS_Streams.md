@@ -4,8 +4,7 @@ uid: sdsStreams
 
 # Streams
 
-SdsStreams are collections of sequentially occurring values indexed by a single property, typically time series data.
-You define SdsStreams to organize incoming data from another system into the OCS.
+SdsStreams are a container for sequential data of some type of sequentially occurring values indexed by a single property, typically time series data. You define SdsStreams to organize incoming data from another system into the OCS.
 To define an SdsStream, you must first define an SdsType, which defines the structure of the data you want to stream into a selected namespace.
 
 SDS stores collections of events and provides convenient ways to find and associate events.
@@ -47,7 +46,7 @@ However, they are associated with SdsStream objects and can be used as search cr
 While you define the primary index on the SdsType, the SdsStream is where you define secondary indexes.
 If the primary index defined on the SdsType is a compound index, secondary indexes on the SdsStream are allowed as long as that compound index does not have more than two properties. For more information on compound indexes, see [Indexes](xref:sdsIndexes#compound-indexes). 
 <!-- Secondary indexes apply to a single property. In other words, there are no compound secondary indexes.-->
-  
+
 Note that you can only use the SdsTypeCodes of SdsType properties that can be ordered (``DateTime`` or numbers, for example) as a secondary index.
 
 ## Interpolation and extrapolation
@@ -88,7 +87,7 @@ defines the available functions. See [Streams](#streams) above for general
 information related to SdsStream. 
 
 **********************
-## `Get Stream`
+## `Get stream`
 Returns the specified stream.
 
 ### Request
@@ -102,7 +101,7 @@ The tenant identifier
 
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier
 
@@ -131,7 +130,7 @@ Content-Type: application/json
 ```
 
 ***********************
-## `Get Streams` 
+## `Get streams` 
 Returns a list of streams.
 
 If specifying the optional search query parameter, the list of streams returned will match 
@@ -209,7 +208,7 @@ Content-Type: application/json
 
 ***********************
 
-## `Get Stream Type`
+## `Get stream type`
 Returns the type definition that is associated with a given stream.
 
 ### Request
@@ -221,10 +220,10 @@ Returns the type definition that is associated with a given stream.
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -241,7 +240,7 @@ The requested SdsType.
 
 ***********************
 
-## `Get or Create Stream`
+## `Get or create stream`
 Creates the specified stream. If an SdsStream with a matching identifier already exists, SDS compares the 
 existing stream with the stream that was sent. If the streams are identical, a ``Found`` (302) error 
 is returned with the Location header set to the URI where the stream may be retrieved using a Get function. 
@@ -264,10 +263,10 @@ redirect with the authorization header, you should disable automatic redirect.
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier. The stream identifier must match the identifier in content. 
 
@@ -292,7 +291,7 @@ in the request body, a Conflict error response is returned and the client librar
 
 ***********************
 
-## `Create or Update Stream`
+## `Create or update stream`
 
 Creates the specified stream. If a stream with the same `Id` already exists, the definition of the stream is updated. 
 The following changes are permitted:  
@@ -319,10 +318,10 @@ Changes that are not permitted result in an error.
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -339,7 +338,7 @@ The response includes a status code.
 ```
 ***********************
 
-## `Update Stream Type`
+## `Update stream type`
 
 Updates a stream’s type. The type is modified to match the specified stream view. 
 Defined Indexes and PropertyOverrides are removed when updating a stream type. 
@@ -353,13 +352,13 @@ Defined Indexes and PropertyOverrides are removed when updating a stream type.
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
-  
+
 `string streamViewId`  
 The stream view identifier  
 
@@ -379,7 +378,7 @@ On failure, the content contains a message describing the issue.
 
 ***********************
 
-## `Delete Stream`
+## `Delete stream`
 
 Deletes a stream. 
 
@@ -392,10 +391,10 @@ Deletes a stream.
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -409,7 +408,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get Streams Access Control List`
+## `Get streams access control list`
 
 Get the default ACL for the Streams collection. For more information on ACL, see [Access Control](xref:accessControl).
 
@@ -422,7 +421,7 @@ Get the default ACL for the Streams collection. For more information on ACL, see
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
 
@@ -438,7 +437,7 @@ The default ACL for Streams
 ```
 ***********************
 
-## `Update Streams Access Control List`
+## `Update streams access control list`
 
 Update the default ACL for the Streams collection. For more information on ACL, see [Access Control](xref:accessControl).
 
@@ -451,7 +450,7 @@ Update the default ACL for the Streams collection. For more information on ACL, 
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
 
@@ -468,7 +467,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get Stream Access Control List`
+## `Get stream access control list`
 
 Get the ACL of the specified stream. For more information on ACL, see [Access Control](xref:accessControl).
 
@@ -481,10 +480,10 @@ Get the ACL of the specified stream. For more information on ACL, see [Access Co
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -500,7 +499,7 @@ The ACL for the specified stream
 ```
 ***********************
 
-## `Update Stream Access Control List`
+## `Update stream access control list`
 
 Update the ACL of the specified stream. For more information on ACL, see [Access Control](xref:accessControl).
 
@@ -513,10 +512,10 @@ Update the ACL of the specified stream. For more information on ACL, see [Access
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -530,9 +529,9 @@ The response includes a status code.
 ```csharp
    Task UpdateStreamAccessControlListAsync(string streamId, AccessControlList streamAcl);
 ```
-*** 
+***
 
-## `Get Stream Owner`
+## `Get stream owner`
 
 Get the `Owner` of the specified stream. For more information, see [Access Control](xref:accessControl).
 
@@ -545,10 +544,10 @@ Get the `Owner` of the specified stream. For more information, see [Access Contr
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -564,7 +563,7 @@ The `Owner` for the specified stream
 ```
 ***********************
 
-## `Update Stream Owner`
+## `Update stream owner`
 
 Update the `Owner` of the specified stream. For more information, see [Access Control](xref:accessControl).
 
@@ -577,10 +576,10 @@ Update the `Owner` of the specified stream. For more information, see [Access Co
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 
@@ -594,9 +593,9 @@ The response includes a status code
 ```csharp
    Task UpdateStreamOwnerAsync(string streamId, Trustee streamOwner);
 ```
-*** 
+***
 
-## `Get Stream Access Rights`
+## `Get stream access rights`
 
 Gets the access rights associated with the specified stream for the requesting identity. For 
 more information on access rights, see [Access Control](xref:accessControl#commonaccessrightsenum).
@@ -610,10 +609,10 @@ more information on access rights, see [Access Control](xref:accessControl#commo
 
 `string tenantId`  
 The tenant identifier  
-  
+
 `string namespaceId`  
 The namespace identifier  
-  
+
 `string streamId`  
 The stream identifier  
 

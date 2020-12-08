@@ -8,7 +8,7 @@ APIs to manage default access to entities governed by an [AccessControlList](xre
 
 ***
 
-## `Get Root Namespace AccessControlList`
+## `Get root namespace AccessControlList`
 
 Retrieves the [AccessControlList](xref:accessControl) that is used to authorize access to a `Namespace` if none is specified during creation.
 
@@ -34,16 +34,16 @@ A root [AccessControlList](xref:accessControl) can only be retrieved if the curr
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | AccessControlList | Returns the root [AccessControlList](xref:accessControl) for `Namespaces`. | 
-| 400 | Nothing is returned | Could not retrieve the root [AccessControlList](xref:accessControl) for `Namespaces` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to retrieve the root [AccessControlList](xref:accessControl) for `Namespaces`. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | AccessControlList | Returns the root [AccessControlList](xref:accessControl) for `Namespaces`. |
+| 400 | Nothing is returned | Could not retrieve the root [AccessControlList](xref:accessControl) for `Namespaces` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to retrieve the root [AccessControlList](xref:accessControl) for `Namespaces`. |
 
 
 ***
 
-## `Set Root AccessControlList`
+## `Set root AccessControlList`
 
 Modifies the [AccessControlList](xref:accessControl) that is used to authorize access to a `Namespace` if none is specified during creation.
 
@@ -76,12 +76,12 @@ A root [AccessControlList](xref:accessControl) can only be modified if the curre
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | AccessControlList | Returns the modified root [AccessControlList](xref:accessControl) for `Namespaces`. | 
-| 400 | Nothing is returned | Could not modify the root [AccessControlList](xref:accessControl) for `Namespaces` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to change the root [AccessControlList](xref:accessControl) for `Namespaces`. | 
-| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | AccessControlList | Returns the modified root [AccessControlList](xref:accessControl) for `Namespaces`. |
+| 400 | Nothing is returned | Could not modify the root [AccessControlList](xref:accessControl) for `Namespaces` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to change the root [AccessControlList](xref:accessControl) for `Namespaces`. |
+| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. |
 
 
 ***

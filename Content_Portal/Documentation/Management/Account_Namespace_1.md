@@ -4,8 +4,7 @@ uid: AccountNamespace_1
 
 # Namespaces
 
-A `Namespace` is a collection of SDS types, streams, and stream views. Namespace identifiers are unique within an account. Requirements
-for Namespace IDs are the following:
+A namespace is a logical unit of organization for data within a tenant. Each tenant may contain more than one namespace. Before you can put any data into OCS for a given tenant, a namespace must be created within the scope of that tenant. Namespace identifiers are unique within an account. Requirements for namespace Ids are the following:
 - Must contain 100 characters or fewer
 - Must only contain alphanumeric characters, underscores, dashes, spaces, and periods
 - Must not contain two consecutive periods
@@ -18,13 +17,13 @@ In practice, namespaces may correspond to a specific set of infrastructure asset
 
 For HTTP requests and responses, the Namespace object has the following properties and JSON-serialized body: 
 
-| Property Name | Data Type | Description | 
- | --- | --- | ---  | 
-| Id | string | Nme of this Namespace; unique within a Tenant's Namespaces. | 
-| Region | string | The region that the namespace is provisioned in. | 
-| Self | string | The namespace's URI. | 
-| Description | string | Description of this Namespace. | 
-| State | NamespaceProvisioningState | Current state of this Namespace. | 
+| Property Name | Data Type | Description |
+| --- | --- | ---  |
+| Id | string | Nme of this Namespace; unique within a Tenant's Namespaces. |
+| Region | string | The region that the namespace is provisioned in. |
+| Self | string | The namespace's URI. |
+| Description | string | Description of this Namespace. |
+| State | NamespaceProvisioningState | Current state of this Namespace. |
 
 ```json
 {
@@ -42,7 +41,7 @@ When a namespace is created, all resources are created in the namespace's region
 
 ***
 
-## `Get All Namespaces`
+## `Get all namespaces`
 
 Returns all `Namespaces` owned by the specified `Tenant` that the caller has access to.
 
@@ -68,16 +67,16 @@ A `Namespace` can only be retrieved if the current principal has Read access.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | [Namespace] | Returns a list of all `Namespace` objects for the specified tenantId that the caller has access to. | 
-| 400 | Nothing is returned | Could not retrieve `Namespaces` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to access the tenant's `Namespaces`. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | [Namespace] | Returns a list of all `Namespace` objects for the specified tenantId that the caller has access to. |
+| 400 | Nothing is returned | Could not retrieve `Namespaces` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to access the tenant's `Namespaces`. |
 
 
 ***
 
-## `Get Namespace By Id`
+## `Get namespace by Id`
 
 Returns a `Namespace` with the specified Id.
 
@@ -110,17 +109,17 @@ A `Namespace` can only be retrieved if the current principal has Read access.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | Namespace | Returns a `Namespace` object with the specified namespaceId. | 
-| 400 | Nothing is returned | Could not retrieve the `Namespace` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to access this `Namespace`. | 
-| 404 | Nothing is returned | `Namespace` not found in the specified account. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | Namespace | Returns a `Namespace` object with the specified namespaceId. |
+| 400 | Nothing is returned | Could not retrieve the `Namespace` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to access this `Namespace`. |
+| 404 | Nothing is returned | `Namespace` not found in the specified account. |
 
 
 ***
 
-## `Create New Namespace`
+## `Create new namespace`
 
 Creates a new `Namespace` in the specified `Tenant`.
 
@@ -162,19 +161,19 @@ A `Namespace` can only be created if the current principal has Write access.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 201 | Namespace | Returns the created `Namespace` object. | 
-| 302 | Nothing is returned | Returns the location of the existing `Namespace` object. | 
-| 400 | Nothing is returned | Could not create the `Namespace` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to create a `Namespace` in this account. | 
-| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. | 
-| 409 | Nothing is returned | A `Namespace` already exists with different values. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 201 | Namespace | Returns the created `Namespace` object. |
+| 302 | Nothing is returned | Returns the location of the existing `Namespace` object. |
+| 400 | Nothing is returned | Could not create the `Namespace` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to create a `Namespace` in this account. |
+| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. |
+| 409 | Nothing is returned | A `Namespace` already exists with different values. |
 
 
 ***
 
-## `Update Namespace`
+## `Update namespace`
 
 Updates `Namespace` information: Description and TierId. The [AccessControlList](xref:accessControl) and Owner's [Trustee](xref:accessControl) can
             only be updated through their own routes.
@@ -215,16 +214,16 @@ A `Namespace` can only be updated if the current principal has Write access.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | Namespace | Returns the updated `Namespace`. | 
-| 400 | Nothing is returned | Could not update the `Namespace` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to update the `Namespace`. | 
-| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | Namespace | Returns the updated `Namespace`. |
+| 400 | Nothing is returned | Could not update the `Namespace` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to update the `Namespace`. |
+| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. |
 
 ***
 
-## `Delete Namespace`
+## `Delete namespace`
 
 Deletes a `Namespace` in the specified `Tenant`.
 
@@ -257,17 +256,17 @@ A `Namespace` can only be deleted if the current principal has Delete access.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 204 | Nothing is returned | The `Namespace` was deleted. | 
-| 400 | Nothing is returned | Could not delete the `Namespace` due to an invalid state. | 
-| 403 | Nothing is returned | Unauthorized to delete the `Namespace`. | 
-| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 204 | Nothing is returned | The `Namespace` was deleted. |
+| 400 | Nothing is returned | Could not delete the `Namespace` due to an invalid state. |
+| 403 | Nothing is returned | Unauthorized to delete the `Namespace`. |
+| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. |
 
 
 ***
 
-## `Get Namespace AccessControlList`
+## `Get namespace AccessControlList`
 
 Returns the [AccessControlList](xref:accessControl) that is used to authorize access to a `Namespace`.
 
@@ -300,16 +299,16 @@ An [AccessControlList](xref:accessControl) can only be retrieved if the current 
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | AccessControlList | Returns the [AccessControlList](xref:accessControl) for the specified `Namespace`. | 
-| 400 | Nothing is returned | Could not retrieve the [AccessControlList](xref:accessControl) of the specified `Namespace` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to get the [AccessControlList](xref:accessControl) for the specified `Namespace`. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | AccessControlList | Returns the [AccessControlList](xref:accessControl) for the specified `Namespace`. |
+| 400 | Nothing is returned | Could not retrieve the [AccessControlList](xref:accessControl) of the specified `Namespace` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to get the [AccessControlList](xref:accessControl) for the specified `Namespace`. |
 
 
 ***
 
-## `Set Namespace AccessControlList`
+## `Set namespace AccessControlList`
 
 Updates the [AccessControlList](xref:accessControl) that is used to authorize access to a `Namespace`.
 
@@ -349,18 +348,18 @@ An [AccessControlList](xref:accessControl) can only be updated if the current pr
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | AccessControlList | Returns the updated [AccessControlList](xref:accessControl). | 
-| 400 | Nothing is returned | Could not update the [AccessControlList](xref:accessControl) of the specified `Namespace` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to update the [AccessControlList](xref:accessControl) for the specified `Namespace`. | 
-| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | AccessControlList | Returns the updated [AccessControlList](xref:accessControl). |
+| 400 | Nothing is returned | Could not update the [AccessControlList](xref:accessControl) of the specified `Namespace` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to update the [AccessControlList](xref:accessControl) for the specified `Namespace`. |
+| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. |
 
 
 
 ***
 
-## `Get Namespace Owner`
+## `Get namespace owner`
 
 Returns the Owner's [Trustee](xref:accessControl) for a given `Namespace`.
 
@@ -393,16 +392,16 @@ An Owner's [Trustee](xref:accessControl) can only be retrieved if the current pr
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | Trustee | Returns the Owner's [Trustee](xref:accessControl) of the specified `Namespace`. | 
-| 400 | Nothing is returned | Could not retrieve the Owner's [Trustee](xref:accessControl) of the specified `Namespace` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to get the Owner's [Trustee](xref:accessControl) of the specified `Namespace`. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | Trustee | Returns the Owner's [Trustee](xref:accessControl) of the specified `Namespace`. |
+| 400 | Nothing is returned | Could not retrieve the Owner's [Trustee](xref:accessControl) of the specified `Namespace` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to get the Owner's [Trustee](xref:accessControl) of the specified `Namespace`. |
 
 
 ***
 
-## `Set Namespace Owner`
+## `Set namespace owner`
 
 Changes the Owner's [Trustee](xref:accessControl) for a given `Namespace`.
 
@@ -442,12 +441,12 @@ An Owner's [Trustee](xref:accessControl) can only be changed if the current prin
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | Trustee | Returns the new Owner's [Trustee](xref:accessControl) of the specified `Namespace`. | 
-| 400 | Nothing is returned | Could not change the Owner's [Trustee](xref:accessControl) of the specified `Namespace` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to change the Owner's [Trustee](xref:accessControl) of the specified `Namespace`. | 
-| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | Trustee | Returns the new Owner's [Trustee](xref:accessControl) of the specified `Namespace`. |
+| 400 | Nothing is returned | Could not change the Owner's [Trustee](xref:accessControl) of the specified `Namespace` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to change the Owner's [Trustee](xref:accessControl) of the specified `Namespace`. |
+| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. |
 
 
 ***

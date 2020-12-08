@@ -4,13 +4,8 @@ uid: identitySecret
 
 # Secret
 
-Secrets are used to authenticate both Client Credential clients and Hybrid clients.
-            A Secret has an expiration date or can be created to never expire. We advise to avoid
-            creating secrets that do not expire. After a Secret expires it can no longer be used
-            to authenticate the Client. Any access token issued while a Secret is still valid will
-            be active until the token itself expires. The same applies to refresh tokens, which are
-            issued to Hybrid clients. Safe storage of secrets is your responsibility. OSIsoft Cloud Services
-            does not store secret values, so once lost there is no way to retrieve the value of a Secret.
+Secrets are used to authenticate both client credential clients and hybrid clients. A secret has an expiration date or can be created to never expire. We advise to avoid creating secrets that do not expire. After a secret expires it can no longer be used to authenticate the client. Any access token issued while a Secret is still valid will be active until the token itself expires. The same applies to refresh tokens, which are issued to Hybrid clients. Safe storage of secrets is your responsibility. OSIsoft Cloud Services
+does not store secret values, so once lost there is no way to retrieve the value of a secret.
 
 ## Properties
 
@@ -24,7 +19,7 @@ Value | string | The secret value.
 Expiration | DateTime | The expiration date.
 Type | string | The type of the client secret.
 
-### Serialized Model
+### Serialized model
 
 ```json
 {
@@ -48,7 +43,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will look as follows:
 
@@ -63,11 +58,9 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get Hybrid Client Secrets`
+## `Get hybrid client secrets`
 
-Get all secrets for a Hybrid Client.
-            Total number of secrets in the Client
-            set in the Total-Count header.
+Get all secrets for a Hybrid Client. Total number of secrets in the client set in the Total-Count header.
 
 ### Request
 
@@ -166,7 +159,7 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Get Hybrid Client Secret`
+## `Get hybrid client secret`
 
 Get a Hybrid Client Secret.
 
@@ -239,7 +232,7 @@ Secret, Client, or Tenant not found.
 Internal server error.
 ***
 
-## `Add Hybrid Client Secret`
+## `Add hybrid client secret`
 
 Add a new secret to a Client Credential Client.
             A client can have a maximum of 10 secrets.
@@ -340,7 +333,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Update Hybrid Client Secret`
+## `Update hybrid client secret`
 
 Update a Hybrid Client Secret. It can take up to one hour for
             the update to manifest in the authentication process.
@@ -450,11 +443,9 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Delete Hybrid Client Secret`
+## `Delete hybrid client secret`
 
-Delete a Secret from a Hybrid Client. It can take up to one hour for
-            deletion to manifest in the authentication process.
-            Access tokens issued using this Secret will be valid until their expiration.
+Delete a Secret from a Hybrid Client. It can take up to one hour for deletion to manifest in the authentication process. Access tokens issued using this Secret will be valid until their expiration.
 
 ### Request
 
@@ -520,7 +511,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get Header for Hybrid Client Secret`
+## `Get header for hybrid client secret`
 
 Validate that a Secret with given Id exists in the Client.
             This endpoint is identical to the GET one but it does not
@@ -586,12 +577,9 @@ Secret, Client, or Tenant not found.
 Internal server error.
 ***
 
-## `Get Total Count of Hybrid Client Secrets`
+## `Get total count of hybrid client secrets`
 
-Return total number of Secrets in a Hybrid Client. The value
-            will be set in the Total-Count header. This endpoint
-            is identical to the GET one but it does not return
-            any objects in the body.
+Return total number of Secrets in a Hybrid Client. The value will be set in the Total-Count header. This endpoint is identical to the GET one but it does not return  any objects in the body.
 
 ### Request
 
@@ -646,7 +634,7 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Get Client Credential Client Secrets`
+## `Get client credential client secrets`
 
 Get all secrets for a Client Credential Client.
             Total number of secrets in the Client set in the
@@ -749,7 +737,7 @@ Client or Tenant not found.
 Internal server error.
 ***
 
-## `Get Client Credential Client Secret`
+## `Get client credential client secret`
 
 Get a Client Credential Client Secret.
 
@@ -822,11 +810,9 @@ Secret, Client, or Tenant not found.
 Internal server error.
 ***
 
-## `Add Client Credential Client Secret`
+## `Add client credential client secret`
 
-Add a new Secret to a Client Credential Client.
-            A Client can have a maximum of 10 secrets.
-            We advise against creating secrets that do not expire.
+Add a new Secret to a Client Credential Client. A Client can have a maximum of 10 secrets. We advise against creating secrets that do not expire.
 
 ### Request
 
@@ -927,7 +913,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Update Client Credential Client Secret`
+## `Update client credential client secret`
 
 Update a Client Credential Client Secret.
             It can take up to one hour for the update
@@ -1038,7 +1024,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Delete Client Credential Client Secret`
+## `Delete client credential client secret`
 
 Delete a Secret from a Client Credential Client.
             It can take up to one hour for deletion to manifest
@@ -1109,7 +1095,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get Header for Client Credential Client Secret`
+## `Get header for client credential client secret`
 
 Validate that a Secret with given Id exists in the Client.
             This endpoint is identical to the GET one but it does not
@@ -1175,7 +1161,7 @@ Secret, Client, or Tenant not found.
 Internal server error.
 ***
 
-## `Get Total Count of Client Credential Client Secrets`
+## `Get total count of client credential client secrets`
 
 Return total number of Secrets in a Client. The value
             will be set in the Total-Count header. This endpoint

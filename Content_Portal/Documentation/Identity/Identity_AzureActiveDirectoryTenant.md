@@ -4,10 +4,7 @@ uid: identityAzureActiveDirectoryTenant
 
 # AzureActiveDirectoryTenant
 
-An Azure Active Directory Tenant is used to map an existing
-            [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/)
-            Tenant from Azure to OSIsoft Cloud Services. We only allow one Azure Active Directory Tenant
-            per OSIsoft Cloud Services Tenant.
+An Azure Active Directory Tenant is used to map an existing [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/). Tenant from Azure to OSIsoft Cloud Services. We only allow one Azure Active Directory Tenant per OSIsoft Cloud Services Tenant.
 
 ## Properties
 
@@ -39,7 +36,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will look as follows:
 
@@ -54,7 +51,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Add Azure Active Directory Tenant to OCS Tenant`
+## `Add Azure Active Directory tenant to OCS tenant`
 
 Add an Azure Active Directory Tenant to the OSIsoft Cloud Services Tenant.
 
@@ -134,9 +131,9 @@ Id of Azure Active Directory Tenant. is already in use on the specified Tenant.
 Internal server error.
 ***
 
-## `Get All Azure Active Directory Tenants from OCS Tenant`
+## `Get all Azure Active Directory tenants from OCS tenant`
 
-Get all Azure Active Directory Tenants from an OSIsoft Cloud Services Tenant.
+Get all Azure Active Directory tenants from an OSIsoft Cloud Services Tenant.
 
 ### Request
 
@@ -149,7 +146,7 @@ Get all Azure Active Directory Tenants from an OSIsoft Cloud Services Tenant.
 string tenantId
 ```
 
-Id of OSIsoft Cloud Services Tenant.
+Id of OSIsoft Cloud Services tenant.
 
 ```csharp
 [FromQuery]
@@ -224,9 +221,9 @@ Forbidden.
 Internal server error.
 ***
 
-## `Get AAD Tenant from OCS Tenant`
+## `Get Azure Active Directory tenant from OCS tenant`
 
-Get Azure Active Directory Tenant from an OSIsoft Cloud Services Tenant.
+Get Azure Active Directory tenant from an OSIsoft Cloud Services tenant.
 
 ### Request
 
@@ -292,9 +289,9 @@ OSIsoft Cloud Services Tenant not found.
 Internal server error.
 ***
 
-## `Remove AAD Tenant from OCS Tenant`
+## `Remove Azure Active Directory tenant from OCS tenant`
 
-Remove Azure Active Directory Tenant from an OSIsoft Cloud Services Tenant.
+Remove Azure Active Directory tenant from an OSIsoft Cloud Services tenant.
 
 ### Request
 
@@ -307,14 +304,14 @@ Remove Azure Active Directory Tenant from an OSIsoft Cloud Services Tenant.
 string tenantId
 ```
 
-Id of OSIsoft Cloud Services Tenant.
+Id of OSIsoft Cloud Services tenant.
 
 ```csharp
 [Required]
 string azureActiveDirectoryTenantId
 ```
 
-Id of Azure Active Directory Tenant to remove.
+Id of Azure Active Directory tenant to remove.
 
 ### Security
 
@@ -342,7 +339,7 @@ Forbidden.
 
 #### 404
 
-OSIsoft Cloud Services Tenant not found.
+OSIsoft Cloud Services tenant not found.
 
 #### 405
 
@@ -357,7 +354,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Send Consent Email for AAD Tenant`
+## `Send consent email for Azure Active Directory tenant`
 
 Send consent for an Azure Active Directory Tenant. OSIsoft Cloud Services needs to be granted
             permission to interact with the Azure Active Directory tenant. Otherwise, users from this Azure Active Directory Tenant
@@ -375,14 +372,14 @@ Send consent for an Azure Active Directory Tenant. OSIsoft Cloud Services needs 
 string tenantId
 ```
 
-Id of OSIsoft Cloud Services Tenant.
+Id of OSIsoft Cloud Services tenant.
 
 ```csharp
 [Required]
 string azureActiveDirectoryTenantId
 ```
 
-Id of Azure Active Directory Tenant.
+Id of Azure Active Directory tenant.
 
 ```csharp
 [FromBody]
@@ -447,7 +444,7 @@ Method not allowed at this base URL. Try the request again at the Global base UR
 Internal server error.
 ***
 
-## `Get Azure Active Directory Tenant in Tenant`
+## `Get Azure Active Directory tenant in tenant`
 
 Validate that Azure Active Directory Tenant exists in this OSIsoft Cloud Services Tenant.
             This endpoint is identical to the GET one but
@@ -510,11 +507,9 @@ OSIsoft Cloud Services Tenant not found.
 Internal server error.
 ***
 
-## `Get Total Count of Azure Active Directory Tenant in Tenant`
+## `Get total count of Azure Active Directory tenant in tenant`
 
-Return total number of Azure Active Directory tenants in a OSIsoft Cloud Services Tenant. This endpoint
-            is identical to the GET one but it does not return any objects
-            in the body.
+Return total number of Azure Active Directory tenants in a OSIsoft Cloud Services Tenant. This endpoint is identical to the GET one but it does not return any objects in the body.
 
 ### Request
 
@@ -527,7 +522,7 @@ Return total number of Azure Active Directory tenants in a OSIsoft Cloud Service
 string tenantId
 ```
 
-Id of OSIsoft Cloud Services Tenant.
+Id of OSIsoft Cloud Services tenant.
 
 ### Security
 

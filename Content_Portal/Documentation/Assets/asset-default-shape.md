@@ -4,7 +4,7 @@ uid: AssetDefaultShape
 
 # Asset Default Shape
 
-A shape describes the consumption-oriented aspects of an OCS resource, rather than describing how the resource is configured. For example, the shape of an asset corresponds to its metadata and measurements which define how the data is interpreted (that is, SdsTypeCode, InterpolationMode, UOM, and names that are meaningful in the context of an asset) rather than how the data is retrieved from the Sequential Data Store (that is, configuration information such as StreamId and TypeId).
+A shape is a named set of properties and describes the consumption-oriented aspects of an OCS resource, rather than describing how the resource is configured. For example, the shape of an asset corresponds to its metadata and measurements which define how the data is interpreted (that is, SdsTypeCode, InterpolationMode, UOM, and names that are meaningful in the context of an asset) rather than how the data is retrieved from the Sequential Data Store (that is, configuration information such as StreamId and TypeId).
 
 ***
 

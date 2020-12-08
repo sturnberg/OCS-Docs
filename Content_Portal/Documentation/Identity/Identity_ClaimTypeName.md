@@ -4,8 +4,7 @@ uid: identityClaimTypeName
 
 # ClaimTypeName
 
-An Identity Provider Claim Type Name is the field or type name in a claim
-            that will be used to match to a value when creating an Identity Provider Claim.
+An Identity Provider Claim Type Name is the field or type name in a claim that will be used to match to a value when creating an identity provider claim.
 
 
 ***
@@ -20,7 +19,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will look as follows:
 
@@ -35,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get All Identity Provider Claim Type Names`
+## `Get all identity provider claim type names`
 
 Get all Identity Provider Claim Type Names for an Identity Provider on a Tenant.
 
@@ -134,7 +133,7 @@ Tenant or Identity Provider not found.
 Internal server error.
 ***
 
-## `Get All Identity Provider Claim Type Names Header`
+## `Get all identity provider claim type names header`
 
 Get Header for all Identity Provider Claims Type Names for an Identity Provider on a Tenant.
 
@@ -191,7 +190,7 @@ Tenant or Identity Provider not found.
 Internal server error.
 ***
 
-## `Get Identity Provider Claim Type Name`
+## `Get identity provider claim type name`
 
 Get an Identity Provider Claim Type Name from an Identity Provider on a Tenant.
 
@@ -267,7 +266,7 @@ Tenant, Identity Provider, or Identity Provider Claim Type Name not found.
 Internal server error.
 ***
 
-## `Get Identity Provider Claim Type Name Header`
+## `Get identity provider claim type name header`
 
 Get an Identity Provider Claim Type Name Header from an Identity Provider on a Tenant.
 

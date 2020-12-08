@@ -2,10 +2,11 @@
 uid: AccountClientRole_1
 ---
 
-# Client Roles
+# Client roles
 
-Client `Roles` authorize API requests made by clients to various OCS features. Clients can be assigned more than one
-`Role`, but all clients have the Account Member role. The following are currently available Client `Roles`:
+Client `roles` authorize API requests made by clients to various OCS features. Clients can be assigned more than one
+`role`, but all clients have the Account Member role. The following are currently available Client `Roles`:
+
 - Account Administrator: Can add, edit, and remove data using APIs.
 - Account Member: Can read data using most APIs.
 
@@ -14,10 +15,10 @@ Client `Roles` authorize API requests made by clients to various OCS features. C
 
 For HTTP requests and responses, the ClientRole object has the following properties and JSON-serialized body: 
 
-| Property Name | Data Type | Description | 
- | --- | --- | ---  | 
-| ClientId | string | String value that identifies the client. | 
-| RoleId | string | String value that identifies the role. | 
+| Property Name | Data Type | Description |
+| --- | --- | ---  |
+| ClientId | string | String value that identifies the client. |
+| RoleId | string | String value that identifies the role. |
 
 
 ```json
@@ -28,7 +29,7 @@ For HTTP requests and responses, the ClientRole object has the following propert
 ```
 ***
 
-## `Replace Client Roles`
+## `Replace client roles`
 
 Replaces the `Roles` of a client with a new list of roles.
 
@@ -68,18 +69,18 @@ List of `Role` objects to set as the Roles for the specified client.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | [Role] | Returns a list of all `Role` objects assigned to the user specified by clientId after the replacement operation is complete. | 
-| 400 | Nothing is returned | Could not replace `Roles` due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to replace `Roles` of this client. | 
-| 404 | Nothing is returned | The client was not found in the specified `Tenant`. | 
-| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | [Role] | Returns a list of all `Role` objects assigned to the user specified by clientId after the replacement operation is complete. |
+| 400 | Nothing is returned | Could not replace `Roles` due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to replace `Roles` of this client. |
+| 404 | Nothing is returned | The client was not found in the specified `Tenant`. |
+| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. |
 
 
 ***
 
-## `Find Client Roles`
+## `Find client roles`
 
 Retrieves all `Roles` from a client.
 
@@ -136,12 +137,12 @@ Unsupported parameter.
 
 ### Returns
 
-| Status Code | Return Type | Description | 
- | --- | --- | ---  | 
-| 200 | [Role] | Returns a list of `Role` objects belonging to the client with the specified clientId. | 
-| 400 | Nothing is returned | Could not retrieve `Roles` from the client due to missing or invalid input. | 
-| 403 | Nothing is returned | Unauthorized to retrieve `Roles` from this client. | 
-| 404 | Nothing is returned | The client was not found in the specified `Tenant`. | 
+| Status Code | Return Type | Description |
+| --- | --- | ---  |
+| 200 | [Role] | Returns a list of `Role` objects belonging to the client with the specified clientId. |
+| 400 | Nothing is returned | Could not retrieve `Roles` from the client due to missing or invalid input. |
+| 403 | Nothing is returned | Unauthorized to retrieve `Roles` from this client. |
+| 404 | Nothing is returned | The client was not found in the specified `Tenant`. |
 
 
 ***

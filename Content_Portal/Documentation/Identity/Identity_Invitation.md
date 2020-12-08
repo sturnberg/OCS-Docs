@@ -4,18 +4,7 @@ uid: identityInvitation
 
 # Invitation
 
-Invitations are issued after the creation of a User object in OCS,
-            to begin the provisioning process for a user with one of the Identity
-            Providers in a Tenant.
-            There can only be one Invitation for a User at a time. An invitation
-            can expire, at which time the Admin can either delete it, or extend it.
-            When creating an Invitation an account Admin has the option to resend the
-            Invitation email to the ContactEmail configured for the User the Invitation
-            is attached to. The email can be re-sent by updating the Invitation.
-            When an Invitation expires the User cannot accept it. If the expiration
-            date is extended the User can accept an Invitation.
-            Invitations that are past of their expiration date by more than two weeks will be deleted.
-            The only way to provision a User after this, is to send a new Invitation.
+Invitations are issued after the creation of a User object in OCS, to begin the provisioning process for a user with one of the identity providers in a tenant. There can only be one invitation for a user at a time. An invitation can expire, at which time the admin can either delete it, or extend it. When creating an invitation an account admin has the option to resend the invitation email to the ContactEmail configured for the user the invitation is attached to. The email can be re-sent by updating the invitation. When an invitation expires the user cannot accept it. If the expiration date is extended the User can accept an invitation. Invitations that are past of their expiration date by more than two weeks will be deleted. The only way to provision a user after this, is to send a new invitation.
 
 ## Properties
 
@@ -32,7 +21,7 @@ TenantId | string | ID of the Tenant the invitation belongs to.
 UserId | Guid | ID of the User whom the invitation was issued to.
 IdentityProviderId | Guid | ID of the Identity Provider that must be used to accept the invitation.
 
-### Serialized Model
+### Serialized model
 
 ```json
 {
@@ -59,7 +48,7 @@ Requests made without an access token or an invalid/expired token will fail with
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
 Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
 
-## Error Handling
+## Error handling
 
 All responses will have an error message in the body. The exceptions are 200 responses and the 401 Unauthorized response. The error message will look as follows:
 
@@ -74,7 +63,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get Invitation`
+## `Get invitation`
 
 Get an Invitation from Tenant.
 
@@ -144,7 +133,7 @@ Invitation or Tenant not found.
 Internal server error.
 ***
 
-## `Get Invitations`
+## `Get invitations`
 
 Get all non-expired invitations from a Tenant. Optionally include expired invitations.
 
@@ -259,7 +248,7 @@ Tenant not found.
 Internal server error.
 ***
 
-## `Update Invitation`
+## `Update invitation`
 
 Update an Invitation. Expired invitations will not be extended.
             automatically upon updates.
@@ -368,7 +357,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Delete Invitation`
+## `Delete invitation`
 
 Delete an Invitation. Users who already have an Invitation email
             will not be able to sign-up once the Invitation is deleted.
@@ -434,7 +423,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get header for an Invitation`
+## `Get header for an invitation`
 
 Validate that an Invitation exists. This endpoint is identical to the GET
             one, but it does not return an object in the body.
@@ -492,7 +481,7 @@ Invitation or Tenant not found.
 Internal server error.
 ***
 
-## `Get header for Invitations`
+## `Get header for invitations`
 
 Return total number of non-expired Invitations in a Tenant. Optionally include expired invitations.
             The value will be set in the Total-Count header. This endpoint is identical to the GET one but
@@ -557,7 +546,7 @@ Tenant not found.
 Internal server error.
 ***
 
-## `Get User's Invitation`
+## `Get user's invitation`
 
 Get Invitation for a User.
 
@@ -628,7 +617,7 @@ Invitation, User, or Tenant not found.
 Internal server error.
 ***
 
-## `Create Invitation`
+## `Create invitation`
 
 Create an Invitation for a User. Should use when no other Invitation exists for the User.
 
@@ -740,7 +729,7 @@ Invitation already exists.
 Internal server error.
 ***
 
-## `Create or Update Invitation`
+## `Create or update invitation`
 
 Create or update an Invitation for a User.
 
@@ -873,7 +862,7 @@ Invitation already exists.
 Internal server error.
 ***
 
-## `Delete Invitation`
+## `Delete invitation`
 
 Delete an Invitation for a User.
 
@@ -934,7 +923,7 @@ Operation timed out.
 Internal server error.
 ***
 
-## `Get header for User's Invitation`
+## `Get header for user's invitation`
 
 Validate that Invitation exist for a User. This endpoint
             is identical to the GET one but it does not return any
