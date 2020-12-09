@@ -33,7 +33,11 @@
         "files": [
             "Content_Portal/Quickstarts/images/**",
             "Content_Portal/Documentation/images/**",
-            "Content_Portal/How_To_Guides/images/**"
+            "Content_Portal/How_To_Guides/images/**",
+            "Content_Portal/Getting_Started/images/**",
+            "Content_Portal/Data Egress/images/**",
+            "Content_Portal/Visualization/images/**",
+            "Content_Portal/Data_Ingress/PI-to-OCS/images/**",
         ]
       }
     ],
