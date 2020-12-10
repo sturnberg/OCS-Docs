@@ -1,4 +1,4 @@
-- name: Getting started with SDS 
+- name: Sequential Data Store 
   topicHref: Quick_Start.md
 - name: Getting Started with Trend Data 
   topicHref: Getting-Started-Trend.md

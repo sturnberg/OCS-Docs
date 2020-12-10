@@ -1,19 +1,19 @@
 - name: Overview
-  href: Overview/toc.yml
+  href: overview/toc.yml
   topicHref: index.md
   homepage: index.md
 - name: Get Started
-  href: Quickstarts/toc.yml
-  topicHref: Quickstarts/Quick_Start.md
+  href: quickstarts/toc.yml
+  topicHref: quickstarts/Quick_Start.md
 - name: Concepts
-  href: Concepts/toc.yml
-  topicHref: Concepts/Concepts_Overview.md
+  href: concepts/toc.yml
+  topicHref: concepts/Concepts_Overview.md
 - name: Tutorials
-  href: Tutorials/toc.yml
-  topicHref: Tutorials/create-stream-views.md
+  href: tutorials/toc.yml
+  topicHref: tutorials/create-stream-views.md
 - name:  API Reference
-  href: Reference/toc.yml
-  topicHref: Reference/OSIsoft_Cloud_Services.md
+  href: reference/toc.yml
+  topicHref: reference/OSIsoft_Cloud_Services.md
 - name: Resources
-  href: Resources/toc.yml
-  topicHref: Resources/OSIsoft_Cloud_Services.md
+  href: resources/toc.yml
+  topicHref: resources/OSIsoft_Cloud_Services.md
