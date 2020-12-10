@@ -2,5 +2,5 @@
   dropdown: true
   items:
   - name: OCS API documentation
-    href: OCS/
-    topicHref: OCS/index.md
+    href: ocs/
+    topicHref: ocs/index.md
