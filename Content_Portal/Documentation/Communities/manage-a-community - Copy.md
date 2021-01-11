@@ -4,7 +4,7 @@ uid: ManageCommunity
 
 # Manage a community
 
-The Communities page lets you perform overall tasks for managing communities, such as adding or deleting a community. See <Manage tenants in a community> to specify the clients, users, and roles for particular tenant in a community.
+The Communitiy Details page lets you perform tasks for managing a communit, such as adding or deleting a community. See <Manage tenants in a community> to specify the clients, users, and roles for particular tenant in a community.
 
 ## Create a community
 
