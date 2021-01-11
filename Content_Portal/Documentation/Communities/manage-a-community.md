@@ -2,9 +2,9 @@
 uid: ManageCommunity
 ---
 
-# Manage a community
+# Manage tenants in a community
 
-The Community Details page lets you perform various tasks for managing a community, such as adding a tenant to a community or deleting a community.
+The Community Details page lets you perform various tasks for managing tenants belonging to a community.
 
 To create a new community, see [Add a community](xref:AddCommunity).
 
