@@ -30,7 +30,7 @@ Two different users must perform this procedure:
    2.4. Click **Join**. The inviter receives an email asking for confirmation of the pending invitation.   
 3. **Inviter:** Perform the following steps:   
    3.1. Click **VIEW PENDING INVITATIONS**. After authentication into OCS, the Community Details page opens and shows that an invitation awaits confirmation.   
-   3.2. Select the tenant with the pending confirmation, select ![**More Options**](..\images\more-options-wite-background.png "More Options"), and click **Confirm Tenant**. When prompted for confirmation, **click Confirm Tenant** again.
+   3.2. Select the tenant with the pending confirmation, select **More Options** ![More Options](..\images\more-options-wite-background.png "More Options"), and click **Confirm Tenant**. When prompted for confirmation, **click Confirm Tenant** again.
 
 ## Pause or resume sharing data with a tenant
 
