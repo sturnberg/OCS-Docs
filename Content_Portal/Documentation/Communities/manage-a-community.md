@@ -30,10 +30,30 @@ Two different users must perform this procedure:
    2.4. Click **Join**. The inviter receives an email asking for confirmation of the pending invitation.   
 3. **Inviter:** Perform the following steps:   
    3.1. Click **VIEW PENDING INVITATIONS**. After authentication into OCS, the Community Details page opens and shows that an invitation awaits confirmation.   
-   3.2. Select the tenant with the pending confirmation, select **More Options** ![More Options](..\images\more-options-wite-background.png "More Options"), and click **Confirm Tenant**. When prompted for confirmation, **click Confirm Tenant** again.
+   3.2. Select the tenant with the pending confirmation, select **More Options** ![More Options](..\images\more-options-wite-background.png "More Options"), and click **Confirm Tenant**. When prompted for confirmation, click **Confirm Tenant** again.
 
-## Pause or resume sharing data with a tenant
+## Pause or resume sharing data
 
 ## Remove a tenant from a community
 
+Use this procedure to remove a tenant from a community. This action might be necessary if a business relationship changes or a security breach occurs.
+
+After removing a tenant, you can re-invite the tenant to the community but all data that was previously shared must be shared again with the returning tenant.
+
+**Note.** Only an OCS user whose role is Community Administrator, Community Moderator, or Tenant Administrator can remove a tenant from a community. ???waiting to see API to confirm permissions???  
+
+1. On the Communities overview page, find the community you want to modify and click **Details**.
+2. On the Community Details page, select the tenant you want to remove from the community.
+3. select **More Options** ![More Options](..\images\more-options-wite-background.png "More Options") and click **Remove Tenant**. When prompted for confirmation, click **Remove Tenant** again.
+
 ## Remove your own tenant from a community
+
+Use this procedure to remove your own tenant from a community.
+
+After removing you tenant, you can be re-invited to the community but all data that was previously shared with your tenant must be shared again.
+
+**Note.** Only an OCS user whose role is Community Administrator, Community Moderator, or Tenant Administrator can remove a tenant from a community. ???waiting to see API to confirm permissions???  
+
+1. On the Communities overview page, find the community you want to leave and click **Details**.
+2. On the Community Details page, select the tenant you want to remove from the community.
+3. select **More Options** ![More Options](..\images\more-options-wite-background.png "More Options") and click **Remove Tenant**. When prompted for confirmation, click **Remove Tenant** again.
