@@ -40,11 +40,11 @@ Use this procedure to remove a tenant from a community. This action might be nec
 
 After removing a tenant, you can re-invite the tenant to the community but all data that was previously shared must be shared again with the returning tenant.
 
-**Note.** Only an OCS user whose role is Community Administrator, Community Moderator, or Tenant Administrator can remove a tenant from a community. ???waiting to see API to confirm permissions???  
+**Note.** Only an OCS user whose role is Community Administrator or Tenant Administrator can remove a tenant from a community. ???waiting to see API to confirm permissions???  
 
 1. On the Communities overview page, find the community you want to modify and click **Details**.
 2. On the Community Details page, select the tenant you want to remove from the community.
-3. select **More Options** ![More Options](..\images\more-options-wite-background.png "More Options") and click **Remove Tenant**. When prompted for confirmation, click **Remove Tenant** again.
+3. Select **More Options** ![More Options](..\images\more-options-wite-background.png "More Options") and click **Remove Tenant**. When prompted for confirmation, click **Remove Tenant** again.
 
 ## Remove your own tenant from a community
 
@@ -52,8 +52,8 @@ Use this procedure to remove your own tenant from a community.
 
 After removing you tenant, you can be re-invited to the community but all data that was previously shared with your tenant must be shared again.
 
-**Note.** Only an OCS user whose role is Community Administrator, Community Moderator, or Tenant Administrator can remove a tenant from a community. ???waiting to see API to confirm permissions???  
+**Note.** Only OCS users whose role is Community Administrator or Tenant Administrator can remove their own tenant from a community.
 
 1. On the Communities overview page, find the community you want to leave and click **Details**.
-2. On the Community Details page, select the tenant you want to remove from the community.
-3. select **More Options** ![More Options](..\images\more-options-wite-background.png "More Options") and click **Remove Tenant**. When prompted for confirmation, click **Remove Tenant** again.
+2. Select **More Options** ![More Options](..\images\MoreOptions.png "More Options") and click **Remove <your tenant>**. A confirmation dialog opens.
+3. Enter the name of your own tenant and click **Remove**.
