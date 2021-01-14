@@ -1,0 +1,8 @@
+- name: Communities
+  href: communities.md
+- name: Share data with a partner
+  href: share-data-with-partner.md
+- name: Add a community
+  href: add-a-community.md
+- name: Delete a community
+  href: delete-a-community.md
