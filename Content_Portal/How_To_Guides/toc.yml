@@ -1,5 +1,5 @@
 - name: Assets and Asset Types
   href: Assets/toc.yml
 - name: Communities
-  href: Communities/toc.yml  
-  topicHref: Communities/communities.md
+  href: communities/toc.yml  
+  topicHref: communities/communities.md
