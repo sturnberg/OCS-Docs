@@ -2,3 +2,4 @@
   href: Assets/toc.yml
 - name: Communities
   href: communities/toc.yml  
+  topicHref: communities/communities.md
