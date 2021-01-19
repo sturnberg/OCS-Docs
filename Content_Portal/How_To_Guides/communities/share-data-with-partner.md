@@ -1,5 +1,5 @@
 ---
-UID:ShareDataWithPartner
+UID: ShareDataWithPartner
 ---
 
 # Share data with a partner

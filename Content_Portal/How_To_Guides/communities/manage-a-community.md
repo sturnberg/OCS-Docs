@@ -1,12 +1,12 @@
 ---
-uid: manage-community
+uid: manage-c ommunity
 ---
 
 # Manage tenants in a community
 
 The Community Details page lets you perform various tasks for managing tenants that already belong to a community.
 
-To create a new community, see [Add a community](xref:AddCommunity).
+To create a new community, see [Add a community](xref:add-community).
 
 ## Add a tenant to a community
 
