@@ -9,7 +9,7 @@ Authorization Code clients are used in Javascript/Browser (SPA) based applicatio
             [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#authorization-code-flow-with-pkce).
             Authorization Code clients are not issued secrets or refresh tokens. 
             For some guidelines on use of secrets, refer to the [Credential Management](xref:CredentialManagement) topic.
-            For some recommendations on least privilege for users and clients, refer to the [Least Privilege](xref:LeastPrivilege)  topic.
+            For some recommendations on least privilege for users and clients, refer to the [Least Privilege](xref:LeastPrivilege) topic.
 
 ## Properties
 
