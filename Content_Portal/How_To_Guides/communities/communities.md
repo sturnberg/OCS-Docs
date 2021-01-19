@@ -1,5 +1,5 @@
 ---
-uid: Communities
+uid: communities
 ---
 
 # Communities
