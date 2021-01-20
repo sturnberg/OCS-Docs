@@ -4,18 +4,18 @@ uid: sdsStreams
 
 # Streams
 
-Streams are a container for sequential data of some type of sequentially occurring values indexed by a single property, typically time series data. You define SdsStreams to organize incoming data from another system into the OCS.
-To define an SdsStream, you must first define type, which defines the structure of the data you want to stream into a selected namespace.
+Streams are a container for sequential data of some type of sequentially occurring values indexed by a single property, typically time series data. You define streams to organize incoming data from another system into the OCS.
+To define a stream, you must first define a type, which defines the structure of the data you want to stream into a selected namespace.
 
 SDS stores collections of events and provides convenient ways to find and associate events.
-Events of consistent structure are stored in SdsStreams. SdsStreams are referenced by their identifier or `Id` field.
-SdsStream identifiers must be unique within a namespace.
+Events of consistent structure are stored in streams. Streams are referenced by their identifier or `Id` field.
+Stream identifiers must be unique within a namespace.
 
-Stream must include a `TypeId` that references the identifier of an existing type.
+A stream must include a `TypeId` that references the identifier of an existing type.
 Stream management using the .NET SDS client libraries is performed through `ISdsMetadataService`.
 Create the `ISdsMetadataService`, using one of the ``SdsService.GetMetadataService()`` factory methods.
 
-The following table shows the required and optional SdsStream fields. Fields not listed are reserved
+The following table shows the required and optional stream fields. Fields not listed are reserved
 for internal SDS use.
 
 <a name="streampropertiestable"></a>
@@ -43,15 +43,15 @@ However, they are associated with SdsStream objects and can be used as search cr
 5. Can contain a maximum of 100 characters
 
 ## Indexes
-While you define the primary index on the SdsType, the SdsStream is where you define secondary indexes.
-If the primary index defined on the SdsType is a compound index, secondary indexes on the SdsStream are allowed as long as that compound index does not have more than two properties. For more information on compound indexes, see [Indexes](xref:sdsIndexes#compound-indexes). 
+While you define the primary index on the type, the stream is where you define secondary indexes.
+If the primary index defined on the type is a compound index, secondary indexes on the stream are allowed as long as that compound index does not have more than two properties. For more information on compound indexes, see [Indexes](xref:sdsIndexes#compound-indexes). 
 <!-- Secondary indexes apply to a single property. In other words, there are no compound secondary indexes.-->
 
-Note that you can only use the SdsTypeCodes of SdsType properties that can be ordered (``DateTime`` or numbers, for example) as a secondary index.
+Note that you can only use the SdsTypeCodes of type properties that can be ordered (``DateTime`` or numbers, for example) as a secondary index.
 
 ## Interpolation and extrapolation
-The InterpolationMode, ExtrapolationMode, and [SdsStreamPropertyOverride object](#sdsstreampropertyoverride) can be used to determine how a specific SdsStream reads data.
-These read characteristics are inherited from the SdsType if they are not defined at the SdsStream level.
+The `InterpolationMode`, `ExtrapolationMode`, and [SdsStreamPropertyOverride object](#sdsstreampropertyoverride) can be used to determine how a specific stream reads data.
+These read characteristics are inherited from the type if they are not defined at the stream level.
 
 
 ## ``SdsStreamPropertyOverride``
@@ -70,7 +70,7 @@ The ``SdsStreamPropertyOverride`` object has the following structure:
 The unit of measure can be overridden for any SdsTypeProperty defined by the stream type, including primary 
 and secondary indexes. For more information on SdsTypeProperty `Uom`, see [Types](xref:sdsTypes#sdstypeproperty). 
 
-Read characteristics of the SdsStream are determined by the SdsType and the `PropertyOverride` of the SdsStream. The 
+Read characteristics of the stream are determined by the type and the `PropertyOverride` of the stream. The 
 interpolation mode for non-index properties can be defined and overridden at the SdsStream level. For more 
 information about type read characteristics see [Types](xref:sdsTypes#sdstypeproperty).
 
@@ -84,7 +84,7 @@ The REST APIs provide programmatic access to read and write SDS data. The API in
 section interacts with SdsStreams. When working in .NET framework, convenient SDS client libraries are 
 available. The ``ISdsMetadataService`` interface, accessed using the ``SdsService.GetMetadataService( )`` helper, 
 defines the available functions. See [Streams](#streams) above for general 
-information related to SdsStream. 
+information related to streams. 
 
 **********************
 ## `Get Streams` 
