@@ -1,5 +1,5 @@
 ---
-uid: manage-community
+uid: managecommunity
 ---
 
 # Manage tenants in a community
