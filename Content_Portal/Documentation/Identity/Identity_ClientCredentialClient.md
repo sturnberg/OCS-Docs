@@ -9,7 +9,7 @@ Client Credential clients are used for machine-to-machine communication without
             These clients are issued an Id and Secret upon creation,
             which are later used for authentication against OSIsoft Cloud Services. More than one Secret can be
             created for a Client. You can read more about these clients
-            [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#client-credential-flow).
+            [here](https://github.com/osisoft/OSI-Samples-OCS/blob/master/docs/AUTHENTICATION_README.md#client-credential-flow).
             Because they access resources on OSIsoft Cloud Services, and are not associated to users, these
             clients can be assigned any of the roles in the Tenant. We suggest following a
             least privilege strategy when assigning roles to these clients, as they are more
