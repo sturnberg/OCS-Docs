@@ -1,8 +1,8 @@
 - name: Share data with a partner
   href: share-data-with-partner.md
-- name: Manage tenants in a community
-  href: manage-a-community.md
 - name: Add a community
   href: add-a-community.md
+- name: Manage tenants in a community
+  href: manage-a-community.md
 - name: Delete a community
   href: delete-a-community.md
