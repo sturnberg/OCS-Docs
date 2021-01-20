@@ -5,13 +5,15 @@ uid: AccountNamespace_1
 # Namespaces
 
 A namespace is a logical unit of organization for data within a tenant. Each tenant may contain more than one namespace. Before you can put any data into OCS for a given tenant, a namespace must be created within the scope of that tenant. Namespace identifiers are unique within an account. Requirements for namespace Ids are the following:
+A `Namespace` is a collection of SDS types, streams, and stream views. Namespace identifiers are unique within a tenant. Requirements
+for Namespace IDs are the following:
 - Must contain 100 characters or fewer
 - Must only contain alphanumeric characters, underscores, dashes, spaces, and periods
 - Must not contain two consecutive periods
 - Must not start or end with a period
 - Must not start with two consecutive underscores
 
-In practice, namespaces may correspond to a specific set of infrastructure assets, but more commonly correspond to virtual partitions within a single set of assets. You can create one or more namespaces within an SDS account. Each namespace is effectively an instance of SDS, within which you create SDS types and streams, stream views, data views, and metadata.
+In practice, namespaces may correspond to a specific set of infrastructure assets, but more commonly correspond to virtual partitions within a single set of assets. You can create one or more namespaces within an SDS tenant. Each namespace is effectively an instance of SDS, within which you create SDS types and streams, stream views, data views, and metadata.
 
 ## Properties
 
@@ -58,7 +60,7 @@ Returns all `Namespaces` owned by the specified `Tenant` that the caller has acc
 string tenantId
 ```
 
-The identifier of the account to access.
+The identifier of the tenant to access.
 
 
 ### Security
@@ -93,7 +95,7 @@ Returns a `Namespace` with the specified Id.
 string tenantId
 ```
 
-The identifier of the account to access.
+The identifier of the tenant to access.
 ```csharp
 [Required]
 [FromRoute]
@@ -109,12 +111,12 @@ A `Namespace` can only be retrieved if the current principal has Read access.
 
 ### Returns
 
-| Status Code | Return Type | Description |
-| --- | --- | ---  |
-| 200 | Namespace | Returns a `Namespace` object with the specified namespaceId. |
-| 400 | Nothing is returned | Could not retrieve the `Namespace` due to missing or invalid input. |
-| 403 | Nothing is returned | Unauthorized to access this `Namespace`. |
-| 404 | Nothing is returned | `Namespace` not found in the specified account. |
+| Status Code | Return Type | Description | 
+ | --- | --- | ---  | 
+| 200 | Namespace | Returns a `Namespace` object with the specified namespaceId. | 
+| 400 | Nothing is returned | Could not retrieve the `Namespace` due to missing or invalid input. | 
+| 403 | Nothing is returned | Unauthorized to access this `Namespace`. | 
+| 404 | Nothing is returned | `Namespace` not found in the specified tenant. | 
 
 
 ***
@@ -136,7 +138,7 @@ Creates a new `Namespace` in the specified `Tenant`.
 string tenantId
 ```
 
-The account identifier where the `Namespace` will be created.
+The tenant identifier where the `Namespace` will be created.
 ```csharp
 [Required]
 [FromBody]
@@ -161,14 +163,14 @@ A `Namespace` can only be created if the current principal has Write access.
 
 ### Returns
 
-| Status Code | Return Type | Description |
-| --- | --- | ---  |
-| 201 | Namespace | Returns the created `Namespace` object. |
-| 302 | Nothing is returned | Returns the location of the existing `Namespace` object. |
-| 400 | Nothing is returned | Could not create the `Namespace` due to missing or invalid input. |
-| 403 | Nothing is returned | Unauthorized to create a `Namespace` in this account. |
-| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. |
-| 409 | Nothing is returned | A `Namespace` already exists with different values. |
+| Status Code | Return Type | Description | 
+ | --- | --- | ---  | 
+| 201 | Namespace | Returns the created `Namespace` object. | 
+| 302 | Nothing is returned | Returns the location of the existing `Namespace` object. | 
+| 400 | Nothing is returned | Could not create the `Namespace` due to missing or invalid input. | 
+| 403 | Nothing is returned | Unauthorized to create a `Namespace` in this tenant. | 
+| 405 | Nothing is returned | Method not allowed at this base URL. Try the request again at the Global base URL. | 
+| 409 | Nothing is returned | A `Namespace` already exists with different values. | 
 
 
 ***
@@ -191,7 +193,7 @@ Updates `Namespace` information: Description and TierId. The [AccessControlList]
 string tenantId
 ```
 
-The identifier of the account to access.
+The identifier of the tenant to access.
 ```csharp
 [Required]
 [FromRoute]
@@ -240,7 +242,7 @@ Deletes a `Namespace` in the specified `Tenant`.
 string tenantId
 ```
 
-The identifier of the account to access.
+The identifier of the tenant to access.
 ```csharp
 [Required]
 [FromRoute]
@@ -283,7 +285,7 @@ Returns the [AccessControlList](xref:accessControl) that is used to authorize ac
 string tenantId
 ```
 
-The identifier of the account to access.
+The identifier of the tenant to access.
 ```csharp
 [Required]
 [FromRoute]
@@ -325,7 +327,7 @@ Updates the [AccessControlList](xref:accessControl) that is used to authorize ac
 string tenantId
 ```
 
-The identifier of the account to access.
+The identifier of the tenant to access.
 ```csharp
 [Required]
 [FromRoute]
@@ -376,7 +378,7 @@ Returns the Owner's [Trustee](xref:accessControl) for a given `Namespace`.
 string tenantId
 ```
 
-The identifier of the account to access.
+The identifier of the tenant to access.
 ```csharp
 [Required]
 [FromRoute]
@@ -418,7 +420,7 @@ Changes the Owner's [Trustee](xref:accessControl) for a given `Namespace`.
 string tenantId
 ```
 
-The identifier of the account to access.
+The identifier of the tenant to access.
 ```csharp
 [Required]
 [FromRoute]

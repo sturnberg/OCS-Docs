@@ -4,6 +4,18 @@ uid: identityInvitation
 
 # Invitation
 
+Invitations are issued after the creation of a User object in OCS,
+            to begin the provisioning process for a user with one of the Identity
+            Providers in a tenant.
+            There can only be one Invitation for a User at a time. An invitation
+            can expire, at which time the Admin can either delete it, or extend it.
+            When creating an Invitation an Account Administrator has the option to resend the
+            Invitation email to the ContactEmail configured for the User the Invitation
+            is attached to. The email can be re-sent by updating the Invitation.
+            When an Invitation expires the User cannot accept it. If the expiration
+            date is extended the User can accept an Invitation.
+            Invitations that are past of their expiration date by more than two weeks will be deleted.
+            The only way to provision a User after this, is to send a new Invitation.
 Invitations are issued after the creation of a User object in OCS, to begin the provisioning process for a user with one of the identity providers in a tenant. There can only be one invitation for a user at a time. An invitation can expire, at which time the admin can either delete it, or extend it. When creating an invitation an account admin has the option to resend the invitation email to the ContactEmail configured for the user the invitation is attached to. The email can be re-sent by updating the invitation. When an invitation expires the user cannot accept it. If the expiration date is extended the User can accept an invitation. Invitations that are past of their expiration date by more than two weeks will be deleted. The only way to provision a user after this, is to send a new invitation.
 
 ## Properties
@@ -46,7 +58,7 @@ All endpoints referenced in this documentation require authenticated access. Aut
 
 Requests made without an access token or an invalid/expired token will fail with a 401 Unauthorized response.
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
-Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
+Read [here](https://github.com/osisoft/OSI-Samples-OCS/blob/master/docs/AUTHENTICATION_README.md) on how to authenticate against OCS with the various clients and receive an access token in response.
 
 ## Error handling
 

@@ -4,6 +4,20 @@ uid: identityUser
 
 # User
 
+Users consume resources in a Tenant. They are invited by the Admin of the
+            Tenant and should already have a tenant in one of the configured Identity
+            Providers for this Tenant. A User is fully provisioned in OSIsoft Cloud Services
+            only after they have accepted the invitation and successfully logged with
+            an Identity Provider. OSIsoft Cloud Services does not maintain User credentials, but it delegates
+            authentication to the Identity Provider the User logged in with at first. Once
+            logged in the User cannot change the Identity Provider it signed up with. A Tenant
+            can only have one User with a given email to an Identity Provider. If a User has
+            multiple aliases in the same Identity Provider, they will not be able to create
+            multiple corresponding OSIsoft Cloud Services users. Users have roles associated with them. These roles
+            determine what a User is authorized to do in the Tenant. Roles are assigned to a User
+            upon creation and can be modified by an Admin. We allow the change of some User fields
+            and the complete deletion of a User.
+            For some recommendations on least privilege for users and clients, refer to the [Least Privilege](xref:LeastPrivilege) topic.
 Users consume resources in a tenant. They are invited by the admin of the tenant and should already have an account in one of the configured identity providers for this tenant. A user is fully provisioned in OSIsoft Cloud Services only after they have accepted the invitation and successfully logged with an identity provider. OSIsoft Cloud Services does not maintain user credentials, but it delegates authentication to the identity provider the user logged in with at first. Once
 logged in the user cannot change the identity provider it signed up with. A tenant can only have one user with a given email to an identity provider. If a user has multiple aliases in the same identity provider, they will not be able to create multiple corresponding OSIsoft Cloud Services users. Users have roles associated with them. These roles determine what a user is authorized to do in the tenant. Roles are assigned to a user upon creation and can be modified by an Admin. We allow the change of some User fields and the complete deletion of a user.
 
@@ -56,7 +70,7 @@ All endpoints referenced in this documentation require authenticated access. Aut
 
 Requests made without an access token or an invalid/expired token will fail with a 401 Unauthorized response.
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
-Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
+Read [here](https://github.com/osisoft/OSI-Samples-OCS/blob/master/docs/AUTHENTICATION_README.md) on how to authenticate against OCS with the various clients and receive an access token in response.
 
 ## Error handling
 

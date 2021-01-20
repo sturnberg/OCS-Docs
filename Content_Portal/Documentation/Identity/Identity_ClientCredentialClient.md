@@ -4,7 +4,16 @@ uid: identityClientCredentialClient
 
 # ClientCredentialClient
 
-Client credential clients are used for server-to-server communications without the presence or intervention of a user. Examples include OSIAdapter or Edge Data Store sending data to OCS. The client credentials client is issued a client Id and secret. Once authenticated, it is granted an access token with a defined lifetime. The tokens may either be short-lived access tokens or longer-lived refresh tokens that allow the client to request new access tokens. You can read more about these clients [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#client-credential-flow). 
+Client Credential clients are used for machine-to-machine communication without
+            the presence of a User. 
+            These clients are issued an Id and Secret upon creation,
+            which are later used for authentication against OSIsoft Cloud Services. More than one Secret can be
+            created for a Client. You can read more about these clients
+            [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication#client-credential-flow).
+            Because they access resources on OSIsoft Cloud Services, and are not associated to users, these
+            clients can be assigned any of the roles in the Tenant. We suggest following a
+            least privilege strategy when assigning roles to these clients, as they are more
+            likely to operate in remote machines with a wider attack surface.
 
 Because they access resources on OSIsoft Cloud Services and are not associated to users, these clients can be assigned any of the roles in the tenant. We suggest following a least privilege strategy when assigning roles to these clients, as they are more likely to operate in remote machines with a wider attack surface.
 
@@ -50,7 +59,7 @@ All endpoints referenced in this documentation require authenticated access. Aut
 
 Requests made without an access token or an invalid/expired token will fail with a 401 Unauthorized response.
 Requests made with an access token which does not have the correct permissions (see security subsection on every endpoint) will fail with a 403 Forbidden.
-Read [here](https://github.com/osisoft/OSI-Samples-OCS/tree/master/basic_samples/Authentication) on how to authenticate against OCS with the various clients and receive an access token in response.
+Read [here](https://github.com/osisoft/OSI-Samples-OCS/blob/master/docs/AUTHENTICATION_README.md) on how to authenticate against OCS with the various clients and receive an access token in response.
 
 ## Error handling
 

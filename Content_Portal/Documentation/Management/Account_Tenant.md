@@ -5,6 +5,7 @@ uid: AccountTenant
 # Tenants
 
 APIs to manage an OCS Customer tenant account. A tenant represents the set of services, applications, data, and configuration state available to a customer. Users are associated with a tenant via at least one configured identity provider and access to resources can be managed for those users via the assignment of roles. Data and services provided by a tenant may also span geographical regions. A tenant has:
+APIs to manage an OCS Customer Tenant. Unlike Namespaces, Tenants are not scoped to a region. Tenant level information, such as Users and Clients, is stored in all supported regions for read-only purposes. Write operations for tenant management and identity and access management are only supported through the global base URL. Unsupported requests return a status of ``Method Not Allowed`` (405). The resolution is to utilize the global base URL (https://dat-b.osisoft.com/) for write operations that are not scoped to a namespace.
 
 * Name (was Company Name) – official customer name. May not be unique.
 
