@@ -4,15 +4,15 @@ uid: sdsStreams
 
 # Streams
 
-SdsStreams are a container for sequential data of some type of sequentially occurring values indexed by a single property, typically time series data. You define SdsStreams to organize incoming data from another system into the OCS.
-To define an SdsStream, you must first define an SdsType, which defines the structure of the data you want to stream into a selected namespace.
+Streams are a container for sequential data of some type of sequentially occurring values indexed by a single property, typically time series data. You define SdsStreams to organize incoming data from another system into the OCS.
+To define an SdsStream, you must first define type, which defines the structure of the data you want to stream into a selected namespace.
 
 SDS stores collections of events and provides convenient ways to find and associate events.
 Events of consistent structure are stored in SdsStreams. SdsStreams are referenced by their identifier or `Id` field.
 SdsStream identifiers must be unique within a namespace.
 
-An SdsStream must include a `TypeId` that references the identifier of an existing SdsType.
-SdsStream management using the .NET SDS client libraries is performed through `ISdsMetadataService`.
+Stream must include a `TypeId` that references the identifier of an existing type.
+Stream management using the .NET SDS client libraries is performed through `ISdsMetadataService`.
 Create the `ISdsMetadataService`, using one of the ``SdsService.GetMetadataService()`` factory methods.
 
 The following table shows the required and optional SdsStream fields. Fields not listed are reserved
@@ -32,10 +32,10 @@ for internal SDS use.
 | [Tags](xref:sdsStreamExtra)*		| IList\<String\>					| Optional    | Yes		  | A list of tags denoting special attributes or categories.|
 | [Metadata](xref:sdsStreamExtra)*	| IDictionary\<String, String\>	| Optional    | Yes		  | A dictionary of string keys and associated string values.  |
 
-**\* Notes on SdsStream metadata and tags:** Stream metadata and tags are accessed via the Metadata and Tags API respectively.
+**\* Notes on stream metadata and tags:** Stream metadata and tags are accessed via the Metadata and Tags API respectively.
 However, they are associated with SdsStream objects and can be used as search criteria.
 
-**Rules for the Stream Identifier (SdsStream.Id)**
+**Rules for the stream identifier (SdsStream.Id)**
 1. Is not case sensitive
 2. Cannot just be whitespace
 3. Cannot contain leading or trailing whitespace
@@ -241,7 +241,7 @@ The requested SdsType.
 
 ***********************
 
-## `Get or create stream`
+## `Get or Create Stream`
 Creates the specified stream. If an SdsStream with a matching identifier already exists, SDS compares the 
 existing stream with the stream that was sent. If the streams are identical, a ``Found`` (302) error 
 is returned with the Location header set to the URI where the stream may be retrieved using a Get function. 
@@ -292,7 +292,7 @@ in the request body, a Conflict error response is returned and the client librar
 
 ***********************
 
-## `Create or update stream`
+## `Create or Update Stream`
 
 Creates the specified stream. If a stream with the same `Id` already exists, the definition of the stream is updated. 
 The following changes are permitted:  
@@ -339,7 +339,7 @@ The response includes a status code.
 ```
 ***********************
 
-## `Update stream type`
+## `Update Stream Type`
 
 Updates a stream’s type. The type is modified to match the specified stream view. 
 Defined Indexes and PropertyOverrides are removed when updating a stream type. 
@@ -379,7 +379,7 @@ On failure, the content contains a message describing the issue.
 
 ***********************
 
-## `Delete stream`
+## `Delete Stream`
 
 Deletes a stream. 
 
@@ -409,7 +409,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get streams access control list`
+## `Get Streams Access Control List`
 
 Gets the default ACL for the Streams collection. For more information on ACL, see [Access Control](xref:accessControl).
 
@@ -455,7 +455,7 @@ Successful (200 OK) responses include an additional response header.
 
 ***********************
 
-## `Update streams access control list`
+## `Update Streams Access Control List`
 
 Updates the default ACL for the Streams collection. For more information on ACL, see [Access Control](xref:accessControl).
 
@@ -552,7 +552,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get stream access control list`
+## `Get Stream Access Control List`
 
 Gets the ACL of the specified stream. For more information on ACL, see [Access Control](xref:accessControl).
 
@@ -602,7 +602,7 @@ Successful (200 OK) responses include an additional response header.
 
 ***********************
 
-## `Update stream access control list`
+## `Update Stream Access Control List`
 
 Updates the ACL of the specified stream. For more information on ACL, see [Access Control](xref:accessControl).
 
@@ -705,7 +705,7 @@ The response includes a status code.
 
 *** 
 
-## `Get stream owner`
+## `Get Stream Owner`
 
 Gets the `Owner` of the specified stream. For more information, see [Access Control](xref:accessControl).
 
@@ -737,7 +737,7 @@ The `Owner` for the specified stream
 ```
 ***********************
 
-## `Update stream owner`
+## `Update Stream Owner`
 
 Updates the `Owner` of the specified stream. For more information, see [Access Control](xref:accessControl).
 
@@ -769,7 +769,7 @@ The response includes a status code
 ```
 ***
 
-## `Get stream access rights`
+## `Get Stream Access Rights`
 
 Gets the access rights associated with the specified stream for the requesting identity. For 
 more information on access rights, see [Access Control](xref:accessControl#commonaccessrightsenum).
