@@ -4,9 +4,8 @@ uid: AccountNamespace_1
 
 # Namespaces
 
-A namespace is a logical unit of organization for data within a tenant. Each tenant may contain more than one namespace. Before you can put any data into OCS for a given tenant, a namespace must be created within the scope of that tenant. Namespace identifiers are unique within an account. Requirements for namespace Ids are the following:
-A `Namespace` is a collection of SDS types, streams, and stream views. Namespace identifiers are unique within a tenant. Requirements
-for Namespace IDs are the following:
+A namespace is a logical unit of organization for data within a tenant. It is a collection of types, streams, and stream views. Each tenant may contain more than one namespace. Before you can put any data into OCS for a given tenant, a namespace must be created within the scope of that tenant. Namespace identifiers are unique within an account. Requirements for namespace Ids are the following:
+
 - Must contain 100 characters or fewer
 - Must only contain alphanumeric characters, underscores, dashes, spaces, and periods
 - Must not contain two consecutive periods
