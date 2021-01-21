@@ -86,7 +86,7 @@ All times are represented at offset 0, GMT.
 
 *****
 
-## ``Get first value``
+## ``Get First Value``
 
 Returns the first value in the stream. If no values exist in the stream, null is returned.
 
@@ -114,7 +114,7 @@ The response includes a status code and a response body containing a serialized 
 ```
 ****
 
-## ``Get last value``
+## ``Get Last Value``
 
 Returns the last value in the stream. If no values exist in the stream, null is returned.
 
@@ -143,7 +143,7 @@ The response includes a status code and a response body containing a serialized 
 ```
 ****
 
-## ``Find distinct value``
+## ``Find Distinct Value``
 
 Returns a stored event based on the specified `index` and `searchMode`. 
 
@@ -229,7 +229,7 @@ Content-Type: application/json
 ```
 ****
 
-## ``Get values``
+## ``Get Values``
 
 Returns a collection of *stored* values at indexes based on request parameters. 
 
@@ -415,6 +415,7 @@ The response will contain up to 100 events. The boundary type Outside indicates 
 event outside the boundary will be included in the response. For a reverse direction range request, 
 this means one event forward of the specified start index. In a default direction range request, 
 it would mean one event before the specified start index.
+
 ##### Example request  
  ```text
     GET api/v1/Tenants/{tenantId}/Namespaces/{namespaceId}/Streams/Simple/Data 
@@ -850,7 +851,7 @@ In this case, the results contain the final event. The returned continuation tok
 
 ****
 
-## `Get interpolated values`
+## `Get Interpolated Values`
 
 Returns a collection of values based on request parameters. The stream's read characteristics determine how events 
 are calculated for indexes at which no stored event exists. For more information, see [Interpolation](xref:sdsReadingData#interpolation) and [Extrapolation](xref:sdsReadingData#extrapolation). Interpolation is not supported for streams with compound indexes.
@@ -1059,7 +1060,7 @@ Content-Type: application/json
 
 ****
 
-## ``Get summaries``
+## ``Get Summaries``
 
 Returns summary intervals between a specified start and end index. 
 
@@ -1432,7 +1433,7 @@ Content-Type: application/json
 ```
 ****
 
-## ``Get sampled values``
+## ``Get Sampled Values``
 
 Returns representative data sampled by intervals between a specified start and end index. 
 
@@ -1564,7 +1565,7 @@ Note that `State` is not included in the JSON when its value is the default valu
 ```
 ****
 
-## ``Join values``
+## ``Join Values``
 
 Returns data from multiple streams, which are joined based on the request specifications. The streams must be of the same type.
 
