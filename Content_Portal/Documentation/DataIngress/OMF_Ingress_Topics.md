@@ -24,7 +24,7 @@ Topic information is contained in an object called ``Topic`` and has the followi
 | Description     | string                  | Description of the Topic. |
 | CreatedDate     | DateTime                | Date and time this Topic was created. |
 
-## `Get tenant topics`
+## `Get Tenant Topics`
 Get all topics for a tenant. 
 
 ### Request
@@ -40,7 +40,7 @@ Unique Id for the namespace
 ### Returns
 An array of Topic objects. 
 
-## `Get topic`
+## `Get Topic`
 Get a specific topic. 
 
 ### Request
@@ -58,7 +58,7 @@ Unique Id for the Topic
 ### Returns
 A Topic object
 
-## `Get topic subscriptions`
+## `Get Topic Subscriptions`
 Get all subscriptions across all namespaces mapped to a topic.
 
 ### Request
@@ -76,7 +76,7 @@ Unique Id for the Topic
 ### Returns
 An array of subscription objects. 
 
-## `Get topics access control list`
+## `Get Topics Access Control List`
 Get the default Access Control List for new topics.
 
 ### Request
@@ -92,7 +92,7 @@ Unique Id for the namespace
 ### Returns
 An AccessControlList object
 
-## `Get topics access rights`
+## `Get Topics Access Rights`
 Get the default Access Rights of the requesting identity for any newly created topics.
 
 ### Request
@@ -108,7 +108,7 @@ Unique Id for the namespace
 ### Returns
 An array of Access Rights strings
 
-## `Get topic access control list`
+## `Get Topic Access Control List`
 Get the Access Control List for a particular topic.
 
 ### Request
@@ -126,7 +126,7 @@ Unique Id for the Topic
 ### Returns
 An AccessControlList object
 
-## `Get topic access rights`
+## `Get Topic Access Rights`
 Get the Access Rights of the requesting identity for a particular Topic.
 
 ### Request
@@ -144,7 +144,7 @@ Unique Id for the Topic
 ### Returns
 An array of Access Rights strings
 
-## `Get topic owner`
+## `Get Topic Owner`
 Get the Owner for a particular Topic.
 
 ### Request
@@ -162,7 +162,7 @@ Unique Id for the Topic
 ### Returns
 A Trustee object
 
-## `Create topic`
+## `Create Topic`
 Create a new topic.
 
 ### Request
@@ -181,7 +181,7 @@ A topic object. The ``Id`` property should not be specified, since it will be au
 ### Returns
 The topic object that was created
 
-## `Update topic`
+## `Update Topic`
 Update an existing topic. Only the name and description can be updated. 
 
 ### Request
@@ -202,7 +202,7 @@ A topic object. The ``Id`` property should match the ``topicId`` in the route.
 ### Returns
 The Topic object that was updated. 
 
-## `Update topics access control list`
+## `Update Topics Access Control List`
 Update the default Access Control List for new topics.
 
 ### Request
@@ -236,7 +236,7 @@ Unique Id for the Topic
 ### Body
 An AccessControlList object
 
-## `Update topic owner`
+## `Update Topic Owner`
 Update the Owner for a particular topic.
 
 ### Request
@@ -254,7 +254,7 @@ Unique Id for the Topic
 ### Body
 A Trustee object.
 
-## `Delete topic`
+## `Delete Topic`
 Delete a topic.
 
 ### Request
