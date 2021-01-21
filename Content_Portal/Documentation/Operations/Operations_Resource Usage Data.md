@@ -34,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get tenant resource usage`
+## `Get Tenant Resource Usage`
 
 Gets the current resource usage vs the entitled resource usage.
 

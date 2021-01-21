@@ -34,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get tenant logs`
+## `Get Tenant Logs`
 
 Get customer facing logs for a **tenant**.
 
@@ -165,7 +165,7 @@ Forbidden.
 Internal server error.
 ***
 
-## `Get namespace logs`
+## `Get Namespace Logs`
 
 Get logs for a **Namespace**.
 

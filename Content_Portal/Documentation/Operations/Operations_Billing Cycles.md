@@ -34,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get tenant billing cycles`
+## `Get Tenant Billing Cycles`
 
 Gets the billing cycles for a tenant inferred from the subscription of the tenant.
 

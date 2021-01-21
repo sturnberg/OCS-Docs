@@ -34,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get tenant health`
+## `Get Tenant Health`
 
 Get **tenant** health data containing an aggregated health state and a list of services related to the tenant.
 

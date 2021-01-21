@@ -34,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get tenant usage`
+## `Get Tenant Usage`
 
 Gets **Tenant** usage data calculated based on active / 
             completed billing cycles, when the **start** and 
@@ -142,7 +142,7 @@ Forbidden
 Internal server error
 ***
 
-## `Get namespace usage`
+## `Get Namespace Usage`
 
 Gets **Namespace** usage data calculated based on active / completed billing cycles, when the **start** and **end** parameters are omitted. When **start** is provided and **end** is omitted, a single day of usage data is returned. When both **start** and **end** are provided, daily usage data is returned from the provided range.
 

@@ -34,7 +34,7 @@ All responses will have an error message in the body. The exceptions are 200 res
 
 If and when contacting OSIsoft support about this error, please provide the OperationId.
 
-## `Get stream metrics`
+## `Get Stream Metrics`
 
 Retrieves metrics related to streams ingress and egress rates for a given namespace.
 
