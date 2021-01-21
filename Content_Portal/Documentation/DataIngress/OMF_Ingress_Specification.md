@@ -1,6 +1,4 @@
----
-uid: omfIngressSpecification
----
+
 
 # Use OSIsoft Message Format with OSIsoft Cloud Services
 
@@ -15,24 +13,40 @@ the sender and to authorize the sender for use with a particular Tenant. The cli
 The ``omfversion`` header must match the version of the OMF spec used to construct the message.
 Versions 1.0 and 1.1 of the spec are currently supported. 
 
-## Message Types
-OMF message types fall into three categories: Type, Container, and Data, which are described below. 
+## Message types
+OMF message types fall into three categories: type, container, and data, which are described below. 
 
-### Type messages
-  A Type message is interpreted by OSIsoft Cloud Services as an SdsType in the Sequential Data Store. 
+## Type messages
+  A type message is interpreted by OSIsoft Cloud Services as an SdsType in the Sequential Data Store. 
   Because SdsTypes are immutable, update operations are not supported. The keywords in the 
-  Type definition are interpreted as follows:
+  type definition, by OMF version, are interpreted as follows:
+
+### OMF 1.0
 
   + ``id``: Corresponds to the SdsType Id field. It must conform to the rules defined for a 
-    typeId specified here: [Types](xref:sdsTypes)
+    typeId specified here: [types](xref:sdsTypes)
 
   + ``classification``: Only the ``dynamic`` classification is currently supported.
   + ``version``: Versioning of SdsTypes is not supported.
   + ``name``: Corresponds to the SdsType Name field. This is the friendly name for the type.
   + ``description``: Corresponds to the SdsType Description field. 
-  + ``tags``: Currently unsupported.
-  + ``metadata``: Currently unsupported.
+  + ``tags``: Not supported. If included, this property is ignored
+  + ``metadata``: Not supported. If included, this property is ignored
 
+### OMF 1.1
+
+  OMF 1.1 type messages contain the same keywords as OMF 1.0 plus the following:
+
+  + ``properties``: Key-value pairs defining the properties of a type.
+  + ``type``: Inherited from JSON Schema. Must be set to object. 
+
+### OMF 1.2
+
+  OMF 1.2 type messages contain the same keywords as OMF 1.0 and 1.1, plus the following:
+
+  + ``enum``: Optional array of name/value pairs used to define an allowed set of values. Classification should not be set when defining an enum type.
+
+  
   The ``isindex`` keyword corresponds to the ``iskey`` attribute of an SdsTypeProperty. 
   SdsTypes support clustered indexes which can be specified with multiple properties marked 
   with the ``isindex`` keyword with a value of ``true``. For compound indexes, the 
@@ -68,10 +82,11 @@ object   | dictionary | Idictionary
 string   |          | String
 string   | date-time | DateTime
 
-
 ## Container messages
 A Container message is interpreted as an SdsStream in the Sequential Data Store. The keywords 
-in the Container definition are interpreted as follows:
+in the Container definition, by OMF version, are interpreted as follows:
+
+### OMF 1.0
 
 * ``id``: Corresponds to the SdsStream Id field. It must conform to the rules defined for
     an SdsStream Id specified here: [Streams](xref:sdsStreams#streams).
@@ -82,10 +97,22 @@ in the Container definition are interpreted as follows:
 * ``tags``: Corresponds to the SdsStream Tag field. 
 * ``metadata``: Corresponds to the SdsStream Metadata field.        
 
+### OMF 1.1
+
+ OMF 1.1 container messages contain the same keywords as OMF 1.0 plus the following:
+
+* ``indexes``: Optional array of type property ids to be used as secondary indexes for the container.
+
+### OMF 1.2
+
+ OMF 1.2 container messages contain the same keywords as OMF 1.0 and 1.1, plus the following:
+
+* ``datasource``: Optional string used to specify the source of a stream of data.
+* ``propertyoverrides``: Optional key-value pairs used to override properties on a type definition.
 
 ## Data messages
 A Data message is mapped to generic Sds values in the Sequential Data Store. The keywords in the 
-Data definitions are interpreted as follows:
+Data definitions, by OMF version, are interpreted as follows:
 
 * ``typeid``: Data that is not grouped by containerId is not supported.
 * ``containerid``: Stream Id for the associated Sds Stream.
