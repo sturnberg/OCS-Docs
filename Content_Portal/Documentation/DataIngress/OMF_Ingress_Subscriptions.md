@@ -33,7 +33,7 @@ Subscription information is contained in an object called subscription which has
 
 *****************
 
-## `Get tenant subscriptions`
+## `Get Tenant Subscriptions`
 Get all subscriptions for a tenant. 
 
 ### Request
@@ -49,7 +49,7 @@ Unique Id for the namespace
 ### Returns
 An array of subscription objects. 
 
-## `Get subscription`
+## `Get Subscription`
 Get a specific subscription.
 
 ### Request
@@ -67,7 +67,7 @@ Unique Id for the Subscription.
 ### Returns
 A subscription object 
 
-## `Get subscriptions access control list`
+## `Get Subscriptions Access Control List`
 Get the default Access Control List for new subscriptions.
 
 ### Request
@@ -83,7 +83,7 @@ Unique Id for the namespace
 ### Returns
 An AccessControlList object.
 
-## `Get subscriptions access rights`
+## `Get Subscriptions Access Rights`
 Get the default Access Rights of the requesting identity for any newly created Subscriptions.
 
 ### Request
@@ -99,7 +99,7 @@ Unique Id for the namespace.
 ### Returns
 An array of Access Rights strings.
 
-## Get subscription access control list`
+## Get Subscription Access Control List`
 Get the Access Control List for a particular Subscription.
 
 ### Request
@@ -117,7 +117,7 @@ Unique Id for the Subscription.
 ### Returns
 An AccessControlList object.
 
-## `Get subscription access rights`
+## `Get Subscription Access Rights`
 Get the Access Rights of the requesting identity for a particular Subscription.
 
 ### Request
@@ -135,7 +135,7 @@ Unique Id for the Subscription.
 ### Returns
 An array of Access Rights strings.
 
-## `Get subscription owner`
+## `Get Subscription Owner`
 Get the owner for a particular subscription.
 
 ### Request
@@ -193,7 +193,7 @@ A subscription object. The ``Id`` property should match the ``subscriptionId`` i
 ### Returns
 The subscription object that was updated. 
 
-## `Update subscriptions access control list`
+## `Update Subscriptions Access Control List`
 Update the default Access Control List for new subscriptions.
 
 ### Request
@@ -209,7 +209,7 @@ Unique Id for the namespace.
 ### Body
 An AccessControlList object.
 
-## `Update subscription access control list`
+## `Update Subscription Access Control List`
 Update the Access Control List for a particular subscription.
 
 ### Request
@@ -227,7 +227,7 @@ Unique Id for the Subscription
 ### Body
 An AccessControlList object.
 
-## `Update subscription owner`
+## `Update Subscription Owner`
 Update the owner for a particular subscription.
 
 ### Request
@@ -245,7 +245,7 @@ Unique Id for the Subscription
 ### Body
 A Trustee object.
 
-## `Delete subscription`
+## `Delete Subscription`
 Delete a subscription.
 
 ### Request
