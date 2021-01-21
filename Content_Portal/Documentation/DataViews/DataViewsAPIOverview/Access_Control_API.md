@@ -7,7 +7,7 @@ uid: DataViewsAccessControlAPI
 This portion of the [overall data views API](xref:DataViewsAPIOverview) focuses on [securing data views](xref:DataViewsSecuringDataViews) by setting their ownership and permissions.
 
 
-## `Get data views access control list`
+## `Get Data Views Access Control List`
 Get the default [`AccessControlList`](xref:accessControl#access-control-lists) for the DataViews collection.
 
 ### Request
@@ -69,7 +69,7 @@ HTTP 200 OK
    Task<AccessControlList> GetAccessControlListAsync();
 ```
 
-## `Update data views access control list`
+## `Update Data Views Access Control List`
 Update the default [`AccessControlList`](xref:accessControl#access-control-lists) for the DataViews collection.
 
 ### Request
@@ -134,7 +134,7 @@ The response includes a status code and, in some cases, a body.
    Task UpdateAccessControlListAsync(AccessControlList acl);
 ```
 
-## `Get data view access control list`
+## `Get Data View Access Control List`
 Get the [`AccessControlList`](xref:accessControl#access-control-lists) of the specified data view.
 
 ### Request
@@ -200,7 +200,7 @@ HTTP 200 OK
    Task<AccessControlList> GetDataViewAccessControlAsync(string id);
 ```
 
-## `Update data view access control list`
+## `Update Data View Access Control List`
 Update the [`AccessControlList`](xref:accessControl#access-control-lists) of the specified data view.
 
 ### Request
@@ -269,7 +269,7 @@ The response includes a status code and, in some cases, a body.
    Task UpdateDataViewAccessControlAsync(string id, AccessControlList acl);
 ```
 
-## `Get data view access rights`
+## `Get Data View Access Rights`
 Get the calling user or client's access rights to the requested data view
 
 ### Request
@@ -356,7 +356,7 @@ Content-Type: application/json
    Task<Trustee> GetDataViewOwnerAsync(string id);
 ```
 
-## `Update data view owner`
+## `Update Data View Owner`
 Update the owner [`Trustee`](xref:accessControl#owner) of the specified data view.
 
 ### Request
