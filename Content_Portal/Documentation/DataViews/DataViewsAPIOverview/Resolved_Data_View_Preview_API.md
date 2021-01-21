@@ -7,7 +7,7 @@ uid: ResolvedDataViewPreviewAPI
 This portion of the overall [data views API](xref:DataViewsAPIOverview) specifies the resources that resolve per-user for an input data view. 
 The preview APIs require a data view to be passed in the request body for each request, which provides the user the flexibility to change the data view on the fly without saving/updating it.
 
-## `Get data items by query`
+## `Get Data Items by Query`
 Gets the paged collection of data items returned by an individual query, and which are eligible for use in the provided data view. A data view has a collection of zero or more queries. Each query has an identifier. Those identifiers are used here as part of the request path.
 
 ### Request
@@ -130,7 +130,7 @@ Content-Type: application/json
 ```csharp
    Task<ResolvedItems<DataItem>> GetPreviewDataItemsAsync(string queryId, DataView dataView, int skip = 0, int count = 100);
 ```
-## `Get ineligible data items by query`
+## `Get Ineligible Data Items by Query`
 Gets the paged collection of data items returned by an individual query, but which are not eligible for use in the provided data view. A common reason for ineligibility is that the item's index property is of a different type than the data view expects. A data view has a collection of zero or more queries. Each query has an identifier. Those identifiers are used here as part of the request path.
 
 ### Request
@@ -238,7 +238,7 @@ Content-Type: application/json
    Task<ResolvedItems<DataItem>> GetPreviewIneligibleDataItemsAsync(string queryId, DataView dataView, int skip = 0, int count = 100);
 ```
 
-## `Get groups`
+## `Get Groups`
 Gets the collection of `Group`s that resolved for the provided data view.
 
 ### Request
@@ -377,7 +377,7 @@ Content-Type: application/json
    Task<ResolvedItems<Group>> GetPreviewGroupsAsync(DataView dataView, int skip = 0, int count = 100);
 ```
 
-## `Get available field sets`
+## `Get Available Field Sets`
 Gets the collection of field sets that are available for use in the provided data view, and which are not already included in the data view.
 
 ### Request
@@ -475,7 +475,7 @@ HTTP 200 OK
    Task<ResolvedItems<FieldSet>> GetPreviewAvailableFieldSetsAsync(DataView dataView);
 ```
 
-## `Get field mappings`
+## `Get Field Mappings`
 Gets the collection of field mappings resolved for the provided data view. These show the exact data behind every field, for each data item, for each group.
 
 ### Request
@@ -623,7 +623,7 @@ HTTP 200 OK
    Task<ResolvedItems<FieldMapping>> GetPreviewFieldMappingsAsync(DataView dataView, int skip = 0, int count = 100);
 ```
 
-## `Get statistics`
+## `Get Statistics`
 Gets statistics about the size and shape on how the data view resolved. 
 
 ### Request
