@@ -87,7 +87,7 @@ All times are represented at offset 0, GMT.
 
 *****
 
-## `Insert values`
+## `Insert Values`
 
 Inserts data into the specified stream. Returns an error if data is already present at the index of any event.
 
@@ -145,7 +145,7 @@ The request body specifies the values to insert.
 
 **********************
 
-## `Patch values`
+## `Patch Values`
 
 Modifies the specified stream event(s). Patching affects only the data item parameters that are included in the call.
 
@@ -205,14 +205,14 @@ If there is a problem patching any individual event, the entire operation is rol
 
 **********************
 
-## ``Remove values``
+## ``Remove Values``
 
 There are two options for specifying which events to remove from a stream:
 * [Index Collection](#removeindexcollection): One or more indexes can be specified in the request. 
 * [Window](#removewindow): A window can be specified with a start index and end index.
 
 <a name="removeindexcollection"></a>
-### `Index collection`
+### `Index Collection`
 
 Removes the event at each index from the specified stream. Different overloads are available to make it easier to indicate the index where you want to remove a data event. 
 
@@ -296,7 +296,7 @@ If any individual event fails to be removed, the entire operation is rolled back
 
 ***********************
 
-## ``Replace values``
+## ``Replace Values``
 
 Writes one or more events over existing events in the specified stream.
 
@@ -333,7 +333,7 @@ This request returns an error if the stream does not have an event to be replace
 
 ***********************
 
-## `Update values`
+## `Update Values`
 
 Writes one or more events to the specified stream.
 
