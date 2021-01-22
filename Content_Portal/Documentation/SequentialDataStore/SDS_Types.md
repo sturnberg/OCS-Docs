@@ -1269,7 +1269,7 @@ The .NET SDS Client Libraries manage redirects.
 
 ***********************
 
-## `Delete type`
+## `Delete Type`
 
 Deletes a type from the specified tenant and namespace. Note that a type cannot be deleted if any streams, stream views, or other types reference it.
 
@@ -1299,7 +1299,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get types access control list`
+## `Get Types Access Control List`
 
 Gets the default ACL for the Types collection. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1345,7 +1345,7 @@ Successful (200 OK) responses include an additional response header.
 
 ***********************
 
-## `Update types access control list`
+## `Update Types Access Control List`
 
 Updates the default ACL for the Types collection. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1633,7 +1633,7 @@ The Owner for the specified type
 ```
 ***********************
 
-## `Update type owner`
+## `Update Type Owner`
 
 Updates the Owner of the specified type. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -1667,7 +1667,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get type access rights`
+## `Get Type Access Rights`
 
 Gets the Access Rights associated with the specified type for the requesting identity. For 
 more information on Access Rights, see [Access Control](xref:accessControl#commonaccessrightsenum).

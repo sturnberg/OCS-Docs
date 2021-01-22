@@ -14,7 +14,7 @@ SdsStream results with the [Stream](xref:sdsStreams) API.
 
 ***********************
 
-## `Get stream metadata`
+## `Get Stream Metadata`
 Returns the metadata dictionary for the specified stream.   
 
 ### Request  
@@ -58,7 +58,7 @@ Allowed for account administrator and account members
 
 ***********************
 
-## `Get stream metadata value`
+## `Get Stream Metadata Value`
 Returns the value for the specified key in the metadata dictionary of the specified stream.  
 
 ### Request
@@ -105,7 +105,7 @@ Allowed for account administrator and account members
 
 ***********************
 
-## `Update stream metadata`
+## `Update Stream Metadata`
 Replaces the metadata for the specified stream with the metadata in the request body. 
 Overwrites any existing metadata; does not merge.  
 
@@ -138,7 +138,7 @@ Allowed for account administrator and account members
 
 ***********************
 
-## `Patch stream metadata`
+## `Patch Stream Metadata`
 Modifies the metadata based on operations specified in the request body. The request body follows
 [JSON Patch format](http://jsonpatch.com/).
 
@@ -173,7 +173,7 @@ Allowed for account administrator and account members
 
 ***********************
 
-## `Delete stream metadata`
+## `Delete Stream Metadata`
 Deletes the metadata for the specified stream.  
 
 ### Request
@@ -206,7 +206,7 @@ Allowed for account administrator and account members
 
 # SdsStream Tags API 
 
-## `Get stream tags`  
+## `Get Stream Tags`  
 Returns the tag list for the specified stream. 
 
 ### Request
@@ -249,7 +249,7 @@ Allowed for account administrator and account members
 ```
 
 ***********************
-## `Update stream tags`
+## `Update Stream Tags`
 Replaces the tag list for the specified stream with the tags listed in the request body.
 Overwrites any existing tags; does not merge. 
 
@@ -283,7 +283,7 @@ Allowed for account administrator and account members
 ```
 
 ***********************
-## `Delete stream tags`
+## `Delete Stream Tags`
 Deletes the tag list for the specified stream. 
 
 ### Request

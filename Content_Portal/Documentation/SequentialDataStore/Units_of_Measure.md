@@ -436,7 +436,7 @@ Content-Type: application/json
 
 
 
-## `Get Quantity Uoms`
+## `Get Quantity UOMs`
 
 Returns the list of units of measure that belongs to the quantity with the specified quantityId.
 
@@ -490,7 +490,7 @@ Content-Type: application/json
    Task<IEnumerable<SdsUom>> GetQuantityUomsAsync(string quantityId);
 ```
 ***
-## `Get Quantity Uom`
+## `Get Quantity UOM`
 
 Returns the unit of measure associated with the specified uomId belonging to the quantity with the specified quantityId.
 
@@ -723,8 +723,6 @@ Successful (200 OK) responses include an additional response header.
 
 ***********************
 
-
-
 ## `Update Quantity Access Control List`
 
 Updates the ACL of the specified quantity. For more information on ACLs, see [Role-based access control](xref:accessControl).
@@ -858,7 +856,7 @@ The Owner for the specified quantity
 ```
 ***********************
 
-## `Update quantity owner`
+## `Update Quantity Owner`
 
 Updates the Owner of the specified quantity. For more information on Owners, see [Role-based access control](xref:accessControl).
 
@@ -890,7 +888,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get quantity access rights`
+## `Get Quantity Access Rights`
 
 Gets the Access Rights associated with the specified quantity for the requesting identity.  For 
 more information on Access Rights, see [Role-based access control](xref:accessControl#commonaccessrightsenum).
@@ -1044,7 +1042,7 @@ Content-Type: application/json
 ```
 ***
 
-## `Get UOM access control list`
+## `Get UOM Access Control List`
 
 Gets the ACL of the specified unit of measure. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1130,7 +1128,7 @@ The response includes a status code.
    Task UpdateQuantityUomAccessControlListAsync(string quantityId, string UOMId, AccessControlList uomAcl);
 ```
 ***
-## `Patch Uom Access Control List`
+## `Patch UOM Access Control List`
 
 Updates the ACL of the specified unit of measure using an [RFC 6902](https://tools.ietf.org/html/rfc6902) compliant JSON Patch document. This allows the ACL to be modified without submitting the entire Access Control List. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1201,7 +1199,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get UOM owner`
+## `Get UOM Owner`
 
 Gets the Owner of the specified unit of measure. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -1236,7 +1234,7 @@ The Owner for the specified Uom
 ```
 ***********************
 
-## `Update UOM owner`
+## `Update UOM Owner`
 
 Updates the Owner of the specified unit of measure. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -1271,7 +1269,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get UOM access rights`
+## `Get UOM Access Rights`
 
 Gets the Access Rights associated with the specified unit of measure for the requesting identity. For 
 more information on Access Rights, see [Access Control](xref:accessControl#commonaccessrightsenum).
@@ -1317,7 +1315,7 @@ Content-Type: application/json
 
 
 ## Associating a unit of measure with a SdsType
-At [SdsType](xref:sdsTypes) creation, a SdsUom can be associated with a [SdsTypeProperty](xref:sdsTypes#sdstypeproperty). 
+At [type](xref:sdsTypes) creation, SdsUom can be associated with a [SdsTypeProperty](xref:sdsTypes#sdstypeproperty). 
 
 ## Associating a unit of measure with a SdsStream
-At [SdsStream](xref:sdsStreams) creation, you can override any unit of measure associated with a SdsTypeProperty belonging to the SdsType of the stream. This enables the reuse of a SdsType that may have default unit information associated with it already.
+At [stream](xref:sdsStreams) creation, you can override any unit of measure associated with a SdsTypeProperty belonging to the SdsType of the stream. This enables the reuse of a SdsType that may have default unit information associated with it already.

@@ -679,7 +679,7 @@ Content-Type: application/json
 
 ***********************
 
-## `Get or create stream view`
+## `Get or Create Stream View`
 
 If a stream view with a matching identifier already exists, the stream view passed in is compared with the existing stream view.
 If the stream views are identical, a Found (302) status is returned and the stream view. If the stream views are different, the Conflict (409) error is returned.
@@ -718,7 +718,7 @@ The newly created or matching SdsStreamView.
 
 ***********************
 
-## `Create or update stream view` 
+## `Create or Update Stream View` 
 
 Creates or updates the definition of a stream view. 
 
@@ -754,7 +754,7 @@ The newly created or updated SdsStreamView.
 
 ***********************
 
-## `Delete stream view`
+## `Delete Stream View`
 
 Deletes a stream view from the specified tenant and namespace.
 
@@ -783,7 +783,7 @@ The response includes a status code.
 ```
 
 ***********************
-## `Get stream views access control list`
+## `Get Stream Views Access Control List`
 
 Gets the default ACL for the Stream Views collection. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -829,7 +829,7 @@ Successful (200 OK) responses include an additional response header.
 
 ***********************
 
-## `Update stream views access control list`
+## `Update Stream Views Access Control List`
 
 Updates the default ACL for the Stream Views collection. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -925,7 +925,7 @@ The response includes a status code.
 
 ***********************
 
-## `Get stream view access control list`
+## `Get Stream View Access Control List`
 
 Gets the ACL of the specified stream view. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -975,7 +975,7 @@ Successful (200 OK) responses include an additional response header.
 
 ***********************
 
-## `Update stream view access control list`
+## `Update Stream View Access Control List`
 
 Updates the ACL of the specified stream view. For more information on ACLs, see [Access Control](xref:accessControl).
 
@@ -1077,7 +1077,7 @@ The response includes a status code.
 
 ***
 
-## `Get stream view owner`
+## `Get Stream View Owner`
 
 Gets the Owner of the specified stream view. For more information on Owners, see [Access Control](xref:accessControl).
 
@@ -1141,7 +1141,7 @@ The response includes a status code.
 ```
 ***
 
-## `Get stream view access rights`
+## `Get Stream View Access Rights`
 
 Gets the Access Rights associated with the specified stream view for the requesting identity. For 
 more information on Access Rights, see [Access Control](xref:accessControl#commonaccessrightsenum).
