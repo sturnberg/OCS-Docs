@@ -10,7 +10,7 @@ The most important considerations with OMF connections are to ensure application
 
 - Each type of application or system that sends OMF data to OCS should have its own defined OMF connection, with the name and description referencing the data source.
 - Each application instance or each device that sends OSIsoft Message Format (OMF) data to OCS should have its own client credentials client and its own secret. Connections allow a list of clients to be defined. When each application instance or device has its own client, security is improved because secrets can be managed at a granular level.
-- Ensure that the client credentials client has the minimum roles and access in OCS. For example, a client may be granted access to write data, but it does not have permissions to delete data.
+- The client credentials client should have the absolute minimum roles and access in OCS. For example, a client may be granted access to write data, but it does not have permissions to delete data. Note, however, the permissions associated with the OMF connection are separate from the client's permissions, and restrictions on the client do not impact permissions on OMF messages.
 - For use cases that involve a large number of source applications or source devices, the OCS API can be used to automatically assign a new client credentials client and secret whenever a new device is brought online.
 
 ### Get Started with OMF Connections

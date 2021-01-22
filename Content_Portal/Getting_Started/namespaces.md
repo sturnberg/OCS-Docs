@@ -35,8 +35,8 @@ When querying API endpoints, the namespace ID is part of the URL. The API URL ta
 
 OSIsoft recommends using one of the following strategies when creating namespaces:
 
-- Strategy 1 -- Create a separate namespace for each environment, for example, Production, Development, Staging, and so on.
-- Strategy 2 -- Create a separate namespace for each end-user customer.
+- Use Case 1 -- Create a separate namespace for each environment, for example, Production, Development, Staging, and so on.
+- Use Case 2 -- Create a separate namespace for each end-user customer.
 
 The first strategy is recommended for accounts where all the data belongs to one organization. Generally, it is not good practice to create separate namespaces for data that will later need to be used together.  
 
