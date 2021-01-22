@@ -56,13 +56,13 @@ OMF message types fall into three categories: type, container, and data, which a
   index property order within the message corresponds to the ``Order`` field of 
   an SdsTypeProperty. The ``isname`` keyword is not supported.
 
-### Link Type
-  Link Types are not supported in Sequential Data Store.
+### Link type
+  Link types are not supported in Sequential Data Store.
 
-### Span Type
-  Span Types are not supported in Sequential Data Store.
+### Span type
+  Span types are not supported in Sequential Data Store.
 
-### Property Types and Formats
+### Property types and formats
   OMF supports setting the ``format`` keyword to specify how a particular JSON type should 
   be interpreted. The following is a mapping for the Sequential Data Store supported 
   types (see [Types](xref:sdsTypes)):
