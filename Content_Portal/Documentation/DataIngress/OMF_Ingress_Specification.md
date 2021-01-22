@@ -1,3 +1,6 @@
+---	
+uid: omfIngressSpecification
+---
 
 
 # Use OSIsoft Message Format with OSIsoft Cloud Services
