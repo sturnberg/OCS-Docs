@@ -33,14 +33,14 @@ OMF message types fall into three categories: type, container, and data, which a
   + ``version``: Versioning of SdsTypes is not supported.
   + ``name``: Corresponds to the SdsType Name field. This is the friendly name for the type.
   + ``description``: Corresponds to the SdsType Description field. 
-  + ``tags``: Not supported. If included, this property is ignored
-  + ``metadata``: Not supported. If included, this property is ignored
+  + ``tags``: Optional array of strings to tag the type
+  + ``metadata``: Optional key-value pairs associated with the type
 
 ### OMF 1.1
 
   OMF 1.1 type messages contain the same keywords as OMF 1.0 plus the following:
 
-  + ``properties``: Key-value pairs defining the properties of a type.
+  + ``properties``: Key-value pairs defining the properties of a type
   + ``type``: Inherited from JSON Schema. Must be set to object. 
 
 ### OMF 1.2
