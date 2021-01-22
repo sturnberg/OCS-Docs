@@ -14,7 +14,7 @@ For a description of each of the headers, see [OMF specification](http://omf-doc
 the sender and to authorize the sender for use with a particular Tenant. The client Id associated with this token is used to route messages to a particular [Topic](xref:omfIngressTopics) that it is mapped to.
 
 The ``omfversion`` header must match the version of the OMF spec used to construct the message.
-Versions 1.0 and 1.1 of the spec are currently supported. 
+Versions 1.0, 1.1, and 1.2 of the spec are currently supported. 
 
 ## Message types
 OMF message types fall into three categories: type, container, and data, which are described below. 
